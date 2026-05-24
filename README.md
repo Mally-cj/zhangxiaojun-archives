@@ -15,7 +15,7 @@
 - **Prompt 来源**：感谢小红书博主 **J在发光** 提供的写作 Prompt 思路
 - **转录工具**：通义听悟
 - **排版工具**：Claude Code
-- **原始播客**：[张小珺商业访谈录 - Apple Podcasts](https://podcasts.apple.com/tw/podcast/141-freda%E7%9A%84%E6%8A%95%E8%B5%84%E6%9C%AD%E8%AE%B0%E7%AC%AC2%E9%9B%86-tokenmaxxing-%E6%8A%8A%E7%94%B5%E6%9C%BA%E5%A1%9E%E8%BF%9B%E8%92%B8%E6%B1%BD%E6%9C%BA-%E6%8E%A5%E5%8A%9B%E8%B5%9B%E5%8F%98%E7%AF%AE%E7%90%83%E8%B5%9B-%E5%AD%A4%E7%8B%AC-%E4%BA%BA%E7%9A%84%E8%BF%9E%E6%8E%A5/id1634356920?i=1000768308372) · [Podwise（含文字稿）](https://podwise.ai/dashboard/episodes/8012995)
+- **原始播客**：[小宇宙](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962) · [Apple Podcasts](https://podcasts.apple.com/tw/podcast/141-freda%E7%9A%84%E6%8A%95%E8%B5%84%E6%9C%AD%E8%AE%B0%E7%AC%AC2%E9%9B%86-tokenmaxxing-%E6%8A%8A%E7%94%B5%E6%9C%BA%E5%A1%9E%E8%BF%9B%E8%92%B8%E6%B1%BD%E6%9C%BA-%E6%8E%A5%E5%8A%9B%E8%B5%9B%E5%8F%98%E7%AF%AE%E7%90%83%E8%B5%9B-%E5%AD%A4%E7%8B%AC-%E4%BA%BA%E7%9A%84%E8%BF%9E%E6%8E%A5/id1634356920?i=1000768308372) · [Podwise（含文字稿）](https://podwise.ai/dashboard/episodes/8012995)
 
 ## 制作流程
 
