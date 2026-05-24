@@ -106,6 +106,52 @@ body {
   letter-spacing: 0.3em;
 }
 
+/* 手机 & 平板 */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 0;
+  }
+
+  .page {
+    width: calc(100% - 12px);
+    min-height: auto;
+    padding: 28px 18px 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.85;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  }
+
+  .page .chapter-title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .page .meta-line {
+    font-size: 11px;
+  }
+
+  .page .quote-block {
+    margin: 20px 0 28px;
+    padding: 14px 16px;
+    border-left-width: 2px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .page .podcast-ref {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .page .page-num {
+    bottom: 18px;
+    font-size: 11px;
+  }
+}
+
 @media print {
   body { background: white; padding: 0; }
   .page { box-shadow: none; margin: 0; page-break-after: always; }
