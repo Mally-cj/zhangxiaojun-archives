@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心手合一：Manus的奇幻漂流与最后的访谈</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #e8e0d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+}
+
+.page {
+  width: 680px;
+  min-height: 960px;
+  background: #fdfaf2;
+  margin-bottom: 30px;
+  padding: 80px 65px 60px 65px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  position: relative;
+  line-height: 2;
+  font-size: 15px;
+  color: #2c2416;
+  text-align: justify;
+}
+
+.page p {
+  text-indent: 2em;
+  margin-bottom: 0.6em;
+}
+
+.page p.no-indent {
+  text-indent: 0;
+}
+
+.page .chapter-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 60px;
+  margin-bottom: 36px;
+  text-indent: 0;
+  line-height: 1.6;
+}
+
+.page .meta-line {
+  text-align: center;
+  font-size: 13px;
+  color: #6b5e4a;
+  text-indent: 0;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.page .quote-block {
+  margin: 32px 0 40px 0;
+  padding: 20px 24px;
+  border-left: 3px solid #c4a87c;
+  font-size: 15px;
+  line-height: 2;
+  color: #4a3828;
+  font-style: italic;
+  text-indent: 0;
+}
+
+.page .quote-block p { text-indent: 0; margin-bottom: 0; }
+
+.page .podcast-ref {
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  text-indent: 0;
+  margin-top: 28px;
+  font-style: italic;
+}
+
+.page .page-num {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  letter-spacing: 0.05em;
+}
+
+.english, .num {
+  font-family: 'Baskerville', 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #c4a87c;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+}
+
+/* 手机 & 平板 */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 0;
+  }
+
+  .page {
+    width: calc(100% - 12px);
+    min-height: auto;
+    padding: 28px 18px 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.85;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  }
+
+  .page .chapter-title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .page .meta-line {
+    font-size: 11px;
+  }
+
+  .page .quote-block {
+    margin: 20px 0 28px;
+    padding: 14px 16px;
+    border-left-width: 2px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .page .podcast-ref {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .page .page-num {
+    bottom: 18px;
+    font-size: 11px;
+  }
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .page { box-shadow: none; margin: 0; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: CHAPTER OPENING ==================== -->
+<div class="page">
+<p class="chapter-title">心手合一：<br/>Manus的奇幻漂流与最后的访谈</p>
+
+<p class="meta-line">核心关键词：通用<span class="english">AI Agent</span> &nbsp;| &nbsp;AI时代的产品与模型之争</p>
+
+<p class="meta-line podcast-ref">原始播客：<a href="https://www.xiaoyuzhoufm.com/episode/" style="color:#8b7355;">张小珺商业访谈录 第128期</a><br/>"Manus决定出售前最后的访谈：啊，这奇幻的<span class="num">2025</span>年漂流啊…"<br/>录制于<span class="num">2025</span>年<span class="num">12</span>月<span class="num">1</span>日 · 发布于<span class="num">2025</span>年<span class="num">12</span>月<span class="num">30</span>日</p>
+
+<div class="quote-block">
+<p>"我们非常抵制外部<span class="english">ARR</span>这个事儿。我们内部看<span class="english">ARR</span>或者<span class="english">MRR</span>，就一个口径——就是你看你<span class="english">Stripe</span>上面给的<span class="english">MR</span>数据以及你移动端的<span class="english">MR</span>数据，要不然的话你有太多种方法去把这个<span class="english">MR</span>数字造得很大，但这个就是你自己骗自己。"</p>
+<p style="text-align:right; margin-top:8px;">—— 季逸超（<span class="english">Peak</span>），<span class="english">Manus</span>联合创始人兼首席科学家</p>
+</div>
+
+<p>这期节目的录制时间是<span class="num">2025</span>年<span class="num">12</span>月<span class="num">1</span>日。彼时，<span class="english">Manus</span>联合创始人兼首席科学家季逸超——他的朋友们叫他<span class="english">Peak</span>——坐在张小珺面前，讲述他三段创业的起落、<span class="english">Manus</span>从浏览器残骸中诞生的戏剧性时刻、以及这家只有一百人的公司如何在<span class="num">2025</span>年掀起了一场关于通用<span class="english">Agent</span>的全球风暴。他的语气是轻松的，甚至带着一种"反正我的人生夙愿已经完成"的坦荡。然而就在节目发布前的凌晨，<span class="english">Meta</span>宣布全资收购<span class="english">Manus</span>。于是，这场录制于月初的访谈，意外地成为了<span class="english">Manus</span>作为独立公司最后的一份公开口述记录。</p>
+
+<p>季逸超不是一个典型的<span class="english">AI</span>创业者。他的起点不是顶尖<span class="english">PhD</span>、不是大厂<span class="english">Lab</span>，而是一个高二学生，在<span class="num">2009</span>年<span class="english">App Store</span>刚刚诞生的时候，用一款叫"猛犸浏览器"的第三方<span class="english">iOS</span>浏览器赚到了三十多万美金。那是中国第一代软件出海的草莽岁月。从那个浏览器出发，他误打误撞闯入了自然语言处理——因为想"预测用户的下一次点击"而开始研究<span class="english">NLP</span>。然后是一段让他"人生圆满"的七年创业，从零训练模型、手写搜索引擎、构建知识图谱，直到<span class="num">2019</span>年的某一天，他拿到了<span class="english">GPT-3</span>的早期访问权限——"我觉得天要塌了"。</p>
+
+<p>这是一个关于技术理想主义者如何在范式风暴中三次被碾碎、三次重新站立的故事。而在<span class="num">2025</span>年初，他和他"身心健康"的合伙人们做出了一款叫<span class="english">Manus</span>的产品——一款通用<span class="english">Agent</span>——它在一夜之间烧遍了全球科技圈，也烧出了无数争议。张小珺带着她一贯的冷静，从季逸超的少年时代开始追问，一路穿过浏览器项目的失败、邀请码的风波、"纯血派<span class="english">Agent</span>"的技术哲学、与<span class="english">ChatGPT</span>和大模型厂牌的竞合关系，直到那些深夜在共享办公室里"嚎叫"的亢奋时刻——以及一个创业者关于死亡、焦虑和"没有活着权利"的坦诚告白。</p>
+
+<div class="page-num">- 1 -</div>
+</div>
+
+<!-- ==================== PAGE 2: EARLY LIFE ==================== -->
+<div class="page">
+
+<p>季逸超的履历上写满了"例外"。四岁随家人去美国，二年级就回国。高中开始创业，大学辍学，又创业，又读完了研究生——这条路径放在任何一代中国创业者里都不算寻常。但他说，一切都要从他的家庭背景讲起。</p>
+
+<p>"我的父亲是北大物理系教授，就是传统意义上的科学家。然后我母亲算是老一辈中关村连续创业者。"季逸超说，"所以我从小就在两种不同的风格中一块儿去成长。我可能就在两者中取了一个中间点，就是所谓的科技创业者。"他说自己不是那种聪明孩子，学习也就一般，就是"比较喜欢自己瞎琢磨"。偏科。但他很幸运，很早就找到了自己喜欢做的事儿——那是<span class="num">2009</span>年，苹果推出<span class="english">iPhone</span>之后的第二年，<span class="english">App Store</span>出现了。</p>
+
+<p>"这对我是特别重要的一个转折点，"他说。"在<span class="english">App Store</span>之前，世界上很多人像我一样喜欢自己捣鼓软件或做东西，但是你其实缺乏一个很好的全球化变现的能力。对于高中生来说，如果你只是在瞎捣鼓一些课外的东西，这个东西其实是比较离经叛道的——你没有一个很好的第三方指标来证明你的这个爱好其实是有价值的。而<span class="english">App Store</span>当时的出现给了我一个契机，我可以向我的父母、同学乃至于老师证明，我瞎搞的这个东西是能产生经济价值的。"</p>
+
+<p>他做了中国第一代软件出海的尝试。那时候还在上高中，他开发了一款叫"猛犸浏览器"（<span class="english">Mammoth Browser</span>）的第三方<span class="english">iOS</span>浏览器，用的是最朴素的商业模式——"卖一份<span class="english">copy</span>就赚一份固定的销售额"。从第一个版本到最后，这款浏览器大概赚了三十多万美金。"对当时我觉得对于高二高三的学生来说，已经算是挺开心的一个事儿。"而且关键的是销售模式很清晰——不需要考虑应用内付款，也不需要提供增值模式，"只是非常老实地卖一份<span class="english">copy</span>，你给我一份钱"。维护成本很低。</p>
+
+<p>张小珺问他这段创业怎么结束的。季逸超说，其实没有一个明确的结束那一刻。"它是我创业的一个起点。"当时他只是一个学生、个人开发者，用最朴素的商业模式获得了一定的现金流。因为没有团队，他就在国内外的论坛上自己发帖做推广。"当时国内也没有很成熟的那种支付渠道。现在<span class="english">App</span>你可以用支付宝、微信，或者用信用卡去付款。但当时只能支持国际信用卡，中国国内基本没有什么付费的。"他于是做了一个很接地气的决定——在国内论坛上发布自己软件的破解版。"你没钱你就给我捧个人场。"而这样做着做着，资本界的关注就来了。</p>
+
+<div class="page-num">- 2 -</div>
+</div>
+
+<!-- ==================== PAGE 3: TRUE VENTURE CAPITAL ==================== -->
+<div class="page">
+
+<p>高二高三的时候，季逸超在中关村参加了一个创业活动，认识了真格基金。"当时徐老师问我，'小伙不错，你想创业吗？'"季逸超说。"我当然不想创业了，对吧？因为我既然有一个稳定的、可以边上学边躺着赚钱的现金流，那我何必要创业呢？"但他回家跟父母提了这件事。"他们就说，你是值得去好好考虑一下的。"</p>
+
+<p>那一瞬间，一个典型的创业者的纠结出现了——可以申请学校去上一个好的大学，走跟大多数人一样的路；但另一方面，<span class="english">App Store</span>给了他一个特别好的正反馈。"你只要创新也许就能有回报。当时想得比较天真——我好像做出一个好东西，自然就会有一个好的结果。"但他也渐渐意识到这不是常态。"我是很幸运地踩中了一个时代的机遇。我什么时候都能继续去读书，所以我现在优先考虑的应该是一个机会成本。"</p>
+
+<p>于是他拿了真格的<span class="english">Term Sheet</span>，决定大学先不上了，去创业。而他接受真格<span class="english">Offer</span>的原因，除了徐小平的盛情，还有一个"兑现至今"的承诺——"他们不管我干什么，我爱干嘛干嘛。"对一个学生来说，这是他能得到的最好的选择。他拉上了另外几个同学——比他大两届，已经被保送去北大了，但"又被我忽悠出来"。那时候他们已经意识到，按每份<span class="english">Copy</span>去赚钱的模式已经不<span class="english">Work</span>了。巨头们回过味儿来了。第三方<span class="english">iPhone</span>浏览器的市场上已经出现了很多不同的玩家。"这个东西一定会走向免费加增值的这条路。"</p>
+
+<p>但在最后的挣扎中，他们做了一件几乎决定了季逸超此后十年方向的事情。他们觉得既然要卖一款付费的浏览器，应该在功能上有比较大的跃进。当时还没有那么流畅的<span class="english">3G</span>移动互联网环境下，大家更多关注的是"弱网环境怎么办"。季逸超提出了一个大胆的想法——能不能预测用户的下一次点击，进行"预加载"（<span class="english">Preloading</span>）？"就是提前加载下一页的内容，让它的响应会更加的快。"张小珺听到这里追问了一句："就是机缘巧合让你进入了<span class="english">NLP</span>？"</p>
+
+<p>"对，"季逸超说，"机缘巧合之下让我进入了<span class="english">NLP</span>——<span class="english">Natural Language Processing</span>——自然语言处理。当然现在大家可能不太提这个词了，因为大模型已经把这一切给统一了。"那是<span class="num">2011</span>年左右。他因为这一个具体的产品需求，开始研究自然语言处理。"太早了。但是我觉得我很幸运——我感觉一直我在学习的东西都是因为具体需求在牵引，刚好就跟自己兴趣比较<span class="english">Aligned</span>。"那个浏览器的结束是什么？是他发现了更好玩的东西——自然语言处理。因为它的商业模式一直很单纯，卖一份<span class="english">Copy</span>，后来渐渐变成了没有人维护的状态。随着<span class="english">iOS</span>系统不断更新，兼容版本跟不上了，被从<span class="english">App Store</span>下架了。"这是一个自然死亡的过程。"</p>
+
+<div class="page-num">- 3 -</div>
+</div>
+
+<!-- ==================== PAGE 4: MAGGIE YEARS ==================== -->
+<div class="page">
+
+<p>"从<span class="num">2011</span>年做的事情，感觉和现在大家做的事情差不多，"张小珺说，语气里带着一丝感叹。季逸超否认了这种"先知"式的解读。"我觉得不能这么说。应该说大家在每一个阶段遇见的问题是类似的，但是你每一个阶段其实都未能解决未来大家再次遇到的时候的问题。比如说我们当时说的<span class="english">Long Context</span>，从<span class="num">512</span>个<span class="english">Token</span>到<span class="num">16K</span>——现在的<span class="english">Long Context</span>可能是指比如说<span class="num">200K</span>到<span class="num">2</span>个<span class="english">Million</span>。所以就是历史的话它会押韵，但肯定不会重复。"</p>
+
+<p>张小珺追问道："你们当时做这些的目标是什么？"这是一个季逸超想了很久的问题。"可能那个时候还是年轻。包括现在我看到很多跟那时候我一样的年轻创业者，大家的优点是非常遵循自己的本心——你喜欢什么事儿，你就先把这事做下去。如果你看中了一个技术问题，且这个技术问题真的别人没解决的话，那它往往会符合第一性原理——它是一个很重要的待解决的一个问题。"但他承认，切到产品侧，有几个错误很明显。他们低估了搜索引擎这件事本身的非技术壁垒——"很多的数据源跟谷歌已经形成了一种互利互惠的可循环的关系。以一个搅局者入场，你无法重复谷歌过去<span class="num">20</span>年来积累的数据源。"</p>
+
+<p>"早一步是先驱，早十步就是先烈。"季逸超自嘲道。"所以我当时我们就先烈了。但是特别爽。那是一个很多创业者梦寐以求的状态——我就想把我人生的夙愿给做完。"</p>
+
+<p>"夙愿是啥？"张小珺追问。</p>
+
+<p>"我想自己从头——基于一切都是自己写的方法、自己做的模型——去解决一个别人没有解决好的问题。"他的语气突然变得认真起来。"我们当时在最高置信度下的准确度能达到<span class="num">89%</span>点几，比谷歌的知识图谱还要高。同时我们不仅支持中文，还支持别的一些语言，包括反向写的阿拉伯语。当时这还是比较厉害的一个事儿。我们还自己去演练了向量搜索——现在可能也是常态了。"他讲到他在英特尔帮助下基于<span class="english">HSW</span>算法自己写了一套向量索引，搭建了整套系统。"就是——我把我这辈子想试的技术都以合理的方式花投资人的钱给搞定了。所以我觉得在那个项目做完的那一刻，我的人生已经圆满了你知道吗。所以再后来像包括现在做<span class="english">Manus</span>这些事儿，我心里已经没有什么那种'我要证明自己或者我要做什么才能死而无憾'——我早就无憾了。"</p>
+
+<div class="page-num">- 4 -</div>
+</div>
+
+<!-- ==================== PAGE 5: GPT-3 MOMENT ==================== -->
+<div class="page">
+
+<p>那段创业的终点，是<span class="num">2019</span>年的某一天，季逸超拿到了<span class="english">GPT-3</span>的早期访问权限（<span class="english">Early Access</span>）。"我觉得天要塌了。"他回忆道。为什么？因为他们当时选择的是最苦的一条路——一切做垂直整合。模型自己做，产品自己做。每一次产品迭代都要等底层模型完成。"那时候模型跟现在比简直非常小。但同样<span class="english">Evaluation</span>这事也很恶心——你的<span class="english">Inference</span>要自己去搞。我们当时迭代的周期基本是<span class="num">2</span>到<span class="num">3</span>周能有一个模型的迭代。但<span class="num">2</span>到<span class="num">3</span>周在当时的外部简直是巨变了。"</p>
+
+<p>拿到<span class="english">GPT-3</span>的时候，他做了一次测试，然后把同样的任务用<span class="english">GPT-3</span>随便写了一个<span class="english">Prompt</span>——"那时候大家也没有什么<span class="english">Prompt</span>的艺术，都胡写"——发现<span class="english">GPT-3</span>要跟他们自己从零训练的端到端模型"五五开"。"我当时就意识到一个问题——它虽然现在很贵，但是它是一个通解。"那时候在<span class="english">NLP</span>领域内，大家互相交流，泾渭分明——做信息抽取的、做机器翻译的、做客服系统的——各有一套。"但<span class="english">GPT-3</span>出来之后，它印证了一件事——好像我们做的不同的任务是能够大一统的。"其实之前谷歌的<span class="english">Flan-T5</span>已经有这个苗头了，但那时候大家还觉得"谷歌土豪太厉害了，做出一个很好的<span class="english">Demonstration</span>，但是垂直领域还得看我们"。"<span class="english">GPT-3</span>出来之后，就彻底把我们那条心给摁死了。"</p>
+
+<p>季逸超的第一反应不是沮丧，而是："赶紧卖掉公司。"他卖掉了。然后他去了一家公司上了一年半的班——"那段时间主要工作就是打榜。"他是那家公司内部类似<span class="english">Kaggle</span>的榜单系统中的常年第一名。"公司内部有一个激励方案很有趣——你赢得越多，你的奖品是更多的显卡。所以我当时一个人能存好几十张卡，一堆卡的资源闲置，我们就可以去捣鼓很多我想试的东西。"他说那段经历"特别开心"。</p>
+
+<p>但他在那段时间观察到了一件更重要的事。当<span class="english">ChatGPT</span>在<span class="num">2022</span>年底横空出世之后，他几乎跟所有大模型公司都聊过——海内外的。"没人能说服我就是这个东西到底该怎么办。因为我不太想再体验那种特别难受的状态。"那个状态的比喻他经常用——"每天醒了之后，你就感觉海水在上涨，但是你不知道会涨到什么程度。也许你第二天醒的时候就已经到鼻子这儿了，就很恐怖的一个感觉。"所以他的目光更多看向了基础设施层和应用层。</p>
+
+<p>"但是没人知道真正的<span class="english">AI</span>应用该长什么样。"</p>
+
+<div class="page-num">- 5 -</div>
+</div>
+
+<!-- ==================== PAGE 6: MEETING XIAO HONG ==================== -->
+<div class="page">
+
+<p>张小珺问到了他加入<span class="english">Manus</span>的过程。"你们从几月聊到几月份？"</p>
+
+<p>季逸超记得第一次跟肖弘在真格基金见面，前前后后聊了四个多月。他最终加入是在<span class="num">2024</span>年<span class="num">3</span>月。而肖弘说服他的方式，是极其精准的一句话："我知道你做过浏览器，你做过搜索引擎，你做过语言模型——你想不想在一个产品里把这三个事都重新做一遍？"</p>
+
+<p>"我觉得好，这个好像听起来还是挺吸引人的。"季逸超说。但让他下定决心的，不只是这句话，而是肖弘这个人。"他擅长所有我不擅长的东西。"季逸超说。他在上一段创业中交了一笔沉重的学费——他意识到自己根本不是做<span class="english">CEO</span>的那块料。"我既不喜欢商业化，我也很讨厌管人。"他觉得人太复杂了。"与其跟电脑打交道，我很喜欢跟电脑打交道，但我觉得人太复杂了。你的组织在随着变大的时候，复杂度是呈指数级增长的。我觉得我不是那块料。"</p>
+
+<p>张小珺追问："你看起来比肖弘要硬很多？"</p>
+
+<p>"不，其实我们公司除了张涛以外全是<span class="english">I</span>人。"季逸超笑着解释，"我是<span class="english">I</span>人。我只是开朗的内向。我在跟你聊具体的业务的时候，我能讲很多。但其实管人我不太行。"而且他还有一个"特别追求正道"的毛病。"正道就是——你有一个能够赚钱的方向和一个能够把一个特别有趣的技术走到底的方向，我毫不犹豫地油门踩死，往技术走。但是我知道这一定是错的。所以我需要有一个人能把我给管住，就是在我又想发癫的时候给我摁死。"</p>
+
+<p>张小珺敏锐地捕捉到了他对肖弘的评价：他在当今国内外<span class="english">AI</span>创始人一号位的整体版图里，有一个非常稀缺的特质。"他很正常——他身心健全，没有任何不良嗜好，没有任何极端的思想。"季逸超说。张小珺忍不住笑了："这不是一个正常的指标。""这已经很难得了，你知道吗？"他继续说道，"现在整个这个行业有很多人比较偏执。"然后他补了一句，带着明显自嘲的语气——"你没有乔布斯的命，却得了乔布斯的病。你能说你自己吗？"他指向了自己。</p>
+
+<p>"对，我经过惨痛的失败之后，我意识到这一点。但是他们还没有意识到。"他接着说道："小红身上最可贵的品质就是他特别正常。相信常识，相信团队。好多事情的判断他都会更加——可以说是数据驱动，也可以说是直觉驱动。他是一个真正的能把公司从一个阶段持续带到下一个阶段的人。而我可能如果自己从头做的话，我只会在我喜欢的那一个阶段很爽。"</p>
+
+<div class="page-num">- 6 -</div>
+</div>
+
+<!-- ==================== PAGE 7: WHY NOT MODEL COMPANY ==================== -->
+<div class="page">
+
+<p>季逸超没有选择做大模型。这是一个从第一天就<span class="english">Pass</span>掉的方向。原因很简单——<span class="english">PTSD</span>。不是大模型的<span class="english">PTSD</span>，是"做垂直整合"的<span class="english">PTSD</span>。他至今觉得当时的选择是对的，但是他不否认"沿途下蛋"理论的合理性。"我认为有一个时间信号问题。我现在的一个观点是——可能都不用太久，也许六个月之后，你不用再分所谓的模型公司跟应用公司。基本上每一家头部应用公司都有做模型的能力。"</p>
+
+<p>他提到了<span class="english">Cursor</span>。"这个事儿已经被<span class="english">Cursor</span>给跳出来了。之前大家还有一种秘而不谈、泾渭分明的状态。"但在他看来，做模型这件事影响最大的是初期的迭代速度。"上一次创业最惨痛的教训——你在不确定的时候开始做自下而上的迭代，你会被你的模型迭代所影响。"</p>
+
+<p>张小珺追问他，在这段纠结期，心态上的差别是什么。</p>
+
+<p>"我觉得这是量很大的一个变化。移动互联网时代喜欢艺术家，而且你能够很低成本地获得一批初始的用户。但<span class="english">AI</span>我觉得不是这样。你有模型带来的固定成本——你如果没有任何优化的话，你随着你用户量的增加，你的成本是线性提升的。所以这整个是对经营的操作能力的要求，比上一代移动互联网创业要高很多。"他说了一个很多人没有说出口的事实：移动互联网时代，你可以赌一把，搞一个大的，看用户是否跟你共振。但<span class="english">AI</span>更像制造业——有一个固定的成本在那里。</p>
+
+<p>张小珺问他有没有聊过的大模型公司让他觉得眼前一亮的。</p>
+
+<p>"大模型的话肯定都聊了。当时其实我比较喜欢两家——不是马后炮——应该三家。我比较喜欢千问、<span class="english">DeepSeek</span>和<span class="english">Kimi</span>。"他说千问做得非常扎实，是真正第一个上非常宽松的开源模型的公司，也让他看到了"大厂里头一群年轻人能干出来的事情"。<span class="english">Kimi</span>的话，他觉得"这个公司是比较有品位的——技术品位。大家常说品位，我觉得该怎么体现出来呢？品位可能体现在你的<span class="english">Evaluation</span>或者你内部的<span class="english">Benchmark</span>上。甚至我觉得这可能是所有<span class="english">AI</span>公司唯一的护城河。"</p>
+
+<p>而在他眼里，做模型的世界正在变得越来越残酷。"自从<span class="english">DeepSeek</span>出来之后，它让一个模型的保质期变短了特别多。训大模型最痛苦的是什么？如果说我以前的痛苦是来自于我要做垂直整合、我要快速迭代，现在变成了一种——如果你只做模型，你不是<span class="english">SOTA</span>就没有意义。但一个<span class="english">SOTA</span>模型的保质期其实只有<span class="num">1</span>到<span class="num">1</span>个半月。一种非常激烈的不进则退的状态。"</p>
+
+<div class="page-num">- 7 -</div>
+</div>
+
+<!-- ==================== PAGE 8: AI BROWSER PIVOT ==================== -->
+<div class="page">
+
+<p>季逸超加入之后，<span class="english">Manus</span>团队做的第一件事不是你后来听说的通用<span class="english">Agent</span>——而是一款<span class="english">AI</span>浏览器。这件事持续了将近半年，从<span class="num">2024</span>年<span class="num">4</span>月到<span class="num">9</span>月。</p>
+
+<p>"我们当时觉得好像我们做到底也只能渗透到不到<span class="num">1%</span>的<span class="english">Chrome</span>用户。因为插件真的是一个形态比较高阶的模式——好多普通用户甚至不知道<span class="english">Chrome</span>能装浏览器插件。"所以他们的第一直觉是：跳出插件，变成一款原生的<span class="english">AI</span>浏览器，同时做一些端侧模型的事情。"这里就埋了第一个很傻的坑——你拜托，你做的是一款浏览器。浏览器本身就是联网的，你为什么要追求一个离线端侧运行？"他回顾那段时间的想法时，语气里带着明显的"回头看真蠢"的坦诚。</p>
+
+<p>"用户其实大部分时候不会关注你到底是离线的还是怎样的，他们要的是最好的效果。而你在电脑上，即使只做苹果<span class="english">Silicon</span>芯片，你其实也就跑一个<span class="num">3B</span>左右的模型，就已经差不多是极限了。用户会拿你跟云端的旗舰模型去对比，你的效果一定会差一些。"</p>
+
+<p>第二个问题更本质——他们想实现让<span class="english">AI</span>接管用户的浏览器来完成自动化工作流，但体验非常奇怪。"你让<span class="english">AI</span>去帮你在一个网页上完成填表，当你滚了一下屏幕想要看看下面的东西，你就打破了<span class="english">Agent</span>的<span class="english">Observation</span>。然后<span class="english">Agent</span>可能会把这网页又拉回来。这个体验就很怪——你有一个特别聪明的实习生，但你好像非要把你跟这个实习生一起共用一个电脑。两个人在一起抢一个系统，而实际上我们现在用的所有操作系统和软件，本质上是为一个人同时使用设计的。"</p>
+
+<p>更让团队无法回答的是一个核心拷问：到底做了这样一款原生<span class="english">AI</span>浏览器之后，有什么是<span class="english">Chrome</span>加<span class="english">Monica</span>做不到的吗？"后来想想好像没有。然后我们就开始逐渐变得理智。"</p>
+
+<p>压垮骆驼的最后一根稻草，是<span class="english">Twitter</span>上的一条消息。有一天，他们看到很尊敬的美国创业公司<span class="english">The Browser Company</span>——它做的浏览器<span class="english">Arc</span>很受小众极客喜欢——的创始人<span class="english">Josh Miller</span>宣布"不做了，不做<span class="english">To C</span>了"。<span class="english">Josh</span>说："我做<span class="english">Arc</span>这么久，我甚至无法说服我的亲戚朋友从<span class="english">Chrome</span>换成<span class="english">Arc</span>。"</p>
+
+<p>"我们觉得好吧，他已经把我们心里的担忧白纸黑字都写出来了。"季逸超说。"这是我做的第二遍浏览器，我又得到了相同的结论。"</p>
+
+<div class="page-num">- 8 -</div>
+</div>
+
+<!-- ==================== PAGE 9: TWO WEEKS OF WANDERING ==================== -->
+<div class="page">
+
+<p>从放弃浏览器到<span class="english">Manus</span>的<span class="english">Idea</span>诞生，中间有一段"堪称无所事事"的两周半。季逸超说，那段时间不焦虑。</p>
+
+<p>"这就是为什么我们说有一款正向现金流的产品很重要。"他们还有<span class="english">Monica</span>——一款<span class="english">Chrome</span>插件形态的<span class="english">AI</span>产品。"当时<span class="english">Monica</span>已经有接近<span class="num">12</span>个<span class="english">Million</span>——<span class="num">1200</span>万美金的<span class="english">ARR</span>——而且它是一个盈利的产品。"正是因为有<span class="english">Monica</span>在持续造血，他们在放弃浏览器之后没有恐慌，而是进入了一种"当一群不太笨的人无所事事的时候，就会产生很多很好的想法"的状态。</p>
+
+<p>转折点又一次来自老天帮忙。那段时间，他们观察到已经有一些<span class="english">AI</span>产品受欢迎，"尤其是<span class="english">Coding</span>领域"。但有一件事让他们非常意外——公司里很多非工程师同事都在用<span class="english">Cursor</span>。</p>
+
+<p>"<span class="english">Cursor</span>的产品形态仍然是一个<span class="english">IDE</span>——集成式开发环境——是写代码的人才用的东西。我们发现比如说公司的运营同事，居然在用<span class="english">Cursor</span>写博客。数据分析同事在用<span class="english">Cursor</span>进行数据分析和可视化。"他们走到这些同事身后去观察。"很好玩，因为左边都是代码，右边是跟<span class="english">AI</span>聊天的窗口。很多这些同事他们不会写代码，他们根本不看左边的东西，他们就是在不断地跟<span class="english">AI</span>去交流，让他去把一个事情完成。<span class="english">AI</span>通过编程的方式，以编程或代码为媒介，去完成一些非编码任务。"</p>
+
+<p>这个观察让他们意识到一个根本性的东西：编程不是一个垂直能力——编程是一个通用能力。"它是解决通用任务的一个媒介。"</p>
+
+<p>然后他们开始推演。第一，<span class="english">Cursor</span>的形态对非工程师不是最优的：它不应该跑在用户的电脑上，而应该跑在云端——这样才能解放注意力，实现异步执行和并发。"你如果能让很多不同的任务在同时去跑的话，这才是真正成倍提升你的效率。"第二，代码应该作为一个工具而不是主要呈现。第三——也是最关键的——这个产品应该面向谁？"不是专业的工程师。专业工程师这个领域的卷度已经几乎饱和，它是一个绝对的主航道。所以我们应该面向的是<span class="english">Prosumer</span>——所有的脑力工作者，但你却不是程序员。"</p>
+
+<p>"很幸运的是，"季逸超说，"我们在浏览器中已经做了很多技术积累——对<span class="english">Chromium</span>内核非常了解，也做了整套<span class="english">Agentic</span>调度系统。对我们来说，把整体浏览器搬到云上这件事也没那么难。"</p>
+
+<div class="page-num">- 9 -</div>
+</div>
+
+<!-- ==================== PAGE 10: BIRTH OF MANUS ==================== -->
+<div class="page">
+
+<p>季逸超给这个内部项目起了个代码名——<span class="english">LBNB</span>。意思是"<span class="english">Browser and Browser in the Air</span>"——浏览器里运行的浏览器，并且跑在云上。从<span class="num">2024</span>年<span class="num">10</span>月正式开搞，到<span class="num">2025</span>年<span class="num">1</span>月中，产品基本做完了，只用了三个多月。</p>
+
+<p>但季逸超决定不马上发布。"当时我们能拿到的最好的模型是<span class="english">Claude 3.5 Sonnet V2</span>。它初步具备了一些<span class="english">Agentic</span>能力，但是它会有一些问题——首先缺乏真正的<span class="english">Reasoning</span>能力。我已经听到了一些<span class="english">Rumor</span>，他们应该在两个月后会有一次模型发布。我觉得我们最好能把发布的时间点跟下一次模型迭代对齐。这样产品发布的一瞬间能享受到最大的代际提升。"于是他决定再多花一个半月去打磨。</p>
+
+<p>张小珺问他："做出来的时候，哪个时刻让你觉得'这个一定会成'？"</p>
+
+<p>"是涛哥跑的第一个<span class="english">Case</span>。"季逸超的语气里有一种不加掩饰的兴奋。"他拿<span class="english">Manus</span>去找办公室——自己找资料、查地图、写程序，最后做出交互式网站，还提供一堆选项。我们觉得这个太酷了。后来一次次跑别的<span class="english">Case</span>，信心就越来越强。"</p>
+
+<p>那段时间他们办公室的状态是什么样的？</p>
+
+<p>"就很嗨。当时我们在北京的那个<span class="english">E-Park</span>——一个共享办公室，很小，工位只有六个。我们对周围的邻居都特别对不起，他们就经常听见有一个奇怪的办公室，突然发现'我操'，全都是我跟涛哥跟别的同事在嚎叫。"季逸超把那种状态形容为"完全不焦虑"。"那段时间发布后就开始焦虑了。"</p>
+
+<p>而<span class="english">Manus</span>这个名字的来源，季逸超说起来带着一种技术理想主义者特有的浪漫。"当时我们已经依稀有一个感觉——模型在解决的是智力。但是再强的智能你也不能把环境给内化掉。所以你一定是需要一个手来去触及到现实世界。否则你再强的思维，你只是一个理论物理学家，或者说甚至可以是一个缸中之脑。"他想到的是<span class="english">MIT</span>的校训——"<span class="english">Mens et Manus</span>"，拉丁语，翻译过来是"心与手"或"心手合一"。"别人都已经在心或者说心智这件事上做了很远的探索。而我们要做的其实是那个手。所以<span class="english">Manus</span>就是拉丁语的'手'的意思。"</p>
+
+<div class="page-num">- 10 -</div>
+</div>
+
+<!-- ==================== PAGE 11: LAUNCH & INVITE CODES ==================== -->
+<div class="page">
+
+<p><span class="num">2025</span>年<span class="num">3</span>月初，<span class="english">Manus</span>发布了。发布时间选的是晚上十点多——因为那是北美市场的早晨。然后，一场谁也没预料到的风暴开始了。</p>
+
+<p>邀请码机制是<span class="english">Manus</span>发布后最大的争议点。季逸超终于有机会在这个节目上做出正式回应。"我们其实很早就想去公开回应这个事儿，但我们觉得你瞎回应没意义。我们内部就说——你没做到<span class="num">1</span>亿美金<span class="english">ARR</span>，就不用答应这个事儿。现在我们可以回答了。"</p>
+
+<p>"邀请码这个东西是为所有人趟了一条很重要的河。"他开始解释。他们是在发布之前就决定用邀请码的——不是因为营销噱头，而是因为一个他们自己也震惊的事实。"我们在最后决定发布之前，跟所有的云厂商和推理供应商聊了之后，惊讶地发现——世界上能够在第二天立即到位的算力比想象中少太多了。"他举了一个具体的例子。"当时我们用<span class="english">Claude</span>。他们说你们千万别放开——你如果放开我们会挂。所以对我们来说，唯一的控量方法就是邀请码。"</p>
+
+<p>但即使有邀请码限制，发布当天的情况仍然超出了所有人的想象。"当时我们跟云厂商打电话，说我们现在需要加到多少<span class="english">TPM</span>。他们说'没问题，你们是要下个月还是下下个月要？'我们说'今天下午要。'"季逸超停顿了一下。"真的那段时间，他们从物理层面把卡插到机柜上给我们用。"</p>
+
+<p>张小珺追问："你们当时账上有多少钱？"</p>
+
+<p>"也没太多。但是当时一天烧几十万美金，我们觉得没关系——这个东西一定能挣，根本不慌。绝对没问题，使劲烧。"他紧接着解释了为什么<span class="num">2025</span>年初大家都低估了<span class="english">Agent</span>的<span class="english">Token</span>消耗量。<span class="english">Chatbot</span>的<span class="english">Token</span>消耗量是可以预测的——因为人参与频率太高，得人触发才有下一次行动。而<span class="english">Agent</span>首先会持续自我工作，而且它的上下文（<span class="english">Context</span>）是指增状态。"其实每一轮越来越大越来越大。"更重要的是，在<span class="english">Chatbot</span>场景下，<span class="english">Input</span>和<span class="english">Output</span>的比例大约是<span class="num">3</span>比<span class="num">1</span>。但在<span class="english">Agent</span>中，"<span class="english">Input</span>跟<span class="english">Output</span>的比例是<span class="num">100</span>比<span class="num">1</span>到<span class="num">1000</span>比<span class="num">1</span>——你可以说是几十倍甚至上百倍的<span class="english">Token</span>消耗量差距。"</p>
+
+<p>这就是为什么云厂商没有准备好。"当时没有一款真正的<span class="english">Agent</span>出来之前，云厂商没有准备好的。"</p>
+
+<div class="page-num">- 11 -</div>
+</div>
+
+<!-- ==================== PAGE 12: THE VIRAL STORM ==================== -->
+<div class="page">
+
+<p>张小珺把话题转向了那个让<span class="english">Manus</span>团队"觉得非常冤"的问题——<span class="english">Manus</span>在国内的突然爆火和被质疑过度营销。季逸超的态度在这段对话里达到了整场访谈中最激烈的程度。</p>
+
+<p>"我可以直接这么说。如果我们在<span class="num">3</span>月份发布的时候——如果没有任何付费的宣传——我死全家。"他停了一下，语气平静下来，但每个字都很用力。"我们要做的是海外<span class="english">Prosumer</span>的市场。我们该做的应该是让那些真正我们要用的用户去用起来。如果我们在国内买自媒体，对我们来说没有任何好处。"</p>
+
+<p>他给出了两个解释。第一，"我们自己都觉得很酷的东西，我相信大家一定会觉得很酷。对他们来说这是一个内容，他们值得去写。"第二——他引用了张涛的话——"这是我们多年广结善缘的结果。"都不是第一次创业了，他们多年来一直积极无私地分享见解，上播客、写文章。"以前跟我们一起成长的很多小伙伴，也许成为了很厉害的投资人，也许成为了自媒体人。当他看见你的朋友在做一款产品的时候，你哪怕出于是朋友支持，愿意去写一下。所以我觉得大家把这个创业和媒体之间的关系想得有点太复杂了。整个市场好像挺单纯的——你做出一个好的东西，且刚好是朋友，大家就愿意帮你一下。"</p>
+
+<p>但国内的热度在起火一天之后就迅速降低了。季逸超说，这是他们在国内主动"灭火"的结果。"我们觉得如果把我们的东西过度曲解，对我们来说没有好处。我们只是一款<span class="english">AI</span>产品出海的应用，不要给我们赋予太多的东西。"</p>
+
+<p>而在海外，<span class="english">Manus</span>的走红链路完全不同。"基本隔了三天就开始自上而下火起来了。靠的是像<span class="english">Andreessen Horowitz</span>的合伙人、<span class="english">Patrick Collison</span>、<span class="english">Garry Tan</span>这些人先用起来，然后他们的影响力再去自上而下地影响。"</p>
+
+<p>张小珺问："那段时间你每天睡几个小时？"</p>
+
+<p>"从第一周到第二周，基本每天就是零散的，加起来睡三四个小时，都是间断性的。我们那个书架上摆的更多是补剂——营养品。"他说团队精神状态都很差，但真正的痛苦来自于颠倒黑白——要支撑全球各个时区的用户。武汉的团队飞过来，在楼上租了一个更大的办公室。"在线上工作不行，赶紧线下一起来来讨论方案。"他补了一句话，语气里带着一种苦涩的幽默，"那段时间跟投资人开会，我们都是站着开的。每天白天看见网上大多是骂我们的东西，跟投资人好好聊的时候得到正反馈——那是我们一天中最温暖的时候。"</p>
+
+<div class="page-num">- 12 -</div>
+</div>
+
+<!-- ==================== PAGE 13: BUSINESS METRICS ==================== -->
+<div class="page">
+
+<p>张小珺把话题切回了商业层面。"你们现在的<span class="english">ARR</span>是多少？"</p>
+
+<p>"已经超过<span class="num">1</span>亿美金。"季逸超说。然后他加了一个在他们内部被视为底线原则的补充。"我们非常看重这一点——我们非常抵制外部<span class="english">ARR</span>这个事儿。什么是<span class="english">ARR</span>？<span class="english">ARR</span>是<span class="english">MRR</span>乘以<span class="num">12</span>。<span class="english">MR</span>是什么东西？你不能把你一个月内获得的年付算在当月之内——你必须得除到每一个月。所以我们内部看<span class="english">ARR</span>或者<span class="english">MRR</span>，就一个口径——你看你<span class="english">Stripe</span>上面给的<span class="english">MR</span>数据以及你移动端的<span class="english">MR</span>数据。要不然你有太多种方法去把这个<span class="english">MR</span>数字造得很大，但这个就是你自己骗自己。"</p>
+
+<p>说到定价，季逸超坦率到了一种让张小珺有些意外的程度。"我们当时定价的逻辑特别简单——就是<span class="english">ChatGPT</span>好像是<span class="num">20</span>美金一个月。而且我们死活想不通，为什么是<span class="num">20</span>美金一个月。后来当时也跟别人聊了一下，他们觉得产品好，当时也是拍脑袋拍的。我们从<span class="num">20</span>跟<span class="num">40</span>开始呗，然后就延续至今。"他又补了一刀，"定价有什么逻辑？说实话，商业化能力其实还是比较有限的。我们的<span class="english">PR</span>或者说<span class="english">Marketing</span>能力其实也很差。"</p>
+
+<p>张小珺问到一个关键问题：你们是靠什么指标在运营这家公司？</p>
+
+<p>"营收，不是<span class="english">DAU</span>。"季逸超的回答斩钉截铁。"<span class="english">Manus</span>追求的从来不是<span class="english">DAU</span>。这是我们很早就想清楚的一件事——与其服务更多用户，不如把一个高价值用户的高价值<span class="english">Task</span>做到最好。我们经常有一个用户，能付我们几千美金。他不断有很多高价值任务要跑。"</p>
+
+<p>张小珺追问："这个创业逻辑跟互联网时代是不是完全不一样？"</p>
+
+<p>"完全不一样。"季逸超说出了两个核心原因。"第一，<span class="english">AI</span>不是一个平台变化——<span class="english">AI</span>是一个技术增量。传统强者的优势能惯性发挥。这不是说大家都在同一起跑线，而是强者恒强。第二，最根本的一点——边际成本问题。目前为止<span class="english">AI</span>还是更像制造业而不是互联网。这是非常关键的一个区别。互联网的边际成本趋近于零，但<span class="english">AI</span>每一个<span class="english">Task</span>都有<span class="english">Token</span>的固定消耗。所以你没有办法像互联网那样烧钱去抢用户。"</p>
+
+<p>"这个还挺理智的。"张小珺说。</p>
+
+<p>"对。不理智早死了。"</p>
+
+<div class="page-num">- 13 -</div>
+</div>
+
+<!-- ==================== PAGE 14: WHY GENERAL AGENT ==================== -->
+<div class="page">
+
+<p>在<span class="english">2025</span>年初那个时间点，做"通用<span class="english">Agent</span>"是一个反直觉的选择。按照传统的创业理念，"选中一个<span class="english">Niche Market</span>，扎进去做深"才是正道。但季逸超有几层思考。</p>
+
+<p>第一层是技术判断。"上一次创业我就经历了专有模型被大一统模型吃掉的体验。现在这套技术体系之下，即使你在做一个垂直的<span class="english">Agent</span>，背后用的无非还是通用模型。"而更底层的一个事实是：每一个<span class="english">Manus</span>会话背后都有一个单独隔离的虚拟机——沙盒。"这个东西学名叫图灵机——图灵完备。理论上它是能够去模拟或者运行任何算法的。"也就是说，底层的两个技术供给——通用模型和通用计算机——已经摆在那里了。"走垂直其实是在上面加约束。"</p>
+
+<p>第二层是产品策略。"我们一开始就没有做特别大的使用场景上的赌博，而是以一种类似于达尔文的心态在观察。我们给用户提供一套通用的技术架构，用户按他的想象力去使用，而我们通过观察用户的集体行为模式去捕获头部的场景，再做最后一公里的优化。"他举了一个例子：<span class="english">Manus</span>刚发布的时候，宣传页里的<span class="english">Case</span>天南海北什么类型都有。"我们不把用户先提前做一个引导，告诉他'你就用我做什么'。逐渐我们发现用户很喜欢做<span class="english">Slides</span>、做<span class="english">PPT</span>，很喜欢做网页，很喜欢做批量文件处理。然后我们的产品团队再去介入做定向优化。所以<span class="english">Manus</span>是一个完全由用户塑造的产品。"</p>
+
+<p>第三层是频次问题。"做一个垂直<span class="english">Agent</span>，你在用户心中建立心智比较难。比如说旅行规划——对于普通老百姓来说一年就两三次，频次太低。"而通用产品有更大的概率去服务用户的方方面面，获得更好的频次。最关键的是，"所有垂直于垂直场景之后，<span class="english">Manus</span>能再多加一步。"他举了一个非常具体的例子：<span class="english">Manus</span>可以同时完成深度研究（<span class="english">Deep Research</span>），基于研究去做网页，网页还有实际的后台和数据库，然后还能帮用户分析网页流量，做成<span class="english">PPT</span>，发邮件给潜在投资人——"且能产生一个内部的网络效应。"</p>
+
+<p>张小珺追问了一句："为什么你们要做一个通用的，而不是做一款<span class="english">Agent</span>的<span class="english">OS</span>？"</p>
+
+<p>季逸超第一反应是回避这个话题："首先作为一个有职业素养的程序员，我们会尽量回避<span class="english">OS</span>这个词。这是一个圣杯——我不配。"</p>
+
+<div class="page-num">- 14 -</div>
+</div>
+
+<!-- ==================== PAGE 15: PURE-BLOOD AGENT ==================== -->
+<div class="page">
+
+<p>张小珺问到了<span class="english">Manus</span>最核心的技术哲学——季逸超反复强调的"纯血派<span class="english">Agent</span>"到底是什么。</p>
+
+<p>"<span class="english">Agent</span>这个词的定义其实就是一个很含糊的事儿。"季逸超开始拆解。"大部分时候大家会把两个概念混在一起——一个叫<span class="english">Agentic Workflow</span>，一个叫<span class="english">Agent</span>。很多人说<span class="english">Agent</span>要追求稳定性的话，你可能更多是以一个<span class="english">Workflow</span>的方式去做。但在我们眼中这个不叫<span class="english">Agent</span>。我们认为什么叫纯血的<span class="english">Agent</span>？就是它没有人为加的约束，完成一个任务的所有过程和方式是由智能本身决定的。这个东西天花板会非常高。"</p>
+
+<p>这个理念在他日常工作中几乎每天都在面临抉择。"比如你要让一个<span class="english">Agent</span>做数据可视化工作。比较简单的产品驱动做法是写很多单独的<span class="english">Prompt</span>——当你要数据可视化的时候应该注意什么东西，写一大堆的<span class="english">Guardrail</span>。但是每增加一条约束，你都在减小模型的<span class="english">Diversity</span>。"</p>
+
+<p>而<span class="english">Manus</span>的做法是什么？"我们只不过加入了一条'查看图片'的能力。我们期望的是智能能够通过自己查看这张图，自己发现'原来有字体选择的错误导致中文渲染失败'，而去修改这张图。这样我解决的不是一个具体的问题——它还能检查到'不行，我画这个图表有两个元素重叠了'，然后去修复。你变成了一种——让智能的泛化性帮你解决更多你还没发现的问题。"他把这个思路总结为一句话："你应该站在模型的角度去思考问题，而不是把人因为生而为人的限制颁给<span class="english">Agent</span>。"</p>
+
+<p>他也直截了当地指出：市场上很多人做<span class="english">Agent</span>的方法是错的。"很多人过于执着于让<span class="english">Agent</span>模仿人类的分工——我的<span class="english">Multi-Agent</span>系统里要分为设计师、<span class="english">PM</span>、程序员。但这个其实不太对。为什么人类社会会有分工这个问题？是因为很可惜，我们每个人都不太全能，所以你在组织架构下必须要有这样的分工。但实际上模型比人更加全能。你应该充分利用模型的优势，而不要生搬硬套人带来的这套约束。"</p>
+
+<p>张小珺抓住了这句话背后的含义："所以把<span class="english">Agent</span>的人格化是一种人的自恋？"</p>
+
+<p>"是的。这也是<span class="english">The Bitter Lesson</span>——用通用的方法投入更大的算力去解决问题，而不是加入更多的人为知识。"</p>
+
+<div class="page-num">- 15 -</div>
+</div>
+
+<!-- ==================== PAGE 16: COMPETITION & COOPETITION ==================== -->
+<div class="page">
+
+<p>对于任何一家做通用<span class="english">Agent</span>的创业公司来说，最大的阴影始终是：如果大模型公司——尤其是<span class="english">OpenAI</span>——亲自下场做<span class="english">Agent</span>，你怎么办？</p>
+
+<p>季逸超没有回避这个问题。"<span class="english">OpenAI</span>的<span class="english">ChatGPT Agent</span>已经做了。但是明显效果不如<span class="english">Manus</span>。"他的解释分几层。第一，<span class="english">Manus</span>能用市面上所有最好的模型选择。"我能在不同场景下调用最适合的模型——<span class="english">Anthropic</span>在<span class="english">Coding</span>上是领先的，<span class="english">Gemini</span>在多模态领域是断层级别的强，<span class="english">OpenAI</span>在<span class="english">Reasoning</span>方面投入非常大。对我们来说，这是非常幸福的一个时间点。"</p>
+
+<p>第二层是用户心智。"<span class="english">ChatGPT Agent</span>仍然是<span class="english">ChatGPT</span>的一部分。<span class="english">Chatbot</span>的战争已经结束了。但是有<span class="english">Agent</span>需求的人，客观来说是少了一个量级的。我们服务的是一个相对<span class="english">ChatGPT</span>单价更高的用户群。"他做了一个清晰的层次划分——"对于那种快速问答或者低价任务，我自己也不用<span class="english">Manus</span>，我用<span class="english">ChatGPT</span>。我们会长期专注为真正有高价值需求的人提供他能找到的最好的<span class="english">AI</span>，而不是跟<span class="english">ChatGPT</span>去抢夺最广的底层用户群。"</p>
+
+<p>第三层是竞合的微妙性。季逸超说<span class="english">Manus</span>的<span class="english">Token</span>消耗量巨大——"我们在各个模型厂商基本应该都是<span class="english">Top 2</span>到<span class="english">Top 5</span>的消耗量。"因为有这么大的消耗量，他们有了巨大的影响力。他们直接跟模型厂商提需求，甚至帮他们构建<span class="english">Evaluation</span>。"我记得两个月前<span class="english">Gemini</span>新出了一个叫可控并行<span class="english">Function Calling</span>的功能——它的定义、<span class="english">Proposal</span>和它的实现，<span class="english">Spec</span>都是我写的。"他说他每天都在给模型公司"洗脑"，让他们改进<span class="english">Agent</span>工况下的表现。"比较幸运的是，因为我们影响力大，他们确实很积极地在改进这些。"</p>
+
+<p>"你教会了他们，他们可以反过来抄你们的产品。"张小珺追问，"但你们没有那么快能抄他们的模型。你们的壁垒是什么？"</p>
+
+<p>"就是快。"季逸超的回答非常直接。"他们的速度一旦是垂直整合，你一定没有我们快。产品方面的迭代还是太快了。所以刚好反过来了——应用公司做综合，模型公司做垂直整合。这很有趣，很反直觉。"</p>
+
+<div class="page-num">- 16 -</div>
+</div>
+
+<!-- ==================== PAGE 17: COEVOLUTION WITH MODELS ==================== -->
+<div class="page">
+
+<p>张小珺追问了一个更深层的问题——<span class="english">Manus</span>作为一款通用<span class="english">Agent</span>，对模型厂商到底有什么具体的需求？</p>
+
+<p>季逸超列出了几个关键方向。第一，不要让模型无限扩展上下文窗口（<span class="english">Context Window</span>）——"我现在有一个暴论：我觉得<span class="num">200K</span>以上的<span class="english">Long Context</span>就不重要了。因为比起更长的<span class="english">Context</span>，更重要的应该是让模型具备<span class="english">Compression Awareness</span>——对压缩这件事的意识。"他解释说，让模型知道什么时候自己上下文已经很长了，能把信息<span class="english">Offload</span>到文件系统中，把很多中间历史压缩成一个紧凑的表达。"就好比人的记忆很差，但人会知道这个东西可以整理成一个文档放在<span class="english">Notion</span>里，下次知道什么时候去拿回来。这个是需要专门训练的。而且现在的模型还没有被好好训练这一点。"</p>
+
+<p>第二，针对<span class="english">Reasoning</span>的优化目标要改变。"不要以纯缸中之脑的形式去做。你应该考虑到如何更好地结合<span class="english">Observation</span>——我把它叫<span class="english">TIR</span>——<span class="english">Tool-Integrated Reasoning</span>，有工具集成的推理。这个跟完全靠<span class="english">RLVR</span>去解竞赛编程和数学是完全不一样的思路。"</p>
+
+<p>第三，模型需要更好的"异步交互"能力。在<span class="english">Chatbot</span>场景下，永远是用户和模型交替执行——你等我、我等你。而<span class="english">Agent</span>在持续工作的过程中，用户可以随时插嘴——要么改变目标、要么补充信息、甚至去终结它。"这个很多模型还没有完全掌握。用户和<span class="english">Agent</span>可能是处于一个异步的空间中。"</p>
+
+<p>第四，也是他认为最关键的一点——<span class="english">Error Resilience</span>，错误处理和恢复能力。如果把<span class="english">Agent</span>部署在真实环境中，错误是常态。"现在大部分模型仍然是为<span class="english">Chatbot</span>场景而进行后训练的。模型会感受到一种无形的'上下文压力'——当你输入的<span class="english">Token</span>长度到一定范围之内，模型会倾向输出<span class="english">End of Sequence Token</span>——想尽快结束任务。这让模型在<span class="english">Agent</span>任务中非常着急。一个常见现象是，到后面开始疯狂用<span class="english">Bullet Point</span>写很短的总结。"</p>
+
+<p>"但比较开心的就是——好像全世界都在帮我们一起训模型，"季逸超笑着说，"我们却没有自己掏出很多钱砸进去。我们让用户使用了一个很好的产品，用户付了钱，我们为用户创造了价值。同时我们通过获得影响力来影响别人帮我们训练好的模型。这节省了很多我们内部的<span class="english">Research</span>的带宽。"</p>
+
+<div class="page-num">- 17 -</div>
+</div>
+
+<!-- ==================== PAGE 18: TEAM & ORGANIZATION ==================== -->
+<div class="page">
+
+<p>张小珺把话题转向了<span class="english">Manus</span>的公司内部。"你们现在大概多少人？"</p>
+
+<p>"差不多<span class="num">100</span>个人。"季逸超说。这个团队结构在传统互联网公司里几乎找不到对应的模板。大部分人是研发，但他们有两个很特别的团队：一个叫<span class="english">Sandbox Team</span>——负责虚拟化和运行环境，维护的是一套"给<span class="english">Agent</span>使用的操作系统"；另一个叫<span class="english">Agent Team</span>——由<span class="english">Agent</span>工程师、<span class="english">Evaluation</span>评估团队和一个很小的<span class="english">Research Team</span>组成。这两个团队在做的事情是传统意义上的广义后端研发不会接触的——"他们在做的事情不是面向人的，是面向模型的。"</p>
+
+<p>季逸超把<span class="english">Agent Team</span>的工作方法论概括为"弱到强衡量"。"你整个<span class="english">Agent</span>系统中有两个重要变量影响质量——一个是模型，一个是<span class="english">Agent</span>框架。你要做消融对比——把当前版本的<span class="english">Agent</span>框架锁死，选一个同源模型家族，拿弱版本和强版本跑同样的<span class="english">Benchmark</span>。然后你不断调整<span class="english">Agent</span>框架来让它们之间的<span class="english">Delta</span>最大。这样的话，当下一代模型变强时，你获得的增幅是最大的。这就是我们的<span class="english">Agent Team</span>要经常关注的。"</p>
+
+<p>张小珺想到了一个外界的疑问——很多人觉得<span class="english">Manus</span>只有季逸超一个研究员，这种配置跟不上全球<span class="english">Frontier Lab</span>的竞争。</p>
+
+<p>"不止我一个人，我们正常招<span class="english">Researcher</span>。"季逸超的回应很快。"但跟上所有<span class="english">Frontier Lab</span>这件事根本不成立——我们的目标不是要跟上所有<span class="english">Frontier Lab</span>在模型方面的工作。我们跟<span class="english">Frontier Lab</span>是共建关系。用功利的角度说——我们成功地把模型训练这件事外包了出去。用户给我们的钱服务了用户，让我们有影响力，让别人帮我们训模型。我们内部<span class="english">Research</span>团队更关注的是非共识性的东西——<span class="english">Context Engineering</span>方面需要做大量实验，这不是纯靠工程能解决的事。"</p>
+
+<p>在问到团队决策机制时，季逸超画出了一个细致的框架。"目标设定（<span class="english">Goal</span>）是专制的——<span class="english">CEO</span>肖弘拍板，定死方向；优先级（<span class="english">Priority</span>）是专制加民主——有人拍板但大家充分发挥意见；方案选项（<span class="english">Alternative</span>）是完全民主的——可选方案的数量甚至比质量更重要。"</p>
+
+<div class="page-num">- 18 -</div>
+</div>
+
+<!-- ==================== PAGE 19: ANXIETY & REALITY ==================== -->
+<div class="page">
+
+<p>张小珺开始转向一个更私人的维度。"你在这一年的起伏里，焦虑的是什么？"</p>
+
+<p>季逸超把不同阶段的焦虑分很清楚。<span class="num">2024</span>年<span class="num">9</span>到<span class="num">10</span>月——在<span class="english">Manus</span>做完到发布前的这段时间——是没有任何焦虑的。"很快乐。我们知道它一定会火。极有信心。"但发布之后就开始了。"发布后每一个时期的焦虑都不一样。"</p>
+
+<p>张小珺问他火了以后飘过没有。<span class="english">Manus</span>的火不是后来<span class="num">1.5</span>版本的那种从<span class="num">60</span>分到<span class="num">90</span>分的稳健成长，而是一夜之间从零到沸点的核爆——争议、攻击、赞美、质疑一起涌来。季逸超的反应出人意料地冷静。</p>
+
+<p>"不会。因为我们其实每天收到的负面反馈会比正面反馈更多。"他停了一下，语气里有一种老兵的那种沧桑。"那会很悲伤吗？也不会。因为我们都是老灯——中等型连续创业者。有点心里憋着一口气。为什么现在我们可以站出来说这事儿？就是我们之前觉得说什么也没用，你还是得打铁需要自身硬。"</p>
+
+<p>他对<span class="english">Manus</span>被骂给出了一些非常具体的解释。其中一个让张小珺也感到惊讶——"很多国内用户骂我们的根本原因是你用的根本不是<span class="english">Manus</span>。我要非常郑重地强调一下——你在国区<span class="english">App Store</span>上搜到的所有<span class="english">Manus</span>都是假的，那都是来蹭我们的。"他说一部分被骂的原因，是你用的那个东西就是一个山寨品。</p>
+
+<p>张小珺问到了中国市场。"中国市场未来会好好做吗？"</p>
+
+<p>"这个比较难。"季逸超的回答依然坦诚。"我们之所以一开始就选择出海，原因非常简单——海外的用户对于生产力工具的付费意愿就是更强。而<span class="english">Agent</span>就真的是非常贵的一个东西。刚才讲<span class="english">Agent</span>有点像工业生产，而不是传统互联网那种边际为零的东西。我们要先保证自己能活下去，再去讨论这个事儿。"他说，目前他们在"活着的边缘"。</p>
+
+<p>最后他补了一句话，带着一种观察者式的认可："在<span class="english">Manus</span>出来之后，我看见了大量类似于<span class="english">Manus</span>的产品出现，很多也是国内团队去做的。我觉得这个挺好的。但真正的难点——你跟我们遇见的一样——就是你到底要补贴到什么时候？你如何把你的产品商业化跑通？这决定了能走多远。"</p>
+
+<div class="page-num">- 19 -</div>
+</div>
+
+<!-- ==================== PAGE 20: THE PEOPLE BEHIND ==================== -->
+<div class="page">
+
+<p>当张小珺问起肖弘这一年的变化时，季逸超的描述突然多了几分温度。</p>
+
+<p>"小红是比较符合预期的——情绪依然很稳定。但我觉得更多了解到的是，即使像他这样可能比我经验更丰富的连续创业者，在很多时候还是依然会有很多人性的脆弱。我们经常讲好像我们不在意或者怎么样，但其实有时候听到一些东西，大家心里还是觉得挺尖锐的。小红可能比我没有那么没心没肺——他很多时候还是比较容易受到这些事儿的影响。他会不开心，甚至就很着急。"</p>
+
+<p>"他反而情绪不稳定？"</p>
+
+<p>"不是不稳定——他的情绪是稳定，但他很容易低落。他不会像我刚讲那个艺术家那个问题。但是他也是比较容易受伤的，更感性一点。小红经常说一句话——'接下来一段时间我可能很抑郁，你们不用帮我。'但谁会真的放他不管呢？"</p>
+
+<p>张小珺问到了六位合伙人的分工。除了季逸超和肖弘，还有<span class="english">CPO</span>张涛——"他之前经历了豌豆荚、神策，后来光年之外。他现在是我们公司出差胜铁，经常要去全世界各地参加合作伙伴的活动。涛哥更多是给我们带回一些比较新的方向性内容。"<span class="english">CTO</span>潘潘和<span class="english">CMO</span>慧杰——"他们三个是<span class="english">Monica</span>的原始创始人。"还有负责公司运营和财务的<span class="english">COO</span>。六个人全是连续创业者。"基本上大家可能都扮演过不止一个岗位。这也是合作比较好的一个点。但与此同时你又很难能找到一些在自己领域做得非常深、却又能听得进去别人话的人。"</p>
+
+<p>他对自己在这个团队中的位置做了精准的自我诊断。"我非常不喜欢管人——人的复杂度比<span class="english">AI</span>还要高。随着人数增加，呈指数级增长的复杂网络。但程序你写得好，有足够好的设计模式，复杂性的增长是可控的。"他补充了一个很私人的理由——"我的体力其实挺差的。跟你聊的时候能聊得多，但如果我一天把更多时间花在管人上，每天我的有效输出就会变得少很多。与其弥补自己的短板，不如把这方面能力外包出去。"</p>
+
+<p>张小珺问了一个有趣的问题——产品和模型谁的话语权更大？</p>
+
+<p>"技术基本对很多事有一票否决权。比如产品可能会有一些非常诱人的快糙猛的做法——是否要放弃纯血<span class="english">Agent</span>的想法，采用一种比较快速的方式——这种情况无论是我还是技术都会站出来直接阻止。"但他说，<span class="english">Manus</span>团队非常反对投票。"投票这件事其实是在异化团队。如果不同人有不同观点，会为自己的观点服务。你看的应该是目标而不是投票的手段。大家目标一致的话，一定能达成共识。但我们期待肖弘来做一个最终的拍板。"</p>
+
+<div class="page-num">- 20 -</div>
+</div>
+
+<!-- ==================== PAGE 21: DATA FLYWHEEL ==================== -->
+<div class="page">
+
+<p>张小珺问到了一个被很多人认为<span class="english">Manus</span>最大的护城河——数据飞轮。</p>
+
+<p>季逸超先做了一个<span class="english">Chatbot</span>和<span class="english">Agent</span>场景下的对比。"如果你在用<span class="english">Chatbot</span>，当<span class="english">AI</span>输出了你不满意的东西，你的第一反应可能有两种——点重置键，让它重新输出一次；或者你去改原始的<span class="english">Prompt</span>。但在<span class="english">Agent</span>场景下，用户会教<span class="english">Agent</span>。比如说我让<span class="english">Manus</span>帮我去筛简历，筛选标准跟我不太一样，我就跟<span class="english">Manus</span>说——'你这不对，这个我喜欢的是这种，下次注意。'或者我发现<span class="english">Agent</span>做不对，我会帮它修——'你这个不对，我已经帮你把这个文件改成了正确的格式。'"</p>
+
+<p>这两种数据——用户的教学行为和修复行为——在<span class="english">Chatbot</span>时代是极其难以获取的。"当你有很大的用户量之后，能够做到一种基于集体反馈（<span class="english">Collective Feedback</span>）的自我进化。即使不碰模型，通过更多用户使用之后，我们能将更多通用的失败模式（<span class="english">Failure Pattern</span>）和用户共识变成系统原生的一部分。用的人越多，失败率越低，完成同样任务的轮次开销越小。这是第一种飞轮。"</p>
+
+<p>第二种飞轮是用户评分。"用户打一星到五星这个朴素的反馈，其实对<span class="english">Agent</span>来说非常重要。为什么？因为<span class="english">Agent</span>的自动化评估现在还是非常亟待改善的。即使你有一些自动可验证的<span class="english">Benchmark</span>，但真正上线之后，在这些方面表现好的架构和模型，用户的真实评分不一定高。因为用户关注的点跟你那些理想化的编程测试挺不一样的。"他举了一个非常具体的例子——"用户更关注的是你做的这个网站，长宽比是否超过了<span class="num">16</span>比<span class="num">9</span>，是否比较易用且好看。'什么叫网站好用且易用'——这东西你很难通过一个完全自动的评估模型去实现。我们非常依赖于用户给的直接反馈。"</p>
+
+<p><span class="english">Manus</span>有一个<span class="num">10</span>人左右的<span class="english">Evaluation</span>团队，加上产品团队中轮转的实习生和初级同事，总计十几个人专门负责评估——而且很多是主观评估。</p>
+
+<p>这些数据飞轮的结果是什么？季逸超指向了一个也许是被<span class="manual">Manus</span>最核心的秘密——"未来半年会看见更多的应用层公司在利用自己的数据飞轮，以模型的形式来体现出产品可以持续迭代。就像<span class="english">Cursor</span>可以在一个预训练基座之上开发出一个基本是<span class="english">Frontier Level</span>、但成本很低且专门适配自己的模型。"</p>
+
+<div class="page-num">- 21 -</div>
+</div>
+
+<!-- ==================== PAGE 22: ECOSYSTEM VISION ==================== -->
+<div class="page">
+
+<p>张小珺把话题拉回了<span class="english">Manus</span>作为通用<span class="english">Agent</span>在整个<span class="english">AI</span>生态中的位置。</p>
+
+<p>"你觉得<span class="english">Agent</span>最后的生态会是什么样的格局？"</p>
+
+<p>"垂直领域的<span class="english">Agent</span>最后应该是一个百花齐放的状态。尤其是<span class="english">To B</span>方面会多一些。"季逸超解释说，"美国市场现在大部分创业者在想一件事——我要做一家给另外一家创业公司使用的产品，并卖给另外一家公司。很多美国创业者已经失去了做<span class="english">To C</span>的勇气和心气。过去十年美国<span class="english">To B</span>确实更好——退出机制非常成熟，你可以卖公司，或者自己有一个稳定收入。"但他认为<span class="english">To C</span>的垂直<span class="english">Agent</span>也会有一个生态位，只是模式比较微妙。</p>
+
+<p>他分享了团队里一个同事的观察——这位同事之前做过一款被腾讯收购的剪辑软件。"做垂直<span class="english">To C</span>的应用很难的一种模式是——你要给剪辑师做一款更好的剪辑<span class="english">Agent</span>。这是非常难的。因为专业人士对这有极高的要求。你的工作流很复杂，但凡有一个环节没做好，对这个专业人士来说这个东西就是零分。你应该做一种什么样的<span class="english">Agent</span>呢？是做一个给非剪辑师用的、但是却有剪辑需求的人用的。"这句话影响了<span class="english">Manus</span>团队很深。"我们现在经常说——虽然我们做通用<span class="english">Agent</span>，它很像人，但我们从来不以替换人的思路来想这个事儿。因为如果你要给别人一种'我要替换人'的心智，所有人都会从一个风险控制的角度去想。你应该是一种提升人的思路——让你现在已经最高效的雇员获得这个工具后，产能提升。这是一个更良性且更现实的做法。"</p>
+
+<p>而对于做垂直<span class="english">Agent</span>的创业者，他的建议出奇地宽厚。"一个公司如果要做某一种垂直<span class="english">Agent</span>，他可能希望被<span class="english">Manus</span>调用——其实你不用为<span class="english">Manus</span>做任何优化。这是我们非常坚持的一点。现在赛博世界所有的这些基础设施——网站、<span class="english">API</span>——都是为人设计的。我们不能指望一夜之间世界就为<span class="english">Agent</span>做好了准备。应该不断让两侧相向而行。<span class="english">Manus</span>的选择是——如果有<span class="english">MCP</span>当然很好，但如果没有，<span class="english">Manus</span>可以自己学习<span class="english">API</span>文档来使用；如果连<span class="english">API</span>都没有，那总有个网页吧——<span class="english">Manus</span>会再次降级，通过浏览器去模拟人的方式去使用。不用为<span class="english">Manus</span>做适配，应该是我们去适配你。"</p>
+
+<div class="page-num">- 22 -</div>
+</div>
+
+<!-- ==================== PAGE 23: FEARS AND DOUBTS ==================== -->
+<div class="page">
+
+<p>张小珺看着眼前这个看起来非常乐观的人，问了一个让她自己也有点意外的问题："我刚刚听你讲，觉得你非常乐观。你心里的隐忧是什么？"</p>
+
+<p>季逸超沉默了极短的一瞬，然后说出了两件事。第一件是对外的。"我心中对<span class="english">Manus</span>最大的隐忧是——失去特色。"第二件是对内的。"从内看，我最害怕的是<span class="english">Manus</span>变得复杂。这是一种要克服很强吸引力的事情。你在产品增长的过程中，有一个很便捷的方式——做更多的功能。但我很相信<span class="english">GitHub</span>那句话——'<span class="english">Everything added dilutes everything else</span>'——你每增加一个东西都在稀释所有别的东西。我希望<span class="english">Manus</span>能一直保持这么克制走下去。但是你又不能因为保持克制而影响持续的增长。"</p>
+
+<p>张小珺接着问："你觉得<span class="english">Manus</span>会死于竞争吗？"</p>
+
+<p>"我觉得不会。或者说——其实死于竞争的时候，你产品已经到了一种非常好的状态。大家经常说我担心这个会不会断供、那个会不会怎么样——拜托，你能考虑被断供，产品已经是一个非常好的状态了。所以<span class="english">Manus</span>更大的可能性不是因为竞争而输掉，而是因为你失去了独有的价值。"他停了一下，然后修正了自己。"但也可以说是竞争——当你失去独有价值，用户走了。那有可能因为竞争而死掉。"</p>
+
+<p>张小珺追问他对于<span class="num">2026</span>年<span class="english">Agent</span>生态的预期。</p>
+
+<p>"<span class="english">Agent</span>已经爆发了。只不过大家可能没看到那种'一片勃勃生机'的感觉。我觉得<span class="english">Agent</span>现在处于的状态是——场景大家都在挖，但每一个场景可能都还差一口气。这口气是质量决定的，是完成度决定的——既有模型能力，也有对环境的适配、<span class="english">Context</span>如何获取，以及整个<span class="english">Ecosystem</span>需要共同进步。"他提到了一些具体的进展。"比如我们最近跟<span class="english">Stripe</span>就在做<span class="english">Agent</span>的支付。如果能有支付在其中，很多东西会变得更顺畅一点。"</p>
+
+<p>"<span class="num">2026</span>年<span class="english">Agent</span>会进一步爆发——我觉得一定是的。不一定是更多<span class="english">To C</span>的，应该是渗透到更大的人群。"他说<span class="english">Manus 1.5</span>发布之后，收到的最让他开心的反馈是——"用户说这个版本越过了生产力工具那条门槛。以前大家觉得<span class="english">Agent</span>是帮我提效，但不是主要生产要素。但现在很多用户真的在拿<span class="english">Manus 1.5</span>作为工作主力应用，帮他们产生收入。这就形成了一个更健康的飞轮。"</p>
+
+<div class="page-num">- 23 -</div>
+</div>
+
+<!-- ==================== PAGE 24: JUDGING THE FIELD ==================== -->
+<div class="page">
+
+<p>当张小珺让他评价一下全球<span class="english">AI</span>战场上各家模型公司时，季逸超的观察力展现了一个实战者的独到视角。</p>
+
+<p>关于<span class="english">OpenAI</span>：他"非常尊重他们的<span class="english">Bottom-Up</span>文化"。但是"接下来他们产品也会很重。买模型彩票这件事是不靠谱的。那又如何尊重一个<span class="english">Researcher</span>的研究自由？这是他们要搞清楚的一个点。也许他们可能分化成两个完成目标不同的公司也是有可能的。"</p>
+
+<p>关于<span class="english">Anthropic</span>：<span class="english">Dario Amodei</span>是他最佩服的技术型一把手。"<span class="english">Anthropic</span>的优化目标跟<span class="english">OpenAI</span>很不一样——它关注的是'高经济价值任务'。到底哪些东西能够产生足够的经济价值，它就优化什么，而不是以'我要加强<span class="english">Reasoning</span>'这样的研究课题作为引导。这和<span class="english">Manus</span>的关注点比较相像。而且<span class="english">Anthropic</span>有一个开发者社区内的根基——包括<span class="english">MCP</span>和<span class="english">Claude Skills</span>这些事都是他们在带节奏。"</p>
+
+<p>关于<span class="english">Google Gemini</span>："最大的一个给大家带来的正向信号就是强有力地证明了<span class="english">Pre-training</span>还是可以继续的。他们在多模态和数据方面的积累是<span class="english">Google</span>本身就非常强的一点。而且<span class="english">Google</span>还有自己的搜索引擎索引——这是跟别人相比持久的一个差异，别人难以通过技术去追上来。所以<span class="english">Google</span>可能在信息方面和多模态方面会持续领先。"</p>
+
+<p>关于<span class="english">xAI</span>：季逸超给了马斯克的思路一个很有意思的解读。"伊隆他已经十足地意识到<span class="english">Chatbot</span>这场战争已经结束了。他更赌的一个东西是<span class="english">Pixel to Pixel</span>——现在我们所看到的一切，任何模态都应该统一成像素输入和输出。他相信一切软件或者文本都是以像素形式呈现在用户眼前的——按他的第一性原理，他应该是直接生成一切。"</p>
+
+<p>关于那些出走<span class="english">OpenAI</span>的顶级科学家们——他点评了田渊栋的"<span class="english">Latent Reasoning</span>"方向。"你基于<span class="english">Logits</span>进行一次随机采样，预测一个<span class="english">Token</span>再继续走下去。而<span class="english">Latent Reasoning</span>没有进行这一次采样，某种意义上来说没有塌缩，可以在一个近乎于平行的维度内同时考虑多种可能性。我觉得它的<span class="english">Reasoning</span>效率是更高的。"对于<span class="english">Ilya Sutskever</span>的新公司<span class="english">Thinking Machines Lab</span>，他的评价则更谨慎："目前太神秘了，我不敢说什么。"</p>
+
+<div class="page-num">- 24 -</div>
+</div>
+
+<!-- ==================== PAGE 25: WHAT MAKES MANUS DIFFERENT ==================== -->
+<div class="page">
+
+<p>张小珺一直在追问同一个问题，换了好几个角度：<span class="english">Manus</span>到底为什么跟别人不一样？</p>
+
+<p>"我们其实一直比较贯彻的一点——我们不会为了成本或者速度去缩减<span class="english">Token</span>的消耗量。我们一定是以质量为先的。甚至我们以消耗更多的<span class="english">Token</span>为荣。涛哥有一个梦想——他想造一个<span class="num">7</span>乘<span class="num">24</span>小时烧<span class="english">Token</span>的机器。"这是产品理念上的不同。</p>
+
+<p>然后他讲了一个更具体的例子——关于他们的网站生成能力。这个功能只开发了不到一个月，但效果已经是<span class="english">SOTA</span>。"这就是因为我们在一套统一的<span class="english">Agent</span>架构之上长出来的最后一公里。"他说，<span class="english">Manus</span>永远是一个"不断优化头部场景，且保持很强长尾能力"的系统。他们不会单独做一款产品叫"<span class="english">Manus Slide</span>"或"<span class="english">Manus Website Builder</span>"——所有能力都在同一个统一架构之下。</p>
+
+<p>张小珺问他，<span class="english">Manus</span>和垂直领域的<span class="english">Agent</span>——比如设计类<span class="english">Agent Lovable</span>——的长期关系是什么？</p>
+
+<p>"<span class="english">Lovable</span>一定会越做越专业。<span class="english">Manus</span>可能有一定设计能力，但<span class="english">Lovable</span>是给设计师用的，<span class="english">Manus</span>是给有设计需求的非设计师用的。而且同时存在另外一种关系——就是我刚才讲的<span class="english">Connector</span>或者<span class="english">Integration</span>。你如果是一个设计师，你的工作每天也不是百分百都在设计。你需要在<span class="english">Slack</span>上跟同事讨论需求，需要基于产品需求去做出设计。你可以让<span class="english">Manus</span>帮你盯着<span class="english">Slack</span>，然后用<span class="english">Lovable</span>去完成设计工作。所以<span class="english">Manus</span>跟所有人，都不是竞争的关系——我们是一个网络中的节点。但很多时候价值其实不是在网络节点，而是在网络的边上。"</p>
+
+<p>这个"网络中的节点"的表述后来在整场访谈中反复出现，几乎构成了季逸超对<span class="english">Manus</span>生态位最核心的认知——"与其跟每一个去做一个比不过别人的东西，你为什么不让大家一起去做呢？我们获得了很大的一个从<span class="english">Monica</span>学到的经验——如果你要做很多单独的<span class="english">Feature</span>，做起来一时爽，但是你要维护它并保证这个功能长期有竞争力，是很累的。这可能导致团队无限膨胀。应该充分利用别人做好的东西，产生一个<span class="english">Synergy</span>，而不是去跟别人硬碰硬。"</p>
+
+<div class="page-num">- 25 -</div>
+</div>
+
+<!-- ==================== PAGE 26: THE ROAD AHEAD ==================== -->
+<div class="page">
+
+<p>张小珺问了季逸超一个他想了很久的问题——"长期来看，理想状态的<span class="english">Manus</span>应该是什么样的？"</p>
+
+<p>季逸超没有直接描绘一个宏大远景。他把焦距调到了"三个月后"——对于创业公司来说，这是他能看到的极限。"我们接下来会比较投入的方向是——<span class="english">Proactiveness</span>，主动性。这个词是<span class="english">Agent</span>的本意——<span class="english">Agent</span>其实来自于<span class="english">Agency</span>，就是能动性、主动性。之前大家可能更关注的是一个结果的呈现，但现在又到了该关注<span class="english">Context</span>的问题。我们更关注的应该是如何让<span class="english">Agent</span>主动去完成更多的事。"</p>
+
+<p>他给了一个非常具体的场景。"比如说我们每天面试完人之后，需要用第三方<span class="english">SaaS</span>服务去写评价。我们面试的过程中用的是<span class="english">Notion</span>跟<span class="english">Granola</span>进行记录。有了这套新的主动性<span class="english">AI</span>——<span class="english">Manus</span>可以每天早晨在我醒来之前，先去自己看我的<span class="english">Notion</span>，帮我直接把记录填到<span class="english">HR</span>系统里，然后只让我确认接受与否。"</p>
+
+<p>张小珺问了一个也许是最深刻的问题——"<span class="english">Manus 1.5</span>中间有什么<span class="english">Insight</span>？"</p>
+
+<p>季逸超的回答回到了用户心理的层面。"通过一个新的版本号是最好的让用户理解有更新的方式。大家已经习惯了像基座模型以版本来断代——<span class="english">GPT-3</span>、<span class="english">GPT-4</span>——但实际上做<span class="english">Agent</span>或者做系统的时候，你的迭代更多是<span class="english">Feature</span>级别的。用户的实感可能没有那么强。所以<span class="english">Manus 1.5</span>它不是一个突变——它只是把过去一系列的东西以<span class="num">1.5</span>的形式打包了。但这个过程中用户就能直接体感到好像非常不一样。这是很好玩的一个发现——你得让用户意识到你有变化，用户才能真的感受到变化。"</p>
+
+<p>而对于一个最直接的追问——"<span class="english">Manus</span>未来会有多大？"——季逸超的答案和他的整个创业哲学一样，带着一种异质的清醒。"我不想用服务多少用户来说，而是想——对于每个用户，我们能为他产生多少的<span class="english">Agentic Hours</span>。一个高价值用户，他可能把<span class="english">Manus</span>的用量是普通用户的<span class="num">1000</span>倍。我们经常有一个用户，能付我们几千美金。所以我们追求的从来不是<span class="english">DAU</span>，而是把最有高要求的用户的高价值<span class="english">Task</span>做到最好。"</p>
+
+<div class="page-num">- 26 -</div>
+</div>
+
+<!-- ==================== PAGE 27: PESSIMISM & OPTIMISM ==================== -->
+<div class="page">
+
+<p>张小珺把话题带到了一个季逸超从来没公开讨论过的地方。"你对<span class="english">Manus</span>最乐观的预期和最悲观的预期分别是什么？"</p>
+
+<p>"悲观预期就是下个月死掉。这个是所有创业公司一样的悲观预期。我们没有权利活着——我们是在努力地获得一个活着的权利。"他停了一下。"最好的预期就是——我们希望让所有有高价值工作的白领，都能获得一个<span class="num">7</span>乘<span class="num">24</span>小时不断推理的<span class="english">AI</span>伙伴。"</p>
+
+<p>"如果<span class="english">Manus</span>下个月死了，你会去干嘛？"</p>
+
+<p>"我会歇一会儿。太累了。"他说现在的日常是——十点半到公司，晚上干到十点半往后。"这也是为什么我们选了一个在一家商场里的<span class="english">WeWork</span>——因为在商场里空调会一直开到十点。十点以后就没有空调了。所以大家待多久，主要看在没空调的情况下能待多久。"</p>
+
+<p>张小珺把话题延伸到整个<span class="english">AI</span>行业。"最近有很多人开始讨论<span class="english">AI Bubble</span>，你怎么看？"</p>
+
+<p>"<span class="english">AI Bubble</span>一定是客观存在的。但不是说因为<span class="english">AI</span>是泡沫，所以这波<span class="english">AI</span>就没用。你会有一些比如过度建设或者怎么样，但这都在可接受范围内——我们人类历史上干的比这个疯狂的事多得多。"</p>
+
+<p>他接着谈到了对<span class="english">AI</span>行业进展速度的一个判断。他说现在这个阶段"特别像<span class="num">2018</span>年"。"像当年<span class="english">Transformer</span>出来之后的那一阵疯狂，<span class="english">BERT</span>给大家带来了第一批应用的落地。但现在也暴露出了当前范式的一些瓶颈——<span class="english">Scaling</span>肯定还是有用的，但大家一直在期待一个下一次的阶段性的变化。而<span class="num">2019</span>年的<span class="english">GPT-3</span>可能是我心中那个跃迁的点。"</p>
+
+<p>关于<span class="english">Scaling Law</span>有没有停止，他的看法是分歧的。"狭义的<span class="english">Scaling Law</span>——你只关注<span class="english">Loss</span>曲线——肯定还是能降的。广义的<span class="english">Scaling Law</span>——固定投入多大算力，期待解锁多少新场景——这个东西是很难保证的。但是我们觉得，即使模型的能力没有解锁全新的使用场景，现有的很多场景你的质量也是不够的。而对于用户来说，质量往往可能更重要。"他说，当前<span class="english">Agent</span>最大的问题是"完成质量还需要提升，而不是有哪些需求没被满足"。</p>
+
+<div class="page-num">- 27 -</div>
+</div>
+
+<!-- ==================== PAGE 28: WORLDVIEW & PEOPLE ==================== -->
+<div class="page">
+
+<p>张小珺把问题从产业层面拉回了个人层面。"你过去一年对肖弘有什么新的认识？"</p>
+
+<p>"小红是比较符合预期的——情绪依然很稳定。但我更多了解的是，即使像他这样可能比我经验更丰富的连续创业者，在很多时候还是依然会有很多人性的脆弱。很多时候还是比较容易受到这些事儿的影响。他会不开心，甚至就很着急。我觉得这也就是团队在一起的好处——我们可以互相分担一下痛苦。"</p>
+
+<p>张小珺问到了新加坡。他们为什么会把团队放在新加坡？</p>
+
+<p>"我们团队可能因为管理能力比较差，之前在国内北京和武汉两地的时候，沟通成本就很高。我们首先希望是大家能在一个地方办公。但另一方面，既然要服务全球市场，就要做很多合规方面的工作——像现在<span class="english">Manus</span>是<span class="english">SOC 2 Type II</span>、<span class="english">ISO 27001</span>，还有<span class="english">GDPR</span>。你既然要服务哪个市场，就要选择一个合适的总部。"对于有人说他们"跑路了"，季逸超的回应是干脆的——"跑路这个词就不对。我们一直就有新加坡这个实体，而且我们一直在做的是全球市场。你的客户在哪就去哪。只不过可能因为不是第一次公司，大家获得了一些额外的关注。"</p>
+
+<p>"你觉得新加坡无聊吗？"</p>
+
+<p>"无聊。而且我认为这对创业公司来说是一个很大的加分项。"</p>
+
+<p>关于<span class="english">AI</span>时代的创业与互联网时代的区别，季逸超有一个让张小珺印象深刻的判断：两者最大的不同，是"今天的强者具有先发优势"。<span class="english">AI</span>不是平台级的变革，而是技术级的增量。<span class="english">AI</span>没有像当年<span class="english">App Store</span>那样创造一个众生平等的蛮荒期。"你看这回，无论是巨头还是创业公司，还是个人开发者，大家的反应都一样快，做的都非常干脆利索。所以我觉得我算是赶上了一个好时代。"这句话里的"好时代"，带着一种复杂的情感——既是对技术突破的兴奋，也是对"没有蛮荒期"的清醒。</p>
+
+<div class="page-num">- 28 -</div>
+</div>
+
+<!-- ==================== PAGE 29: ON NOT MANAGING ==================== -->
+<div class="page">
+
+<p>张小珺回到了季逸超反复提及的一个"缺陷"——他极度不喜欢管人。</p>
+
+<p>"人的复杂度比<span class="english">AI</span>还要高。人的复杂度随着人数增加，是呈指数级增长的复杂网络。但程序你写得好，有足够好的设计模式，复杂性的增长是可控的。"然后他补了一个很少说出口的私人原因，"我的体力其实挺差的。跟你聊的时候能聊得多，但如果一天把更多时间花在管人或者广义的非技术层面的事情上，每天我的有效输出就会少很多。我认清了一件事——与其弥补自己的短板，不如把这方面能力外包出去。自己做最擅长的事。要不然不值得。"</p>
+
+<p>这个回答让张小珺自然地追问到他对<span class="english">AI</span>时代的组织变革的思考。他的回答再次回到了<span class="english">AI</span>作为一种解放力量的本质。</p>
+
+<p>"<span class="english">AI</span>时代一定能帮人更好地做人。如果我们不喜欢的事儿都被<span class="english">AI</span>所取代，剩下的东西其实就是人自己。很多时候大家对<span class="english">AI</span>的恐惧——有点像当年纺织机被发明出来之后，大家担心纺织女工是不是都要下岗了。但实际上确实是很多人不再做纺织女工，但他们获得了全新的工作和全新的生活。甚至你也解放了很多东西。"</p>
+
+<p>他说出了可能是这场三小时访谈中最核心的认知——"现在大家对<span class="english">AI</span>的恐惧和怕被取代的核心恐惧，在于你<span class="english">AI</span>用得不够多。就像以前有了汽车，你能去更远的地方。十年前要学会用电脑才能找到更好的工作。现在——学会跟<span class="english">AI</span>共处之后，其实没有那么多的恐惧。反而给你解放了更多'人'的那一面。"</p>
+
+<p>张小珺问他对十年后的想象。季逸超说："我不敢想象。我们的视野只能有三个月的时间。"但他给出了三个月后的两个预测：第一，"大家在主动性上会有很大的进展——头一次让人跟<span class="english">AI</span>交互的时长变短，但是产出价值变高。"第二，"应该还能看见一次较大的成本降低。"</p>
+
+<p>最后，当被问及"基于你当下的认知，一个关键的重要事实是什么"时，季逸超的回答只有一个短句，却概括了他全部的技术哲学和创业信念——"<span class="english">Agent</span>阶段的进步需要用户。"</p>
+
+<div class="page-num">- 29 -</div>
+</div>
+
+<!-- ==================== PAGE 30: THE UNKNOWN ==================== -->
+<div class="page">
+
+<p>在访谈的最后一段，张小珺把问题引回了整个<span class="english">AI</span>战场的版图上。她提到了杨植麟（<span class="english">Kimi</span>创始人）和姚顺雨（<span class="english">DeepSeek</span>相关）上过她的播客，他们各自有一些观点。她试探性地问季逸超有什么认同和不认同的。</p>
+
+<p>"舜宇的观点我一般都比较认同。尤其他那句暴论——'以前都是小公司超大厂，现在是大厂超小公司，互相抄。'"季逸超说，然后自己加了一句——"虽然我觉得前半句本来也不一定是这样，本来就互相抄。但最近确实大公司抄小厂的事更多了。"</p>
+
+<p>而对于杨植麟的观点，他表达了唯一一个明确的不同意见。"他提到一嘴——如果不训模型的话，做<span class="english">Agent</span>是逆向工程。对这点我是完全不同意的。对我们来说不仅不是逆向工程，反而是在给别人带节奏。"</p>
+
+<p>张小珺追问了一句他们之间的根本分歧——"杨植麟是垂直整合派，你们是'逆向工程'吗？"</p>
+
+<p>"他们是整合。但我认为这个东西如果你从一个严格定义来说，你是无法整合进模型的。因为模型无法内化环境。"这句话，可能是整场访谈中技术哲学最核心的一次交锋。</p>
+
+<p>然后张小珺问了一个很多人好奇的问题——他见黄仁勋的时候问了什么。"我问了他一个灵魂问题——接下来一年你觉得什么事会让你感到意外？老黄说什么事都不会意外。"季逸超说。"我觉得这其实就像杨植麟之前说的那个——只要问题存在，问题一定能解决。这就是整体<span class="english">AI</span>圈的乐观观点的代表。"</p>
+
+<p>最后，在一个快问快答的环节里，季逸超聊到了自己。最喜欢的食物——"奶酪，垃圾食品。"一个少有人知但必须知道的知识点——"海带不是海鲜。因为海鲜过敏，我经常要跟大家解释海鲜不是动物。"推荐的必读书——"我平时读书特别少，我正在读线条小狗的画册。"心目中影响<span class="english">AI</span>进程的论文——他想了很久，避开了<span class="english">Transformer</span>，说了一个很少被提及的名字："<span class="english">Word2Vec</span>——<span class="num">2013</span>年谷歌的那篇<span class="english">Paper</span>。第一次能够把离散化的自然语言文本变成稠密向量。对我来说是我心中最石破天惊的一个转折点。它让我们能把源自其他机器学习和深度学习领域的方法应用在自然语言处理领域。新世界的大门就打开了。"</p>
+
+<div class="page-num">- 30 -</div>
+</div>
+
+<!-- ==================== PAGE 31: ENDING NOTE ==================== -->
+<div class="page">
+
+<p>访谈进行到尾声的时候，张小珺问了季逸超一个问题：<span class="english">AI</span>产品的网络效应到底是什么？</p>
+
+<p>季逸超给出了一个非常不一样的答案。"到目前为止，我没有看到任何一个真正的网络效应的<span class="english">AI</span>产品。为什么？因为所谓的网络效应——要么是'别人的产出进一步贡献'，要么是'完全由用户关系带来'——而<span class="english">AI</span>在这两个场景里都是附加值。<span class="english">AI</span>不会因为是<span class="english">AI</span>就进一步连接人。"</p>
+
+<p>但他话锋一转。"但'能力及原子能力的网络效应'是<span class="english">Manus</span>已经观察到的。"他举了一个例子——"最早我们给<span class="english">Manus</span>加入了看图的能力。一开始很简单，就希望<span class="english">Manus</span>能看看它生成的图好不好。后来我们发现，加了多模态输入能力之后，<span class="english">Manus</span>开始自己学会检查自己做的网页是否能跑得通。你增加一个基础能力的同时，能跟所有的通用<span class="english">Agent</span>水平里别的能力之间产生交互。这种我们可以叫'能力及原子能力的网络效应'——可以让<span class="english">Agent</span>的能力以指数形式提升。"</p>
+
+<p>而关于<span class="english">Agent</span>和<span class="english">Agent</span>之间的网络效应，"看怎么解读。比如说我们的广域搜索能力——一个<span class="english">Agent</span>可以调度很多别的<span class="english">Agent</span>，它们之间还能互相通信，共同完成一个单独的<span class="english">Agent</span>无法完成的任务。也有人在尝试让<span class="english">Agent</span>加入人的协作上下文——比如说<span class="english">Manus</span>跟<span class="english">Slack</span>打通。很多时候我们的讨论是不带着<span class="english">AI</span>的，但更多讨论是在人与人之间无形产生的。这块可能就是<span class="english">Agent</span>跟很多人之间的网络效应。但目前来看，这可能还是因为没有大家想象中那种爆发式的网络效应。"</p>
+
+<p>张小珺问了一个典型的战略投资者的问题：有没有可能通用<span class="english">Agent</span>成为唯一的入口？</p>
+
+<p>"可能不存在单一的<span class="english">AI</span>入口。"季逸超的回答像一个冷静的解剖师。"<span class="english">A16Z</span>有一个很好的调查——如果你手机上装有某一个软件，那么安装另外一个软件的概率的最大异常值是什么？你发现装了<span class="english">ChatGPT</span>、<span class="english">Claude</span>、<span class="english">DeepSeek</span>——所有这些用户的手机里，最大异常值全是<span class="english">Manus</span>。<span class="english">Manus</span>几乎是在跟所有这些<span class="english">Chatbot</span>并存的状态。我们的用户群——那些<span class="english">Prosumer</span>——会自己知道什么时候用什么产品。"</p>
+
+<div class="page-num">- 31 -</div>
+</div>
+
+<!-- ==================== PAGE 32: COPYRIGHT PAGE ==================== -->
+<div class="page" style="min-height:auto; text-align:center; padding:48px 40px;">
+  <div class="divider">· · ·</div>
+
+  <p style="text-indent:0; font-size:13px; color:#8b7355; line-height:2; margin-bottom:20px;">
+    本文基于《张小珺商业访谈录》第<span class="num">128</span>期播客整理<br>
+    <span class="english" style="font-size:12px;">录制于2025年12月1日 · 发布于2025年12月30日</span>
+  </p>
+
+  <p style="text-indent:0; font-size:13px; color:#6b5e4a; line-height:2.2;">
+    🎧 收听原播客<br>
+    <a href="https://www.xiaoyuzhoufm.com/episode/" style="color:#8b7355;">小宇宙</a>
+    &nbsp;·&nbsp;
+    <a href="https://podcasts.apple.com/" style="color:#8b7355;">Apple Podcasts</a>
+  </p>
+
+  <div style="width:30px; height:1px; background:#c4a87c; margin:22px auto;"></div>
+
+  <p style="text-indent:0; font-size:12px; color:#a09070; line-height:2;">
+    制作流程：通义听悟（语音转写）→ Hermes Agent（自动加工）<br>
+    Prompt 思路感谢：小红书博主 J在发光
+  </p>
+
+  <p style="text-indent:0; font-size:11px; color:#b0a090; line-height:2; margin-top:16px;">
+    仅供个人阅读 · 非商业用途<br>
+    内容版权归 张小珺商业访谈录 及 语言及世界工作室 所有
+  </p>
+</div>
+
+</body>
+</html>
