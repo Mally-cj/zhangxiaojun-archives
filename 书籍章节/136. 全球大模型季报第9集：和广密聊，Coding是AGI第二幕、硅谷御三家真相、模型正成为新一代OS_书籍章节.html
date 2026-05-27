@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代码即方案：Coding是AGI第二幕、硅谷御三家真相、模型正成为新一代OS</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #e8e0d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+}
+
+.page {
+  width: 680px;
+  min-height: 960px;
+  background: #fdfaf2;
+  margin-bottom: 30px;
+  padding: 80px 65px 60px 65px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  position: relative;
+  line-height: 2;
+  font-size: 15px;
+  color: #2c2416;
+  text-align: justify;
+}
+
+.page p {
+  text-indent: 2em;
+  margin-bottom: 0.6em;
+}
+
+.page p.no-indent {
+  text-indent: 0;
+}
+
+.page .chapter-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 60px;
+  margin-bottom: 36px;
+  text-indent: 0;
+  line-height: 1.6;
+}
+
+.page .meta-line {
+  text-align: center;
+  font-size: 13px;
+  color: #6b5e4a;
+  text-indent: 0;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.page .quote-block {
+  margin: 32px 0 40px 0;
+  padding: 20px 24px;
+  border-left: 3px solid #c4a87c;
+  font-size: 15px;
+  line-height: 2;
+  color: #4a3828;
+  font-style: italic;
+  text-indent: 0;
+}
+
+.page .quote-block p { text-indent: 0; margin-bottom: 0; }
+
+.page .podcast-ref {
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  text-indent: 0;
+  margin-top: 28px;
+  font-style: italic;
+}
+
+.page .page-num {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  letter-spacing: 0.05em;
+}
+
+.english, .num {
+  font-family: 'Baskerville', 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #c4a87c;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+}
+
+/* 手机 & 平板 */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 0;
+  }
+
+  .page {
+    width: calc(100% - 12px);
+    min-height: auto;
+    padding: 28px 18px 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.85;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  }
+
+  .page .chapter-title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .page .meta-line {
+    font-size: 11px;
+  }
+
+  .page .quote-block {
+    margin: 20px 0 28px;
+    padding: 14px 16px;
+    border-left-width: 2px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .page .podcast-ref {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .page .page-num {
+    bottom: 18px;
+    font-size: 11px;
+  }
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .page { box-shadow: none; margin: 0; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: CHAPTER OPENING ==================== -->
+<div class="page">
+<p class="chapter-title">代码即方案：<br/>Coding 是 AGI 第二幕、硅谷御三家真相、模型正成为新一代 OS</p>
+
+<p class="meta-line">核心关键词：<span class="english">Coding Agent</span> &nbsp;| &nbsp;AGI 第二幕 &nbsp;| &nbsp;模型操作系统</p>
+
+<p class="meta-line podcast-ref">原始播客：张小珺商业访谈录 第136期<br/>"全球大模型季报第9集：和广密聊，<span class="english">Coding</span> 是 <span class="english">AGI</span> 第二幕、硅谷御三家真相、模型正成为新一代 <span class="english">OS</span>"<br/>2026年5月27日</p>
+
+<div class="quote-block">
+<p>"你相不相信 code 可以表达数字世界的绝大多数任务？因为自然语言是对世界的描述，code 是对 solution 的描述——语言即世界，代码即方案。如果领先的模型公司不重视 coding，他大概率会掉出第一梯队的。"</p>
+<p style="text-align:right; margin-top:8px;">—— 广密</p>
+</div>
+
+<p>如果你在2023到2026年间持续追踪大模型的技术进步，你会见证一个很少被准确描述的转变：AI不再只是和你对话的聊天机器人——它开始干活了。2026年的第一个季度，这个转变的速度突然快到了令人窒息的程度。硅谷最前沿的AI研究员们已经基本不写代码了，他们像教授带着博士生一样，让AI去写、自己去审——甚至审的能力都不够了。一周消耗几千美金的<span class="english">token</span>，一个想法从萌芽到代码跑通从两三周变成了两三天，一个公司五十多个工作日发了七十多款新功能——这些事情在互联网时代是不可想象的。</p>
+
+<p>广密是这场变革中最敏锐的观察者之一。过去三年，他和主持人张小珺以季报的形式持续记录着大模型的技术进步和趋势走向。从2023年、2024年、2025年，很多季报里预言的内容都慢慢变成了现实。而在2026年的第一季度，过去一整年反复强调的"<span class="english">coding, coding, coding</span>"，终于像海啸一般席卷了整个行业。这期节目中，广密带着他在硅谷一线的体感和系统性思考，拆解了<span class="english">coding agent</span>如何将AI从聊天机器人的第一幕推向能干活、能加速AGI自身进化的第二幕，剖析了硅谷御三家——<span class="english">Anthropic</span>、<span class="english">OpenAI</span>和<span class="english">Google Gemini</span>——各自的战略、组织与文化真相，并提出了一个底层判断：最领先的模型，正在成为新一代的操作系统，成为全球<span class="english">GDP</span>的基础设施。</p>
+
+<p>但这一集的情绪远不止技术的亢奋。在激动人心的进步之外，广密坦诚地讨论了一个尖锐的问题：当智力与知识被压缩进了模型，当百分之七八十的白领工作可能在短期内被自动化，人类准备好了吗？社会的准备够吗？这期节目夹杂着对技术进步最狂热的信仰和对社会冲击最不安的忧虑——这种复杂性，恰恰是这个时代最真实的底色。</p>
+
+<div class="page-num">- 1 -</div>
+</div>
+
+<!-- ==================== PAGE 2: AI海啸的开端 ==================== -->
+<div class="page">
+
+<p>张小珺开场就坦率地承认了自己的一个情绪转变。她说，去年这个时候她其实有点担心大模型的技术进步曲线会放缓，2026年会不会有点无聊。但刚刚过去的第一季度，她的感受完全相反——很多人反馈已经有点跟不上了。</p>
+
+<p>"我觉得就一件事儿，"广密单刀直入。"过去一个季度最本质、最关键的一个转折点，就是<span class="english">Anthropic</span>的<span class="english">Opus 4.5</span>到<span class="english">4.6</span>这个模型的跨越。我觉得算是一个从<span class="english">GPT-3</span>到<span class="english">GPT-4</span>水平的、跨时代的提升。就是让我们从'<span class="english">chat</span>'问问题变成了真正的<span class="english">agent</span>模式。"</p>
+
+<p>"可以做高价值任务了。因为你做的任务的价值量提升了，所以它的价值就提升，<span class="english">usage</span>的提升。"他接着补充了一个非常重要的量化判断："我的体感是，过去一个季度模型水平进步的幅度，可能超过了2025年全年的进步幅度。"</p>
+
+<p>张小珺追问：现在的这个水平算不算是<span class="english">GPT-5</span>时刻？广密认为还没有，但他对接下来几个月给出了一个很高的预期。<span class="english">Anthropic</span>和<span class="english">OpenAI</span>两家的新模型——代号<span class="english">Missile</span>和<span class="english">Spart</span>——马上就要发布。"我觉得这两个是真正的<span class="english">GPT-5</span>的时刻。"他说此前<span class="english">OpenAI</span>的<span class="english">GPT-5</span>一直在跳票，<span class="english">Opus 4.5</span>、<span class="english">4.6</span>虽然有了那个意思，但也只是"半代"。而接下来的这两个模型，可能是真正意义上跨上<span class="english">GPT-5</span>的台阶。因为今天已经从"一个<span class="english">model</span>你可以跟它<span class="english">chat</span>、可以对话问问题、可以联网搜索"变成了"<span class="english">agentic</span>能力上来了，可以帮我们做复杂任务了，复杂任务的高价值就上来了"。</p>
+
+<p>他甚至给出了一个更激进的时间判断："有可能今天夏天六、七月份之前，可能还有一个<span class="english">GPT-3</span>到<span class="english">GPT-4</span>的跨越。即便说<span class="english">Anthropic</span>、<span class="english">OpenAI</span>新的<span class="english">Missile</span>和<span class="english">Spart</span>很强也好，但可能他们的下一代更强。因为下一代也已经开始了训练过程。"他的结论毫不含糊："过去一个季度的推背感非常强。我是感觉AI的奇点时刻应该已经到了。"</p>
+
+<div class="page-num">- 2 -</div>
+</div>
+
+<!-- ==================== PAGE 3: 硅谷一线的真实体感 ==================== -->
+<div class="page">
+
+<p>张小珺说，以前大家觉得AI还挺遥远的，但现在身边有些朋友已经觉得两年内AI肯定就实现了。她问广密能不能分享一些硅谷一线真实的<span class="english">case</span>，让大家感受到这种代际的跨越，描述得更有体感一点。</p>
+
+<p>广密拿出了几个具象的观察，每一个都能让人感受到那种"站在悬崖边"的眩晕。第一个是：前沿实验室的AI研究员们，包括很强的程序员们，基本上不写代码了。"去年可能一个系统当中还有七八成的代码是人写的，今年可能是小于1%的。大家日常的工作就像<span class="english">leader</span>或者教授带着学生和<span class="english">team member</span>去工作一样——就是AI来写，人来审。可能人来审的这个能力都不够了。"</p>
+
+<p>第二个观察更触目惊心：今天<span class="english">Claude Code</span>和<span class="english">Codex</span>在很多任务上，其实已经到了很多公司的<span class="english">CTO</span>或者首席架构师这个水平了——对标一个<span class="english">Meta</span>的<span class="english">L8</span>或<span class="english">L9</span>。"你开发一个<span class="english">feature</span>，可能两三次的迭代就跑通了。我们认识身边的人，基本上每天都消耗几百美金的<span class="english">token</span>，一周几千美金。这个量还是挺夸张的。"</p>
+
+<p>"以前一个想法到跑通代码可能两三个星期，现在可能一两天、两三天。所以<span class="english">coding</span>和<span class="english">agenting</span>变成了一个AGI加速最关键的一个要素之一了，可能仅次于<span class="english">GPU</span>本身了。"</p>
+
+<p>他接着抛出了一个更具备"质变"意味的信号。有朋友跟他说，最近很多AI研究上的突破不是人类工程师带来的，而是<span class="english">Codex</span>或者<span class="english">Claude</span>带来的。"这是一个更质变的信号。就是说AI今天可以显著地加速，而且带来一些突破了。你以前解一个很难的数学IMO的题，可能写半天，今天<span class="english">Codex</span>帮你解可能很快。你包括对其他领域的研究加速——做多模态的朋友说，他们以前做一个多模态的模型，整个数据迭代可能就一两个月，现在基本上几天或者一个星期。因为<span class="english">coding</span>加速后，你对多模态的研究加速也很大，整个数据处理的<span class="english">pipeline</span>提效挺快的。主要的变化就是模型处理数据的效率是比人要高的。"</p>
+
+<p>最后一个观察是公开的，但放在这个语境中异常震撼：<span class="english">Anthropic</span>过去五十多个工作日发了七十多款产品和功能——这在互联网时代根本做不到。"<span class="english">Coding</span>是过去一个季度最关键的关键词。它会让最顶尖的1%甚至千分之一的人，他的生产力放大了几十倍。"</p>
+
+<div class="page-num">- 3 -</div>
+</div>
+
+<!-- ==================== PAGE 4: Coding的爆发力超越ChatGPT ==================== -->
+<div class="page">
+
+<p>张小珺抓到了一个商业化的关键问题：<span class="english">coding</span>和<span class="english">agentic</span>带来的变化这么巨大，有没有给这几家公司在营收上带来显著的变化？</p>
+
+<p>广密的回答用一个非常震撼的数字对比开了场。"你看<span class="english">Anthropic</span>他们已经官宣说<span class="english">ARR</span>超过了<span class="english">OpenAI</span>。但更重要的是，他可能头上一两百万用户贡献的收入，超过了<span class="english">OpenAI</span>可能五六千万订阅的这些用户。"这个对比的杀伤力在于，它彻底颠覆了过去以<span class="english">DAU</span>和用户规模为核心的互联网评估逻辑。"今天我感觉更有意思的是，不再是只追求<span class="english">DAU</span>或者广告这个规模，而是追求<span class="english">token usage</span>这个指标。尤其是超级开发者或者塔尖的用户，这个感觉更重要。"</p>
+
+<p>"<span class="english">Coding</span>的爆发性，我感觉比<span class="english">ChatGPT</span>当年还要陡峭。"他紧接着给出了一个令整个人工智能投资圈都会深呼吸的数字——"如果这个势头下去，年底<span class="english">OpenAI</span>和<span class="english">Anthropic</span>他们的<span class="english">ARR</span>有可能就到800亿美金或者1000亿美金，那明年可能就奔着两千多亿美金去了。其实它们两个已经成为了新时代的<span class="english">Mag 7</span>这种公司了。"</p>
+
+<p>这个判断随后被他用一个历史坐标锚定得更牢。他说你看明年如果干到一个两千多亿美金的<span class="english">ARR</span>，给个十几倍的<span class="english">PS</span>好像也非常<span class="english">make sense</span>。而历史上几乎没有出现过两家公司齐头并进、这么短的时间内做到千亿美金营收的例子。"<span class="english">Coding</span>的<span class="english">run rate</span>在过去两三年就超过了<span class="english">Google Cloud</span>可能做了十七八年的一个规模。"他停了一下，加了一句："但<span class="english">Google</span>其实规模也很大，所以你看模型的<span class="english">revenue</span>增长是非常陡峭的。"</p>
+
+<p>张小珺于是把话题拉回到了对<span class="english">coding</span>理解本身的深化上。她说，去年一季度他们就在聊AGI的主线任务，广密当时就一直在说<span class="english">coding</span>。但她追问了一个很关键的问题：你觉得当时你对<span class="english">coding</span>的理解已经足够深刻了吗？今天有什么新的变化？</p>
+
+<div class="page-num">- 4 -</div>
+</div>
+
+<!-- ==================== PAGE 5: 语言即世界，代码即方案 ==================== -->
+<div class="page">
+
+<p>广密对这个问题的回答，拆解成了四个层层递进的维度。每一个维度都是他过去一年思考的浓缩。</p>
+
+<p>第一个观点，他给出的是一句他自己称之为"精辟总结"的话：语言即世界，代码即方案。他展开了这个逻辑。"你相不相信<span class="english">code</span>可以表达数字世界的绝大多数任务？因为自然语言是对世界的描述，<span class="english">code</span>是对<span class="english">solution</span>的描述。语言和代码是高度的浓缩抽象，而且覆盖范围非常广。如果这个假设成立——<span class="english">coding</span>做好了，是不是就可以把白领知识工作者的大部分任务都可以自动化了？就是今天我们在办公室电脑上操作的大部分工作任务，基本上都可以被自动化了。"</p>
+
+<p>第二个观点是他整个推演中最具杀伤力的一个。"如果领先的模型公司不重视<span class="english">coding</span>，他大概率会掉出第一梯队的。而且也不存在只给自己用的<span class="english">coding model</span>，因为你自家的任务数据分布是不够全的，肯定是落后的。"他接着画出了一条被很多人忽视的连锁反应链条。"如果你作为一个领先的模型公司，你过度依赖<span class="english">Anthropic</span>——一旦你做到第一梯队，对他有威胁了，<span class="english">Anthropic</span>大概率是给你断供的。你看<span class="english">OpenAI</span>被断供了，<span class="english">xAI</span>也被断供了，可能<span class="english">Google</span>大部分被断供了，可能<span class="english">somehow</span>哪一天<span class="english">Meta</span>也要被断供了。<span class="english">Coding</span>这个跟<span class="english">GPU</span>是一样的。"</p>
+
+<p>他的结论是把<span class="english">coding</span>提到了和历史上最重要的计算基础设施同一个级别的高度。"所以你看<span class="english">coding</span>它不只是一个行业，也不只是一个应用场景，也不只是一个产品——其实它反而变成了AI整个路线图中一个重要的加速器。你没有最领先的<span class="english">coding model</span>，就像是没有最领先的<span class="english">GPU</span>。你用<span class="english">A100</span>跟别人用<span class="english">GB</span>，这个差别是很大的。那还是要追求先进生产力，你不然你研发上就是很落后的。"</p>
+
+<p>第三个观点，他用了一个极其精准的商业类比。"<span class="english">Coding</span>就很像亚马逊当年卖书一样。你借助卖书把所有的仓储、物流、用户、供应链都拉通了，然后你再横向<span class="english">skill</span>其他的<span class="english">SKU</span>，这样就很容易。从长期来看，<span class="english">coding</span>又只是整个AGI实现后可能很小的一部分。因为AGI自动化了全球大部分的<span class="english">GDP</span>，<span class="english">coding</span>其实更多还是在整个AGI实现中起到一个加速和打样的意义。"</p>
+
+<div class="page-num">- 5 -</div>
+</div>
+
+<!-- ==================== PAGE 6: Coding在AGI历史中的位置 ==================== -->
+<div class="page">
+
+<p>广密接着解释了为什么<span class="english">coding</span>最先跑出来。他的答案一如既往的简洁："因为反馈闭环最短，就是整个所谓的<span class="english">feedback loop</span>最清晰。其实你看过去几年AI跑的最快的地方，都是<span class="english">feedback loop</span>最清晰的。"</p>
+
+<p>第四个观点是他这次访谈中最核心的框架性判断——关于<span class="english">coding</span>在整个AGI历史进程中的位置。他画了一条三幕路线图。</p>
+
+<p>"第一幕我们看到的是<span class="english">chatbot</span>——<span class="english">ChatGPT</span>模型可以对话了，也可以联网搜索了，但其实整个商业价值还是有限的。第二幕今天走到了<span class="english">coding agent</span>——<span class="english">agent</span>帮我们直接完成任务，本质是能帮我们干活了，进而还可以加速整个AGI或者说<span class="english">coding</span>实现了。有可能AGI的90%已经实现了。我觉得好像也不用什么范式创新，就可以把大多数的知识工作者的任务自动化了。"</p>
+
+<p>第三步的图景更宏大——自动化的AI研究员。"这也是<span class="english">OpenAI</span>可能最想做的。每个人可能都有一个强大的研究助理，你让研究助理去解决各种各样的问题。那时候可能会去解决基础科学的问题，比如说脑科学、神经科学、材料学。"</p>
+
+<p>他用一个登山比喻做了收束。"所以我们画一个AGI的路线图，就像爬一座科学的高山。但每个<span class="english">AI lab</span>可能有自己的路线图。今天我们处在什么样的位置？<span class="english">Coding</span>又处在什么样的位置？有可能今天还只是整个科学的高山攀登的开始。"</p>
+
+<p>张小珺听完很有感触。她说去年广密说<span class="english">coding</span>的时候，很多人可能会觉得<span class="english">coding</span>还只是一个垂直场景的事情，没有意识到它能带来这么强的泛化性。广密的回应再次回到了那句精辟的总结："语言即世界，代码即方案。因为只有这两个，它的泛化性是充分被证明了的。其他领域的泛化性还没有被充分证明。你比如说我想通过数学来提升智能能力可能可以，但是数学能表达的东西太有限了。"</p>
+
+<div class="page-num">- 6 -</div>
+</div>
+
+<!-- ==================== PAGE 7: 为什么有人没有All In Coding ==================== -->
+<div class="page">
+
+<p>张小珺追问了一个在行业看似显而易见、实则极其复杂的问题：既然所有人都已经意识到<span class="english">coding</span>非常重要，为什么有些公司没有<span class="english">all in</span>资源去做？</p>
+
+<p>"我知道的好几个<span class="english">AI lab</span>好像都把<span class="english">coding</span>放到了最高优先级，但基本上也是过去1到3个月的事情。"广密说。他紧接着提出了一套他称之为"难度系数打分"的评估框架。"你发现实际做好好像也没有那么容易。所以我觉得大家心里可以打个分——做好<span class="english">coding</span>的难度系数1到10分，你到底打几分？如果低于4分，那大家每家都能做好，非常卷；如果高于8分、9分，那有可能领先的<span class="english">SOTA</span>可能会一家独大，大概率会继续领先。其实你也没有其他什么理由能继续超过他。"</p>
+
+<p>张小珺顺势问：做好<span class="english">coding</span>的难点到底在哪里？最头部的三件事是什么？</p>
+
+<p>"最重要的可能就两件事——一个是组织和文化，第二个是数据。"广密说，他认识的很多研究员朋友都认为<span class="english">coding</span>最重要的是数据这个壁垒。但问题在于，"你觉得哪一个<span class="english">AI lab</span>能组织好最聪明、非常有想法的几百个人就<span class="english">all in</span>搞<span class="english">coding</span>一个事儿？因为这里面有很多脏活、很多苦活，就是搞数据的活。每个<span class="english">lab</span>里头最聪明的人都想做自己的一些<span class="english">bet</span>，搞自己的实验，搞一些新的突破，0到1——都想成为伊隆。我觉得这个可能是一个问题的根本。"</p>
+
+<p>在这个背景下，<span class="english">Anthropic</span>的差异化显得格外突出。"<span class="english">Anthropic</span>可能不一样的点就是说，他们的这几个<span class="english">founder</span>可能一开始就意识到数据可能是所有问题的根本，叫模型即应用、数据集模型。所以我感觉他们重视数据可能是刻在骨子里的。"他透露了一个<span class="english">rumor</span>：<span class="english">Anthropic</span>的首席科学家<span class="english">Jared Kaplan</span>亲自带着团队过数据。"这个好像是比较少见的。"</p>
+
+<p>张小珺问他：除了<span class="english">Anthropic</span>，其他团队为什么没有专注地去做<span class="english">coding</span>？广密没有回避任何一家的战略失误。"每家都有自己的战略优先级的选择，包括过去的一些思维上的包袱。你看现在有两条AGI的路线——第一条是追求C端的流量，<span class="english">ChatGPT</span>、<span class="english">Gemini</span>、豆包；第二条是追求高价值的任务，<span class="english">Anthropic</span>比较领先。那就看你想要哪个。有可能过去半年<span class="english">Google</span>和<span class="english">OpenAI</span>是在争<span class="english">to C</span>的，其实对<span class="english">coding</span>也有很大的战略误判，严重低估了<span class="english">coding</span>的重要性和优先级。"</p>
+
+<div class="page-num">- 7 -</div>
+</div>
+
+<!-- ==================== PAGE 8: 战略选择的代价 ==================== -->
+<div class="page">
+
+<p>"<span class="english">Anthropic</span>也许是被迫只能选<span class="english">coding</span>了，"广密坦诚地说，"因为C端窗口它错过了。其实你说C端重要吗？有可能也重要。可能C端未来也是会覆盖掉高价值任务的。其实你看2025年是C端窗口很关键的一年，很多模型公司都已经错过了C端的窗口了。<span class="english">ChatGPT</span>和<span class="english">Google</span>忙着抢C端的这个窗口，才错过了<span class="english">coding</span>这个窗口。"</p>
+
+<p>"资源精力是有限的，你今天资源也很有限，你到底是搞C端还是搞<span class="english">coding</span>？可能就是要放弃一些东西的。我觉得更多是战略选择——你到底优化一个什么样的目标，到底要什么？这个可能是更关键的。"</p>
+
+<p>张小珺于是抛出了她一贯的追问风格：这第一条路（C端窗口）和第二条路（高价值任务），未来会融合吗？</p>
+
+<p>"我觉得融合的概率是非常大的。包括<span class="english">ChatGPT</span>后面会把<span class="english">chat</span>跟<span class="english">agent</span>、<span class="english">code</span>这些东西都融合起来。<span class="english">All in one</span>一个平台本身是对的。"广密没有止步于这个统一的判断。他抛出了一种更极端的、他自己也称之为"开放答案"的可能性。"但是有可能存在另外一种情况——有的人只做塔尖的用户。塔尖的用户就像量化一样，就是只有极少数的人，可能一两百万人贡献了很大的<span class="english">usage</span>。我也不知道未来C端的<span class="english">DAU</span>还有没有意义。有可能有意义，但有可能那个塔尖用户的<span class="english">token usage</span>可能更有意义。"</p>
+
+<p>张小珺敏锐地抓到了一个反论：C端的用户不也是数据的一种吗？它补充了预训练的数据。</p>
+
+<p>"数据的飞轮我觉得还不知道，"广密的回答带着一种极少见的坦诚。"因为我也不知道大多数人在未来这个时代中的重要性还有没有以前那么强。有可能塔尖的人会贡献整个世界的生产力更加集中。我感觉强者恒强是很残酷的，但这又是一个趋势。"这段话没有给出一个安慰人心的结论，但恰恰是这种不确定性本身，构成了2026年春天硅谷最真实的情绪底色——没有人知道旧的法则还有没有用，而新的法则还在构建之中。</p>
+
+<div class="page-num">- 8 -</div>
+</div>
+
+<!-- ==================== PAGE 9: Anthropic——战略的胜利 ==================== -->
+<div class="page">
+
+<p>当话题转入对每一家模型公司的深度拆解时，张小珺先从广密最熟悉的一家开始——<span class="english">Anthropic</span>。她问：<span class="english">Anthropic</span>是最早看到了什么迹象，才<span class="english">get</span>了<span class="english">coding</span>这件事？这个关键的技术决策是谁推动的？</p>
+
+<p>广密的回答非常诚实。"<span class="english">All in coding</span>其实也不是他们<span class="english">day one</span>就能想清楚的。我觉得一方面是C端没有机会了，第二是2024年夏天他们发了<span class="english">Sonnet 3.5</span>，其实给了<span class="english">coding</span>正反馈。其实也是在摸索的过程中把<span class="english">coding</span>这条路线给摸清楚了。"</p>
+
+<p>但他话锋一转，把重点放到了这个公司更值得关注的组织特质上。"在那之后——2024年夏天之后——只<span class="english">all in</span>了一件事，就是<span class="english">coding</span>。今天做成了，而且巨大。而且他们放弃了C端，放弃了多模态。"</p>
+
+<p>他随即展开了一个对<span class="english">Anthropic</span>和<span class="english">OpenAI</span>文化差异的深刻对比。"<span class="english">Anthropic</span>战略上是非常<span class="english">top-down</span>的，<span class="english">OpenAI</span>是特别<span class="english">bottom-up</span>。所以<span class="english">Anthropic</span>有一个非常<span class="english">align</span>一致的目标，就是搞好这个东西，有一个自己的路线图。而且创始人特别懂技术，带着大家搞数据、搞工程，重视数据可能是写在基因里、刻在骨子里的。招聘这个团队好像也一直比较稳定，不像<span class="english">OpenAI</span>团队没那么稳定，人才流失之类的。"</p>
+
+<p>"以及你跟<span class="english">Anthropic</span>的人交流，我感觉他们每个人都很相信AGI——就特别AGI原生的那种状态。可能这个创始人也特别有洗脑能力，经常会传递一些比较像宗教一样的发言。"</p>
+
+<p>他随之列举了一连串<span class="english">Anthropic</span>"不做"的事情，每一件都在反衬出"聚焦"二字的含金量。"其实你看他们很早就不做多模态了，或者投入非常小——可能这就不是他们所认为的科技树的主线。很多人去年说预训练撞墙了，他们好像也没觉得撞墙，依然坚持做，也是他们擅长的。很多人觉得<span class="english">RL</span>这个事儿封神的时候，他们也没有把<span class="english">RL</span>封神，也没有去做所谓的<span class="english">reasoning model</span>。"</p>
+
+<div class="page-num">- 9 -</div>
+</div>
+
+<!-- ==================== PAGE 10: Anthropic的产品与文化 ==================== -->
+<div class="page">
+
+<p>"好像他们没有刻意神话一个人或者某一块，"广密继续，"最终目的好像就是做好一个模型。也没有觉得非得就一个环节重要，更像是一个集体、一个球队、一个工业化的体系，每个环节都做好。"</p>
+
+<p>然后他把<span class="english">OpenAI</span>拉进了这个对比。"相比之下<span class="english">OpenAI</span>可能有些做的不好的地方——其实可能比较像<span class="english">VC</span>，喜欢造新的概念，把某些概念可能推的很高，或者容易神话某一个环节。以前神话<span class="english">pre-train</span>，后面<span class="english">post-train</span>，后面<span class="english">o1</span>、<span class="english">o3</span>。但好像<span class="english">Anthropic</span>就不太会这种动荡摇摆。组织上看，<span class="english">Anthropic</span>可能是一帮人就做一件事儿。你到<span class="english">OpenAI</span>跟小伙伴交流一下，经常是一个人做一个新的事儿。所以专注度、聚焦，我觉得可能是一个比较关键的。"</p>
+
+<p>他接着补充了一个对<span class="english">Anthropic</span>人才策略的观察：<span class="english">Anthropic</span>一直不怎么招那些<span class="english">big name</span>，都是招<span class="english">underdog</span>。而且对文化面试也比较严，经常会问很多文化问题——比如说AGI实现了之后种种选择你会怎么做。"我的感觉好像<span class="english">Anthropic</span>早期的人都还是比较AGI <span class="english">mission</span>驱动的。你看<span class="english">offer</span>当时比<span class="english">OpenAI</span>低，风险也大，很多人还是进来了——可能也是一个筛选。然后这些人都还是比较AGI原生的，所以他们的文化也一直比较稳定，人才流失也比较少。"</p>
+
+<p>张小珺提到了<span class="english">Anthropic</span>在产品上的出色表现——她觉得他们除了模型，在产品上也挺有<span class="english">sense</span>。"感觉他们的产品非常<span class="english">AI native</span>，非常懂产品。"</p>
+
+<p>"对，我是感觉他们的产品文化和产品<span class="english">sense</span>都是蛮好的。"广密解释了这个产品能力的来源。"随着模型能力的提升，他们好像是把模型能力转化到产品、转化到用户体验，这个效率是更高的。因为他们做产品的很多人还是工程师或者研究员，很懂模型能力。你比如说<span class="english">Claude Code</span>的创始人<span class="english">Boris</span>，其实是很强的<span class="english">coder</span>。他其实是想<span class="english">deliver</span>一个最强的<span class="english">coding</span>的工作方式，在引领整个开发范式。"</p>
+
+<p>他特别提到了一个关于产品形态的关键决策。"你看<span class="english">Cursor</span>火了以后，很多人在讨论说模型公司要不要再做一个<span class="english">IDE</span>。好像<span class="english">Anthropic</span>没有做<span class="english">IDE</span>，而是做了一个终端的形式——就是今天的<span class="english">Claude Code</span>。因为这个可能是更能承接住模型红利的。因为模型是指数级增长的，但你产品也得指数级接住这个东西。"</p>
+
+<div class="page-num">- 10 -</div>
+</div>
+
+<!-- ==================== PAGE 11: Anthropic的护城河与风险 ==================== -->
+<div class="page">
+
+<p>张小珺把话题拉到更本质的层面：<span class="english">Anthropic</span>在<span class="english">coding</span>上的护城河高吗？市场现在是不是高估了它？</p>
+
+<p>"因为他们产品线或者<span class="english">revenue</span>是高度集中在<span class="english">coding</span>或者<span class="english">agentic</span>的——可能百分之七八十的<span class="english">revenue</span>都来自于这块。"广密给出的判断是，这件事的难度系数决定了未来竞争的激烈程度，但他认为竞争主要还是头上的三四家。"<span class="english">Anthropic</span>还是有危机感的。如果现有方式不动，就是往前<span class="english">scale</span>，可能他们还是有信心保持一定的优势的。但技术变化总是很快的，大家又很担心<span class="english">OpenAI</span>又搞出一个惊天动地的新的东西。我自己的判断是<span class="english">OpenAI</span>和<span class="english">Google</span>最终都是能追上来的。"</p>
+
+<p>在风险方面，他认为算力是最大的瓶颈。"算力可能是一个——之前包括他们自己内部可能也没有预估过去一个季度需求的爆发，所以算力规划也保守了。我感觉今年实现1000亿美金的<span class="english">ARR</span>，最大的<span class="english">bottleneck</span>可能就是算力。我估计可能后面要到处扫货各种<span class="english">GPU</span>。"</p>
+
+<p>然后他提出了一个对<span class="english">Anthropic</span>商业模式非常精准的概括。"<span class="english">Anthropic</span>有一个比较有意思的是，它定位的是高价格带的用户群。它的定价是很高的，一直也没有降价。其实<span class="english">OpenAI</span>以前是不敢把模型做的很大的，因为它的用户量太大了，很多人不付费。但是你要是去定位一个高价格带的用户，那我就是给我很大的模型，有最好的效果，我就最高的定价，也有好的<span class="english">margin</span>。所以他做了一个塔尖的、金字塔塔尖的一个市场。所以就看他未来能不能守得住这个市场了。"</p>
+
+<p>广密用一句话总结了他对<span class="english">Anthropic</span>的整体判断："<span class="english">Anthropic</span>更像是战略的一个胜利，或者产品专注的胜利，或者文化——我觉得这几个隐形要素是比较重要的。不然他们不可能从一个落后的位置杀出来的，不然早就挂掉了。"</p>
+
+<p>张小珺追问了<span class="english">Anthropic</span>的核心团队构成。广密说，<span class="english">CEO Dario Amodei</span>和首席科学家<span class="english">Jared Kaplan</span>都是物理学家出身。"其实他们对AI的理解更多是从一个物理观察的角度出发的。他也没想着创造新的什么<span class="english">transformer</span>架构，但就是会把<span class="english">transformer</span>这个架构<span class="english">scale</span>得比较好。其实是像物理学家一样洞察了这个AI的规律，找到了<span class="english">data efficiency</span>、架构的<span class="english">efficiency</span>、工程的<span class="english">efficiency</span>。好像也没有像<span class="english">OpenAI</span>一样有执念非得做下一个范式，就是踏踏实实执行得比较好。好像也没有说绝对的各种<span class="english">secret</span>别人不知道的，但好像就是把工程把细节做得比较好。"</p>
+
+<div class="page-num">- 11 -</div>
+</div>
+
+<!-- ==================== PAGE 12: OpenAI——被低估的追赶者 ==================== -->
+<div class="page">
+
+<p>广密特别提到<span class="english">Anthropic</span>在信息保密方面的强硬文化。"内部很透明，然后防止信息外泄。可能一旦出现信息泄露可能就开除，或者很严格。大家也都比较尊重这个事儿。所以你看大家对<span class="english">Anthropic</span>的了解还是比较少的。"</p>
+
+<p>从<span class="english">Anthropic</span>转入<span class="english">OpenAI</span>，张小珺的问题很有张力：<span class="english">OpenAI</span>现在也开始重注<span class="english">coding</span>，但他们作为一个大<span class="english">DAU</span>的产品，战略和定位该怎么走？</p>
+
+<p>"我<span class="english">get</span>到的<span class="english">sense</span>就是<span class="english">OpenAI</span>也要把<span class="english">coding</span>放到最高优先级。其实<span class="english">GPT-5.4</span>的<span class="english">coding</span>能力，最近社区反馈是非常好的，甚至不弱，但<span class="english">agentic</span>能力还是弱一些。我的感觉是它的<span class="english">coding</span>能力已经上来了，其实<span class="english">agentic</span>能力上来有可能也是时间问题。所以最后就看那个塔尖的市场是不是能守得住吧，我觉得不好说。"</p>
+
+<p>张小珺追得更加直接：<span class="english">OpenAI</span>什么时候意识到<span class="english">coding</span>很重要开始加码的？</p>
+
+<p>"我猜也就两三个月之前。"广密说，"因为之前还忙着跟<span class="english">Google Gemini</span>去抢C端的流量，去抢<span class="english">DAU</span>、去做增长。其实你看<span class="english">Meta</span>来了，那个飞机做商业化——我感觉他还是像互联网的老人。其实你发现那个并不重要。其实是对<span class="english">coding</span>有严重的战略误判的。包括<span class="english">Google</span>我感觉也被带沟里了。大家对<span class="english">coding</span>都有战略误判。其实不应该再用互联网思维、用<span class="english">DAU</span>这些思维再去看这些东西了。"</p>
+
+<p>他批评了<span class="english">OpenAI</span>最大的一个问题：不够聚焦。"我觉得最大的可能就不会聚焦。因为<span class="english">Sam Altman</span>他还是一个<span class="english">VC</span>出身，容易摊大饼，什么都想要，也比较容易<span class="english">FOMO</span>。"</p>
+
+<p>他还谈到了一个更深层的文化问题。"<span class="english">OpenAI</span>文化是特别<span class="english">value</span>这种0到1的突破，但是没有那么<span class="english">value</span> 1到100的突破。这种文化引导下，就会导致很多人异构很强，就没有人做脏活、累活、苦活。所有人都想去做突破性的工作，所以就没有人踏踏实实地搞数据清理，去做好产品运营。"</p>
+
+<div class="page-num">- 12 -</div>
+</div>
+
+<!-- ==================== PAGE 13: 今天我们讨论的不是谁好谁坏 ==================== -->
+<div class="page">
+
+<p>张小珺问了一个每个观察者心里都在琢磨的问题：你对<span class="english">OpenAI</span>的前景现在是更乐观还是更悲观？如果这几家模型公司都交替着往前走，未来比拼的关键是什么？</p>
+
+<p>"我对全球领先的三四家甚至三五家模型都很乐观。"广密的回答出人意料的平衡。"我觉得未来这些模型公司都非常重要。现在市场对<span class="english">OpenAI</span>的叙事是比较悲观的，我是没有那么悲观的。我觉得有50%的概率，整个AGI最终的<span class="english">winner</span>可能还是<span class="english">OpenAI</span>。"</p>
+
+<p>他随后抛出了一个极具辩证意味的洞察。"在这个时代，今天胜利的秘籍可能就是下个时代的毒药。<span class="english">OpenAI</span>在<span class="english">ChatGPT</span>过于成功，让他们专注<span class="english">to C</span>而忽视了<span class="english">coding</span>——因为要重视那个<span class="english">inference</span>的成本，所以模型一直没有做很大。"</p>
+
+<p>他反过来分析<span class="english">Anthropic</span>的局限性。"今天<span class="english">Anthropic</span>的成功，更多还是渐进式积累的，把细节做好。我觉得更多是执行的胜利、专注的胜利或者组织的一个胜利。但有可能并不一定能抵御住<span class="english">OpenAI</span>下一个范式级的突破。因为<span class="english">OpenAI</span>它有一种文化是自下而上的，放开你自由地去探索。今天<span class="english">coding</span>能力很强了，可能一两个人就能干出来一件惊天动地的大事儿。有可能未来决定胜局的，可能就是一两个人。有可能就是<span class="english">OpenAI</span>的这种文化下，是有可能搞出惊天动地的新范式的。所以今天你看着的优势都不见得是优势了。"</p>
+
+<p>"未来今年一年，格局就是定不下来的。过去三年格局都没有稳定过，只是持续的淘汰赛。今天又是巡回赛，可能还得打一年。"</p>
+
+<p>张小珺于是问了一个更具体的：<span class="english">OpenAI</span>马上要发新模型了，广密对这个新模型有什么观察和预测吗？</p>
+
+<p>"我觉得是真正意义上的<span class="english">GPT-5</span>。之前<span class="english">GPT-5</span>跳票太多了，之前的<span class="english">5.1</span>、<span class="english">5.2</span>、<span class="english">5.3</span>到<span class="english">5.4</span>，可能更多还是<span class="english">GPT-4 level</span>的<span class="english">model</span>。我觉得<span class="english">Spart</span>有可能是真正意义上的<span class="english">GPT-5</span>，代际上的提升。"他预测<span class="english">Spart</span>在软件工程方面可能还是没有<span class="english">Anthropic</span>强，但其他地方都会大幅提升。<span class="english">Spart</span>是一个新的平台，未来可能每个月都有新的模型出来，在这个平台上持续迭代。最后可能还是比拼算力——<span class="english">OpenAI</span>的算力可能比<span class="english">Anthropic</span>要多很多，这决定了后面的迭代速度。</p>
+
+<div class="page-num">- 13 -</div>
+</div>
+
+<!-- ==================== PAGE 14: Google——最稳的追随者 ==================== -->
+<div class="page">
+
+<p>话题转向硅谷御三家的最后一家——<span class="english">Google</span>的<span class="english">Gemini</span>。广密一上来就给出了一个直言不讳的判断。</p>
+
+<p>"我感觉<span class="english">Gemini 3.0</span>当时是被高估了。其实<span class="english">benchmark</span>刷的很高，但C端并没有持续增长，用户也不太买单。<span class="english">Gemini</span>看起来很好，但实际体验用起来也没那么好。我感觉<span class="english">benchmark</span>有点过度优化了，产品能力不行。其实你看<span class="english">Gemini 3.0</span>的<span class="english">PC</span>桌面版今天都还没有。他们更多还是一个工程师或者技术驱动的文化。<span class="english">PM</span>这个文化好像也没有那么强，或者没那么强势。"</p>
+
+<p>他给了<span class="english">Gemini 3</span>一个非常残酷但准确的评价。"热度很高，感觉像<span class="english">Google</span>王者归来——除了让<span class="english">Google</span>的股价翻倍，证明不是AI的<span class="english">loser</span>了，其他好像也没捞到太多好处。<span class="english">3.1</span>好像也没有真的大的突破。我觉得反而让他们沉浸于<span class="english">Gemini 3</span>的成功喜悦之下，严重误判了<span class="english">coding</span>的重要性。但我听说最近<span class="english">coding</span>也上到了公司最高优先级，但其实已经晚了三四个月才意识到<span class="english">coding</span>的重要性。"</p>
+
+<p>"有时候火一个模型其实没啥，还是要持续地<span class="english">deliver</span>牛逼的模型可能更重要。"</p>
+
+<p>张小珺追问：为什么<span class="english">Google</span>没有第一时间意识到<span class="english">coding</span>的重要？</p>
+
+<p>"因为2025、2026年可能是C端格局最关键的两年窗口。你错过了C端，有可能未来也搬不回来了。所以就忙着跟<span class="english">ChatGPT</span>争C端——这个反而给了<span class="english">Anthropic</span>在<span class="english">coding</span>上一个非常好的黄金窗口。但有可能这个时候<span class="english">Google</span>应该降低在多模态的投入，优先把<span class="english">coding</span>补回来。"</p>
+
+<p>但广密对<span class="english">Google</span>的长期判断依然非常笃定。"长期来讲，<span class="english">Google</span>还是最领先的追随者。资源和布局上没啥短板，战略上只要跟随<span class="english">Anthropic</span>和<span class="english">OpenAI</span>好像就还可以。我觉得掉队的可能性是很低的。拉长看，<span class="english">Google</span>可能是最稳的——因为算力是最足的，现金流是最足的。其实<span class="english">Google</span>的<span class="english">worst case</span>就是<span class="english">TPU</span>都可以变成另外一个英伟达。"</p>
+
+<div class="page-num">- 14 -</div>
+</div>
+
+<!-- ==================== PAGE 15: Meta TBD与xAI ==================== -->
+<div class="page">
+
+<p>广密对<span class="english">Google</span>的组织韧性给出了一个很独特的评价。"你看这个公司已经到第三代职业经理人了，这个挺厉害的。其实很少有科技公司能到第三代职业经理人，而且运行的很好。它更像是一个机器或者体系化的运转了。甚至说你可以任意换掉一两个、两三个人，好像对这个机器都没啥太大的影响。而且他们优势有很多，有操作系统，有<span class="english">Google Workspace</span>。"</p>
+
+<p>张小珺接着请广密点评了<span class="english">Meta</span>和<span class="english">xAI</span>。对<span class="english">Meta</span>，广密的态度很明确——"<span class="english">Meta</span>是最有机会的挑战者，其实已经取代了<span class="english">xAI</span>成为了硅谷四号种子选手。"</p>
+
+<p>他透露了<span class="english">Meta TBD</span>这个团队的情况：人才密度很高，也知道各家的"路数"（因为他们从各个<span class="english">AI lab</span>汇聚过来），进步速度非常陡峭——9到10个月做出了一个还不错的模型。"长期模型能力上是有机会<span class="english">catch up</span>的。"</p>
+
+<p>在策略上，广密分析说<span class="english">Meta</span>的思路比较简单：大概80%对标<span class="english">Google Gemini</span>，也有<span class="english">banana</span>（文生图）和多模态模型；另外20%学<span class="english">OpenAI</span>的<span class="english">post-train</span>和<span class="english">RL</span>。"但我感觉<span class="english">Meta</span>这边的产品战略还不知道是不是清楚。即便他未来有一个好的模型了，但总是要把这个好的模型最后<span class="english">deliver</span>到产品上的。"</p>
+
+<p>"我感觉以<span class="english">Meta</span>的特点，可能还是做个人助理、个人朋友会好吧，就是更低门槛——或者就是把<span class="english">Open Cloud</span>做一个更低门槛的。包括你看他们收购了<span class="english">Manus</span>，如果真的能用好<span class="english">Manus</span>，有可能也是挺有机会的。"他补充了一句令人玩味的话："硅谷公司是擅长技术模型这个<span class="english">layer</span>的创新，其实中国团队是擅长产品的创新的。我是觉得<span class="english">Meta</span>产品创新力并没有自己那么强。"</p>
+
+<p>而对<span class="english">xAI</span>，广密的判断就毫不留情了。"短期是有点掉队的。因为最核心团队其实都离开了——<span class="english">founding team</span>都挺强的，都是世界级的。我觉得短期<span class="english">xAI</span>是挺难的，至少可能现在不在一个正确的路径上。"他点出了最核心的问题——<span class="english">Elon Musk</span>的战略摇摆。"那中间可能也想做<span class="english">chatbot</span>，做AI搜索，今年可能想<span class="english">all in coding</span>。其实这个战略摇摆就会让团队很乱。你这个事儿刚上手还没坐热，<span class="english">Elon</span>可能没有耐心，又拉去做另外一个事儿。"</p>
+
+<div class="page-num">- 15 -</div>
+</div>
+
+<!-- ==================== PAGE 16: Agent Engineering与模型操作系统 ==================== -->
+<div class="page">
+
+<p>在一个快速的节奏中，张小珺请广密讲讲一季度一个非常火的新词——<span class="english">Agent Engineering</span>（也有人叫<span class="english">Harness Engineering</span>）。广密给出了三个层层递进的思路。</p>
+
+<p>"未来我们应该把AI的<span class="english">agent</span>当人看，应该把它看成一等公民，跟我们是一体的。人应该有的东西，<span class="english">agent</span>也应该有——你人类的知识工作者有工作的环境、工作电脑、工作的各种信用卡，那未来可能在一个平行世界，你也要给AI去搭一套<span class="english">agent</span>作为人类作为一等公民需要的环境。"</p>
+
+<p>第二个点更具体。"<span class="english">Agent</span>想做好，一方面是模型，还有一方面是<span class="english">harness</span>。你就把它比喻成像一个人加入到一个公司、一个团队。有些公司有公司的管理和环境，它能让一个正常的人他的下限很高，通过管理和组织一些约束。那其实AI也需要它的管理学和组织——那这就是<span class="english">harness</span>的意义。其实有了<span class="english">harness</span>以后，普通的模型也可以做高价值的任务了。加上过去<span class="english">Claude</span>整个需求的溢出它接不住，所以非<span class="english">SOTA model</span>——包括开源的很多模型——也能被用上了。我觉得这是一个更大的意义。"</p>
+
+<p>第三个点是思维方式的转变。"以前是看<span class="english">to C</span>和<span class="english">to B</span>，传统时代。但今天是到底是<span class="english">to</span>人类还是<span class="english">to agent</span>？如果是<span class="english">to agent</span>，那可能看中的不再是<span class="english">DAU</span>，可能是<span class="english">token usage</span>或者<span class="english">token</span>的价值、<span class="english">margin</span>。因为以后用什么工具可能不是人决策了，可能是AI去调用哪些工具去决策。"</p>
+
+<p>在这三个层次搭建好之后，广密抛出了一个贯穿整场访谈最底层的判断。"我觉得抛一个观点——其实模型可能就是新一代的操作系统。未来最领先的几个模型可能就是世界最重要的基础设施。你生活的问题也是问他，你工作的自动化也是它，你研究科研的支持也是它。可能它的重要性比今天的<span class="english">Google</span>对世界基础设施的支持还要重要。"</p>
+
+<p>"操作系统的定义，它就是支持应用的无限扩展——可能就是今天的<span class="english">agent</span>。慢慢它也会形成一个新的生态，就像安卓、<span class="english">iOS</span>这个生态。<span class="english">Windows</span>也可以兼容各种硬件，不仅在你的电脑、手机，可能还在你的眼镜各种地方。过去称得上操作系统的可能就是<span class="english">Windows</span>、<span class="english">iOS</span>、安卓和微信。有可能不管你追求工作助理、<span class="english">coding</span>还是生活助理——<span class="english">ChatGPT</span>、<span class="english">Gemini</span>、豆包——有可能最终大家都会走向世界的基础设施，一个全球<span class="english">GDP</span>的<span class="english">OS</span>这种方向。"</p>
+
+<div class="page-num">- 16 -</div>
+</div>
+
+<!-- ==================== PAGE 17: 国内的模型赛道 ==================== -->
+<div class="page">
+
+<p>张小珺接着把观察的镜头从硅谷拉回到了国内。"刚才我们看了硅谷御三家，那你对国内的御三家有没有一些观察和评价？因为你看硅谷的御三家也有一些分化——有的在过去一年在做C端，有的在押注<span class="english">Anthropic</span>这种高价值任务。那国内他们是不是也有一些分化？"</p>
+
+<p>"我感觉国内好像都在追求<span class="english">Anthropic</span>的路线，这好像成为了一个共识。一年前好像还不是共识。"广密给出了一个非常明确的判断。他估计这个共识形成的时间点就是过去3到6个月——"因为C端已经没机会了，好像大家也意识到<span class="english">coding</span>和高价值任务这条线，上限好像比C端要更高。"</p>
+
+<p>他分别点名："国内的<span class="english">Kimi</span>、<span class="english">MiniMax</span>和智谱都在押注<span class="english">Anthropic</span>这条路线。豆包看起来是在C端做最好的——因为大家其他几家都是觉得跟豆包没得打才转型的。"</p>
+
+<p>但广密并不认为豆包在<span class="english">coding</span>上就落后了。"我觉得<span class="english">coding</span>是战略不能输的，豆包肯定也是大概率都能追上，而且可以有可能做得更好。我觉得最后可能还是拼组织能力、资源。"</p>
+
+<p>张小珺追问了一个更根本的问题：发展到2026年，模型公司的竞争到底在争夺什么？追求什么？</p>
+
+<p>"我觉得还是综合的。其实不是一个能力最后就取胜了——你说我一个人才牛逼、我一个方法牛逼、我一个<span class="english">bet</span>牛逼——我感觉是非常综合的。"广密给出了一个略带疲惫感的判断。"AI今天进入了一个叫'工业化时代'。我不知道未来会不会进入无聊的大厂游戏，有可能会这样。"</p>
+
+<p>张小珺追问为什么叫"无聊的大厂游戏"。广密的回答简短而有力："有些窗口已经关掉了。"</p>
+
+<div class="page-num">- 17 -</div>
+</div>
+
+<!-- ==================== PAGE 18: 社会影响——白领通缩与失业窗口期 ==================== -->
+<div class="page">
+
+<p>访谈到这里，张小珺把话题转到了一个更加沉重但更加重要的方向。她问：站在今天看，AGI的路线图和时间表在你心中有没有发生什么样的变化？以及它对社会层面会产生怎样深远的影响？社会应该怎么消化这个技术的巨大变革？</p>
+
+<p>广密说路线图更清晰了——从<span class="english">chatbot</span>到<span class="english">coding agent</span>到<span class="english">automated AI researcher</span>这三段路——以及时间表会加速得更快。"以前好像说好像还需要两三年，我感觉好像也许今年年底或者明年初，可能就有一家公司宣布实现了AGI。"</p>
+
+<p>然后他进入了这个访谈中最沉重的一段分析。</p>
+
+<p>"社会影响我觉得很多人确实没做好准备，因为整个割裂感太强了。就是几百个<span class="english">researcher</span>或者两三千个<span class="english">researcher</span>在前沿看到的东西更多，但其实这些信息是没有传递到社会上的。所以社会的准备肯定是不够的。"</p>
+
+<p>"这里面最本质的一个点是——人类的知识和智力变得廉价了。以前我们通过学习、读书获取了知识，可以有个工作。但是今天这些智力和知识好像模型里面都有了，被大幅地压缩了，变成了一个计算资源或者<span class="english">token</span>这种体现。"</p>
+
+<p>他说了一句让人沉默的话。"我就感觉有可能百分之七八十的人，在社会上的价值和意义有可能会发生微妙的变化。因为以前人类觉得自己是最聪明的，但你发现模型比人类要聪明了——好像我们不是最聪明的物种了。"</p>
+
+<p>"有可能AI会带来一个很大的通缩。"他用自己的亲身经历做了说明。"你想我用了<span class="english">ChatGPT</span>和<span class="english">Claude</span>之后，我再去找顾问和买其他软件的需求就小了很多。他一个产品可以满足我很多的需求。有可能长期看很多<span class="english">SaaS</span>也是消失的。我不知道印度的<span class="english">IT</span>外包现在活的怎么样，有可能印度的<span class="english">IT</span>外包已经不如模型了。"</p>
+
+<div class="page-num">- 18 -</div>
+</div>
+
+<!-- ==================== PAGE 19: 今年30%的工作岗位可能消失 ==================== -->
+<div class="page">
+
+<p>广密继续把这个话题推进到了更具体的层面。"今年我感觉美国的本科毕业生是就业率历史新低。因为AI今天已经把工作两三年、三四年的初级工作岗位、工作环境都已经被自动化了，包括中间的程序员。所以今年肯定是人类开始面临失业比较痛苦的一年。有可能今年30%的工作岗位就没了。"</p>
+
+<p>"那这些人没有工作了之后会干嘛呢？我觉得挺担心的。"他拿<span class="english">Meta</span>举了例子。"你看<span class="english">Meta</span>裁员裁了1.6万人，我不知道这1.6万人以后会干嘛。他未来可能再裁1.1万人。有可能微软也不需要15万人——有可能3万人干得比今天15万人更好。"</p>
+
+<p>他接着讲了一个被很多人忽略的更深层的问题——人才培养的路径被拦腰截断了。"十年前我毕业可能还能有个成长、工作的环境。今天好像是另外一个环境了。"</p>
+
+<p>张小珺问了一个所有人都想问但很少有人这么直接问出来的问题：我们俩这个工作还能干多久？</p>
+
+<p>"我觉得你的<span class="english">IP</span>是比较值钱的。"广密先给了张小珺一个安慰，然后坦诚地分享了自己的变化。"有可能我们下一期的播客不用我们自己录了。但我调研了一下，好像效果还不太好。有可能下个季度，可能它就根据我的笔记就自动形成一个播客。其实我们今天的播客我感觉已经半自动化了——这个播客的大部分提纲其实是<span class="english">Claude</span>帮我写的。因为我过去几个月也变成了忠实用户，它根据我的一些<span class="english">notes</span>、记录的一些东西，又根据过去大模型季报的框架。我感觉可能我写东西已经没有<span class="english">Claude</span>写得好了。"</p>
+
+<p>张小珺追问：投资的工作会一直持续吗？</p>
+
+<p>"有可能。我觉得最后的最好的模型公司有可能就是最好的投资了。"广密说。张小珺接过话头："那你就分别持仓就好了，你也不需要干啥了。"</p>
+
+<p>"但是技术变化非常快。我觉得没有人是安全的，每个人都有危机感。"广密的语气里没有夸大，也没有回避。</p>
+
+<div class="page-num">- 19 -</div>
+</div>
+
+<!-- ==================== PAGE 20: 人去干什么——创造力与审美 ==================== -->
+<div class="page">
+
+<p>张小珺接着追问了一个更终极的问题：现在当智力和知识都被压缩进了模型，变成了模型的<span class="english">skill</span>，那人未来去干什么？</p>
+
+<p>广密给出的回答，在这个充满技术决定论的访谈中，像是一束意想不到的光。"我觉得去创造。如果很多人有创造力，还是能搞出来东西的。因为以前我想创造，我没有那个支持。有可能一个人、两个人未来会做出很惊天动地的大事儿。因为整个<span class="english">info</span>从你有想法到跑通代码，可能很快。有可能创造力会被极大地释放。"</p>
+
+<p>"第二，审美——那个<span class="english">taste</span>可能还是很重要的。有审美和<span class="english">taste</span>的，最后可能还是会留住很多东西。因为人以前有很多想法是无法实现的，但今天整个基础设施极大地繁荣，有可能都能实现。比如说以前你要做一个有影响力的媒体，可能要几百个人，现在好像一个人做个自媒体也非常有影响力——这是整个基础设施极大繁荣的结果。"</p>
+
+<p>如果AI开始大规模取代白领，广密对普通人的建议是什么呢？他的回答出奇地简洁、有力，而且带着一种务实主义者特有的韧劲。</p>
+
+<p>"AI取代的是不拥抱AI的人。积极拥抱AI的人可能是受益者。"</p>
+
+<p>当话题转向投资时，广密的信仰展现得更加淋漓尽致。"我觉得投资上，有可能最好的三五家模型公司如果成为全球<span class="english">GDP</span>的操作系统，我觉得每家可能都是10万亿美金。未来加起来三五十万亿美金。我对这个的信仰越来越深了。"</p>
+
+<p>他对自己的投资策略只做了一句总结，但这一句话浓缩了整个季报系列的核心判断。"一句话总结就是——你要投能持续做好<span class="english">SOTA model</span>的公司。我觉得这个指标可能是未来投资最关键的指标。"</p>
+
+<div class="page-num">- 20 -</div>
+</div>
+
+<!-- ==================== PAGE 21: 模型公司竞争的终局 ==================== -->
+<div class="page">
+
+<p>当张小珺问到模型竞争的终局——还有没有时间窗口让新的模型公司出现——广密的回答冷酷而精确。</p>
+
+<p>"一个科技公司每年能不能投三五百亿美金的投入，而且要持续投三五年。你看<span class="english">Mark Zuckerberg</span>一年大几百亿美金。第二个点就是创始人和管理层有没有这个认知和魄力。你没有认知就没有魄力，你就不敢买卡，你怕买了卡砸手里。即便没有认知，那如果有魄力——就像<span class="english">Zuckerberg</span>那样的放手交给团队——也可以，不知道最后结果会怎么样。第三你也得招到起码上百名世界级的AI科学家。其实<span class="english">Zuckerberg</span>砸那么多钱好像也是有道理的——就买时间。"</p>
+
+<p>"但只有这三个还不够。你只做一个通用的模型好像还不行，还得有一些战略的<span class="english">bet</span>、产品的<span class="english">go-to-market</span>的方式。而且你有了钱，好像今天都不一定买到了<span class="english">GPU</span>。"</p>
+
+<p>"我感觉再出来新的模型公司不是没机会，但这个难度比我们想象的大非常多。这就像我们想再造一个台积电——你说他有一个窗口和资源限制的问题。"</p>
+
+<p>关于硅谷最近出现的"<span class="english">New Labs</span>"新型实验室，广密非常务实。"我不知道这个世界上还会不会再出现更多的<span class="english">OpenAI</span>和<span class="english">Anthropic</span>的机会。因为<span class="english">GPU</span>太有限了，资本其实也比较有限。其实<span class="english">OpenAI</span>和<span class="english">Anthropic</span>还是挺重视下一代范式的，内部投入也很多。我觉得优秀人才的流向最能说明问题——你就看最优秀的AI人才会不会流入哪个<span class="english">New Labs</span>。我觉得今天好像<span class="english">New Labs</span>的技术路线还没有收敛，真正的<span class="english">scaling</span>还没有开始，<span class="english">data</span>的<span class="english">scale</span>还没开始。所以可以再观察一下。"</p>
+
+<p>张小珺请他盘点一季度硅谷的前沿产品趋势。广密给出的数据非常有说服力——最终还是<span class="english">ARR</span>最说明问题。<span class="english">Anthropic</span>和<span class="english">OpenAI</span>公开的已经三百多亿美金和250亿美金的<span class="english">ARR</span>了（口径可能不一样），年底可能都800到1000亿美金，明年1500到2000亿美金。再往下是<span class="english">Cursor</span>（25亿美金）、<span class="english">Perplexity</span>（超5亿美金）、<span class="english">ElevenLabs</span>和<span class="english">Suno</span>（超3亿美金）、<span class="english">Manus</span>和<span class="english">Lovable</span>（超4亿美金）。医疗领域他提到了<span class="english">OpenEvidence</span>和<span class="english">Abridge</span>。</p>
+
+<div class="page-num">- 21 -</div>
+</div>
+
+<!-- ==================== PAGE 22: 机器人、AI硬件、垂直Agent ==================== -->
+<div class="page">
+
+<p>张小珺问广密，除了模型公司之外，怎么看待其他方向——机器人、AI硬件、垂直<span class="english">agent</span>。</p>
+
+<p>"我理想的AGI <span class="english">portfolio</span>就是：最领先的三四家模型分别放20%，剩下的20%——比如说10%在机器人，10%在<span class="english">AI Science</span>，还有可能10%在<span class="english">agent infra</span>，就是<span class="english">agent</span>平行世界需要的东西。"</p>
+
+<p>在他眼中，机器人和<span class="english">AI Science</span>是大模型之后下一个大的平台。"我觉得有可能机器人在未来6到18个月是有质变的——可能架构突破了，技术路线也收敛了，<span class="english">data scaling</span>和真正的<span class="english">scaling</span>开始了。反正现在机器人数据采集的需求挺多的。最近像那种第一视角<span class="english">egocentric</span>的采集了很多，包括遥操作的，包括五指手套的。其实大家刚刚弄清楚这几类数据怎么用，有可能后面<span class="english">data scale</span>更好，架构也有一些突破，有可能机器人会发展得更快。"</p>
+
+<p>他补充了一个对中美分工的观察。"我对这个还挺乐观的，就是因为这里面中国团队会有更有优势。你发现以前硅谷公司只觉得算法重要，但是没有硬件完全不行。过去一个季度我感觉是大家都开始重视硬件，都要在深圳招人。"</p>
+
+<p>关于AI应用公司，张小珺问了一个尖锐的问题：AI应用的机会是变大了还是变小了？现在还相信"<span class="english">One Person Company</span>"——一人公司吗？</p>
+
+<p>广密的回答既有理想主义的一面，也有极其务实的一面。"如果模型平台就像我们说的，变成全球的基础设施，它足够的<span class="english">powerful</span>，那每个个体都可以做很多事情。就像微信的自媒体，我们很有影响力；就像抖音的创作者，每个人创作一个内容都可以传播很大。我觉得<span class="english">One PC</span>还是有可能的，可能就是未来的一个常态。模型就变成一个新的平台，足够的<span class="english">powerful</span>，每个人都可以做很多的事情。从一个<span class="english">idea</span>到代码跑通，到最后<span class="english">revenue</span>实现，可能是非常高效的。"</p>
+
+<p>但他立刻加了一个非常实际的标准。"最近听到一个比较好的指标——就说你消耗了100美金的<span class="english">token</span>，你能不能赚到110块钱？你得把这个<span class="english">ROI</span>跑正。其实很多人是没有跑正的，或者这个闭环是没有跑通的。我觉得这个可能是一个比较重要的指标。"</p>
+
+<div class="page-num">- 22 -</div>
+</div>
+
+<!-- ==================== PAGE 23: 尾声——跟不上AI进步的焦虑 ==================== -->
+<div class="page">
+
+<p>在访谈的最后，张小珺的问题从宏大的行业图景收束到了广密个人的生活。</p>
+
+<p>"过去一个季度你自己生活有什么变化？"</p>
+
+<p>"没有。"广密顿了一下，"我觉得很担心跟不上AI的进步。因为每天、每个星期进步太快了，学习压力太大了。"</p>
+
+<p>他说他从<span class="english">ChatGPT</span>变成了<span class="english">Claude Code</span>的忠实用户，生产力确实提升了很多。但他坦诚地说："我依然还没有像那种塔尖的开发者一样，能消耗那么多的<span class="english">token</span>。"</p>
+
+<p>张小珺问他现在能消耗多少<span class="english">token</span>。</p>
+
+<p>"我的<span class="english">Claude</span>的100美金的，我是一直没用完的。大部分时间是用不满。因为做<span class="english">research</span>整个跟<span class="english">coding</span>也不太一样。"</p>
+
+<p>这是一段平静的、几乎有些反高潮的结尾。但这种平静恰恰构成了这场访谈最真实的底噪——在广密描绘的那个奇点将至、GPU轰鸣、模型指数爆发的宏大叙事之外，他依然是一个普通人。他会担心自己追不上变革的速度，他的<span class="english">token</span>用不完，他承认自己的写作已经被<span class="english">Claude</span>超越。但正因为他如此坦白地承认这些，他此前那些关于战略、组织、路线图的宏大判断才显得格外有力——这不是一个从水晶球里读出未来的先知，而是一个站在变革前沿、被变革裹挟、但坚持用理性和诚实去理解它的人。</p>
+
+<p>而他对这个时代唯一给出的那个简短的建议——"AI取代的是不拥抱AI的人，积极拥抱AI的人可能是受益者"——或许就是他在这场海啸中给自己找到的锚点。</p>
+
+<p>他说今年会是爆发点吗？"我期待。我觉得过去的一个季度AI已经进入那个奇点了。其实今天是在加速的，显著加速的。"</p>
+
+<div class="page-num">- 23 -</div>
+</div>
+
+<!-- ==================== PAGE 24: COPYRIGHT PAGE ==================== -->
+<div class="page" style="min-height:auto; padding-top:60px; padding-bottom:60px;">
+<p style="text-align:center; font-size:13px; color:#8b7355; text-indent:0; margin-bottom:14px;">
+原始播客：张小珺商业访谈录<br/>
+<a href="https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962" style="color:#8b7355;">小宇宙收听链接</a>
+</p>
+
+<p style="text-align:center; font-size:13px; color:#8b7355; text-indent:0; line-height:2.2;">
+第136期<br/>
+"全球大模型季报第9集：和广密聊，<span class="english">Coding</span> 是 <span class="english">AGI</span> 第二幕、硅谷御三家真相、模型正成为新一代 <span class="english">OS</span>"<br/>
+2026年5月27日
+</p>
+
+<div class="divider">· · ·</div>
+
+<p style="text-align:center; font-size:12px; color:#a09070; text-indent:0; line-height:2.2;">
+制作流程<br/>
+通义听悟（语音转写）→ 人工初审 → <span class="english">Claude Code</span>（按 <span class="english">Prompt</span> 加工）→ 人工复核
+</p>
+
+<p style="text-align:center; font-size:12px; color:#a09070; text-indent:0; line-height:2.2; margin-top:10px;">
+<span class="english">Prompt</span> 思路感谢：小红书博主 J在发光
+</p>
+
+<p style="text-align:center; font-size:11px; color:#b0a090; text-indent:0; margin-top:24px; line-height:2;">
+仅供个人阅读 · 非商业用途<br/>
+内容版权归 <span style="color:#8b7355;">张小珺商业访谈录</span> 及语言及世界工作室所有<br/>
+本文为播客转录稿的人工加工版本，如有错漏以原始播客为准
+</p>
+
+<div class="page-num">- 24 -</div>
+</div>
+
+</body>
+</html>
