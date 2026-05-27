@@ -1,40 +1,163 @@
 # program
 
-将《张小珺商业访谈录》播客的原始转录稿转化为适合手机/网页阅读的书籍章节 HTML。
+将《张小珺商业访谈录》播客的新内容自动转录、加工为书籍章节 HTML，并发布到线上。全程自动化——你只需要在需要转录时提供一次通义听悟的 cookie。
 
 ## 你的任务
 
-检查 `原文/` 目录：**所有 `.docx` 文件都是待处理的转录稿，`.md` 文件是已处理过的（跳过）。**
+当用户要求处理播客内容时，按以下阶段执行：
 
-对每个待处理的 docx：先转为 md → 搜索该期播客的发布日期 → 读 md → 按 Prompt 生成 HTML → 保存 HTML → 更新 index.html → 删除原 docx（md 保留在原文/里作为存档和已处理标记）。
+1. **先检查 `原文/`**：有 `.docx` 就直接进入加工阶段（第四步开始）
+2. **没有 docx？** 进入转录阶段（第一步开始），从 RSS 获取新内容
+3. **转录完成后** 回到加工阶段
+4. **循环** 直到没有更多待处理内容
 
-## 工作流程
+---
 
-1. **找到待处理文件**：列出 `原文/` 下所有 `.docx` 文件。`.md` 文件直接跳过。
-2. **转为 md**：用 `textutil -convert txt` 将 `.docx` 转为 `.md`，保存到 `原文/` 同目录下（macOS 内置命令，可能需要点一次批准）。文件名 = 原 docx 名去掉 `.docx` + `.md`。
-3. **读取 md**：用 Read 工具读取刚生成的 md 文件，获取完整转录文本。
-4. **搜索播客发布日期**：从文件名提取期数（如"136"），通过 RSS feed 查找该期的真实发布日期。播客 RSS 地址：`https://feed.xyzfm.space/dk4yh3pkpjp3`。解析 `<pubDate>` 字段，格式化为"YYYY年M月D日"（如"2026年4月14日"）。将这个日期用于 HTML 第一页的播客信息区和版权尾页。转录稿第 2 行的时间是通义听悟的转录时间，不是播客发布日期，不要用。
-5. **生成 HTML**：按照下面的写作 Prompt 生成书籍章节 HTML。必须参照 `书籍章节/` 中已有的 HTML 文件保持完全一致的 CSS 和页面结构。日期必须使用步骤 4 搜到的发布日期。
-6. **保存 HTML**：写入 `书籍章节/`，文件名 = md 文件名去掉 `_原文.md` + `_书籍章节.html`。
-7. **更新 index.html**：在章节列表区域添加新章节入口卡片。
-8. **删除 docx**：删除原 `.docx` 文件，只保留 `.md`。
-9. **Git 提交并推送**：`git add 原文/ 书籍章节/ index.html program.md README.md && git commit -m "add: 第X期 <嘉宾名> <主题关键词>" && git push`。每处理完一篇就提交一次，不要攒到一起。
-10. **继续下一篇**：重复步骤 2–9，直到所有 docx 处理完毕。最后报告处理结果。
+# 第一阶段：转录（获取新播客转录稿）
 
-## 更新 index.html 的规则
+## 第一步：对比 RSS 找出未转录的内容
+
+播客 RSS 地址：`https://feed.xyzfm.space/dk4yh3pkpjp3`
+
+1. 获取 RSS feed，解析出所有已发布的播客期数和标题
+2. 列出 `原文/` 下的所有 `.md` 文件（已转录的），提取期数
+3. 列出 `书籍章节/` 下的所有 `.html` 文件（已发布的），提取期数
+4. 对比得出**还未转录的播客列表**
+
+如果所有内容都已转录，告诉用户："全部已同步，没有新内容需要处理。"
+
+## 第二步：提醒用户提供 cookie
+
+如果有未转录的内容，告诉用户：
+
+> 发现 N 期未转录的播客：[列出期数和标题]
+> 
+> 需要你的通义听悟 cookie 来启动转写。请在浏览器中打开 tingwu.aliyun.com（确保已登录），按 F12 → Application → Cookies，导出 tingwu.aliyun.com 和 .aliyun.com 域下的所有 cookie，发给我。
+
+## 第三步：打开通义听悟并转写
+
+收到 cookie 后：
+
+1. **注入 cookie**：用浏览器打开 `https://aliyun.com`，通过 JS 设置所有 cookie（domain: `.aliyun.com`），然后跳转到 `https://tingwu.aliyun.com/home`
+2. **打开播客链接转写**：点击首页的"播客链接转写"卡片
+3. **输入 RSS**：在弹窗中粘贴 RSS 地址 `https://feed.xyzfm.space/dk4yh3pkpjp3`
+
+   > 注意：输入框是一个 `<textarea>`，不是 `<input>`。如果 browser_type 无法触发 React 的状态更新，用 JS 手动设置值并触发 input/change/blur 事件：
+   > ```js
+   > const ta = document.querySelector('textarea[placeholder="输入播客 RSS 订阅链接"]');
+   > const nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+   > nativeSetter.call(ta, 'https://feed.xyzfm.space/dk4yh3pkpjp3');
+   > ta.dispatchEvent(new Event('input', { bubbles: true }));
+   > ```
+
+4. **等待播客列表加载**：通义听悟会解析 RSS 并显示所有已发布播客的列表
+5. **选中要转写的播客**：点击对应播客行的**复选框**（`.NetSourceTransListComp__Checkbox` 或 `.NetSourceTransListComp__CheckboxIcon`），而不是点击播客标题行
+6. **点击"开始转写"**：按钮启用后点击。转写任务会提交到服务端异步执行
+7. **告诉用户**："已提交转写任务，通义听悟正在后台处理。完成后告诉我，我继续加工。"
+
+## 第四步：等待转写完成
+
+通义听悟的转写是异步的。转写完成后：
+
+1. 用户在通义听悟中能看到转写结果
+2. 用户可以将转写结果**导出为 docx**，放到 `原文/` 目录下
+3. 或者用户告诉你"转写好了"，你重新检查 `原文/` 下的 docx
+
+---
+
+# 第二阶段：加工（转录稿 → 书籍章节）
+
+## 第五步：找到待处理文件
+
+列出 `原文/` 下所有 `.docx` 文件。`.md` 文件是已处理过的，跳过。
+
+工作流程概览：docx → md → 搜索发布日期 → 生成 HTML → 更新 index → 删 docx → git push
+
+## 第六步：转为 md
+
+用 `textutil -convert txt` 将 `.docx` 转为 `.md`，保存到 `原文/` 同目录下。
+
+```bash
+cd "原文/"
+textutil -convert txt "文件名.docx" -output "文件名.md"
+```
+
+文件名 = 原 docx 名去掉 `.docx` + `.md`。macOS 内置命令，可能需要点一次批准。
+
+## 第七步：读取 md
+
+读取刚生成的 md 文件，获取完整转录文本。
+
+## 第八步：搜索播客发布日期
+
+从文件名提取期数（如"138"），通过 RSS feed 查找该期的真实发布日期。
+
+```bash
+curl -sL "https://feed.xyzfm.space/dk4yh3pkpjp3" | \
+  python3 -c "
+import sys, re
+content = sys.stdin.read()
+items = re.findall(r'<item>(.*?)</item>', content, re.DOTALL)
+for item in items:
+    title_m = re.search(r'<title>(.*?)</title>', item)
+    date_m = re.search(r'<pubDate>(.*?)</pubDate>', item)
+    if title_m and '期数' in title_m.group(1):
+        print(date_m.group(1))
+"
+```
+
+将 `<pubDate>` 格式化为"YYYY年M月D日"（如"2026年4月14日"）。
+
+> 重要：转录稿第 2 行的时间是通义听悟的转录时间，不是播客发布日期，不要用它。
+
+## 第九步：生成 HTML
+
+按照下面的写作规范生成书籍章节 HTML。必须参照 `书籍章节/141_Freda的投资札记第2集_书籍章节.html` 的 CSS 样式和页面结构。日期使用第八步搜到的发布日期。
+
+## 第十步：保存 HTML
+
+写入 `书籍章节/`，文件名 = md 文件名去掉 `_原文.md` + `_书籍章节.html`。
+
+## 第十一步：更新 index.html
+
+在章节列表区域添加新章节入口卡片。详见下方"更新 index.html 的规则"。
+
+## 第十二步：删除 docx
+
+删除原 `.docx` 文件，只保留 `.md` 作为存档和已处理标记。
+
+## 第十三步：Git 提交并推送
+
+```bash
+git add "原文/" "书籍章节/" index.html program.md README.md
+git commit -m "add: 第X期 <嘉宾名> <主题关键词>"
+git push
+```
+
+每处理完一篇就提交一次，不要攒到一起。
+
+## 第十四步：继续
+
+回到第五步，直到所有 docx 处理完毕。然后回到第一步，检查有没有新播客需要转录。
+
+---
+
+# 更新 index.html 的规则
 
 在 `index.html` 的 `<div class="section-title">已 收 录 章 节</div>` 下方，参照已有 `.chapter-card` 的格式添加新条目：
 
-- `num` 显示期数和日期（从原文头部提取）
+- `num` 显示期数和日期（用第八步搜到的发布日期）
 - `h3` 显示章节标题
 - `meta` 显示嘉宾和机构
 - `keywords` 显示核心关键词
 
-每篇原文处理完成后立即更新一次 index.html，确保随时可以查看进度。
+每篇处理完成后立即更新一次 index.html。
 
-## 写作 Prompt
+---
 
-以下是你加工每一篇转录稿时必须严格遵循的规范。
+# 写作 Prompt
+
+以下是加工每一篇转录稿时必须严格遵循的规范。
 
 ---
 

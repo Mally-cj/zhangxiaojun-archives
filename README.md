@@ -10,31 +10,45 @@
 
 **这是个人项目，非商业用途。所有内容版权归《张小珺商业访谈录》及语言及世界工作室所有。**
 
+## 自动化程度
+
+这个项目现在由 AI agent **半自动维护**。你只需要说一句"处理一下"，agent 就会：
+
+1. 检查 RSS 有没有新播客
+2. 提醒你提供通义听悟 cookie（一次性）
+3. 自动打开通义听悟，输入 RSS，选中新播客，开始转写
+4. 转写完成后，自动将转录稿加工为书籍章节 HTML
+5. 更新目录、提交推送
+
+唯一需要人参与的环节：**提供通义听悟的登录 cookie**（因为登录需要扫码验证）。
+
 ## 致谢
 
 - **Prompt 来源**：感谢小红书博主 **J在发光** 提供的写作 Prompt 思路
 - **转录工具**：通义听悟
-- **排版工具**：Claude Code
-- **原始播客**：[小宇宙](https://www.xiaoyuzhoufm.com/episode/6a09d58b1b7bd502955258ab) · [Apple Podcasts](https://podcasts.apple.com/tw/podcast/141-freda%E7%9A%84%E6%8A%95%E8%B5%84%E6%9C%AD%E8%AE%B0%E7%AC%AC2%E9%9B%86-tokenmaxxing-%E6%8A%8A%E7%94%B5%E6%9C%BA%E5%A1%9E%E8%BF%9B%E8%92%B8%E6%B1%BD%E6%9C%BA-%E6%8E%A5%E5%8A%9B%E8%B5%9B%E5%8F%98%E7%AF%AE%E7%90%83%E8%B5%9B-%E5%AD%A4%E7%8B%AC-%E4%BA%BA%E7%9A%84%E8%BF%9E%E6%8E%A5/id1634356920?i=1000768308372) · [Podwise（含文字稿）](https://podwise.ai/dashboard/episodes/8012995)
+- **自动化引擎**：Hermes Agent
+- **原始播客**：[小宇宙](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962) · [Apple Podcasts](https://podcasts.apple.com/cn/podcast/%E5%BC%A0%E5%B0%8F%E7%8F%BAj%C3%B9n-%E5%95%86%E4%B8%9A%E8%AE%BF%E8%B0%88%E5%BD%95/id1634356920)
 
 ## 制作流程
 
 ```
-播客音频 → 通义听悟（语音转文字）→ 人工初审 → Claude Code（按 Prompt 加工）→ 人工复核 → HTML 网页
+RSS 监控 → 通义听悟（自动转写）→ agent（按 Prompt 加工）→ HTML 网页 → 自动发布
+                     ↑
+               人提供 cookie
 ```
 
-## 使用的 Prompt
+## Agent 指令
 
-详见 `program.md`，该文件同时也是 Claude Code 的 agent 指令文件——打开仓库说一句"看一下 program.md，开始处理"即可自动转换新内容。
+详见 `program.md`——这个文件就是 agent 的完整操作手册。agent 会读取它并自主执行所有步骤。
 
 ## 项目结构
 
 ```
 张小珺商业访谈录/
 ├── README.md           # 本文件（人类阅读）
-├── program.md          # Agent 指令 + 写作 Prompt（AI 阅读）
+├── program.md          # Agent 自动化指令 + 写作 Prompt
 ├── index.html          # 目录首页
-├── 原文/               # 通义听悟转录原始稿件
+├── 原文/               # 通义听悟转录稿（.docx = 待处理，.md = 已处理）
 └── 书籍章节/           # 加工后的书籍章节（HTML）
 ```
 
@@ -43,3 +57,4 @@
 | 期数 | 嘉宾 | 主题 |
 |------|------|------|
 | 第141期 | Freda Duan (Ultimately Capital) | Tokenmaxxing、AI组织架构、软件行业冲击、投资行业变革、焦虑与人际连接 |
+| 第136期 | 广密 | Coding是AGI第二幕、硅谷御三家真相、模型正成为新一代OS |
