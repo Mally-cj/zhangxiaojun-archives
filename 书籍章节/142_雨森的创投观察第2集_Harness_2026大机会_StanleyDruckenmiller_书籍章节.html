@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在被打脸中进化：戴雨森的AI创投沉思录</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #e8e0d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+}
+
+.page {
+  width: 680px;
+  min-height: 960px;
+  background: #fdfaf2;
+  margin-bottom: 30px;
+  padding: 80px 65px 60px 65px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  position: relative;
+  line-height: 2;
+  font-size: 15px;
+  color: #2c2416;
+  text-align: justify;
+}
+
+.page p {
+  text-indent: 2em;
+  margin-bottom: 0.6em;
+}
+
+.page p.no-indent {
+  text-indent: 0;
+}
+
+.page .chapter-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 60px;
+  margin-bottom: 36px;
+  text-indent: 0;
+  line-height: 1.6;
+}
+
+.page .meta-line {
+  text-align: center;
+  font-size: 13px;
+  color: #6b5e4a;
+  text-indent: 0;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.page .quote-block {
+  margin: 32px 0 40px 0;
+  padding: 20px 24px;
+  border-left: 3px solid #c4a87c;
+  font-size: 15px;
+  line-height: 2;
+  color: #4a3828;
+  font-style: italic;
+  text-indent: 0;
+}
+
+.page .quote-block p { text-indent: 0; margin-bottom: 0; }
+
+.page .podcast-ref {
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  text-indent: 0;
+  margin-top: 28px;
+  font-style: italic;
+}
+
+.page .page-num {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #8b7355;
+  letter-spacing: 0.05em;
+}
+
+.english, .num {
+  font-family: 'Baskerville', 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #c4a87c;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+}
+
+/* 手机 & 平板 */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 0;
+  }
+
+  .page {
+    width: calc(100% - 12px);
+    min-height: auto;
+    padding: 28px 18px 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.85;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  }
+
+  .page .chapter-title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .page .meta-line {
+    font-size: 11px;
+  }
+
+  .page .quote-block {
+    margin: 20px 0 28px;
+    padding: 14px 16px;
+    border-left-width: 2px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .page .podcast-ref {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .page .page-num {
+    bottom: 18px;
+    font-size: 11px;
+  }
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .page { box-shadow: none; margin: 0; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: CHAPTER OPENING ==================== -->
+<div class="page">
+<p class="chapter-title">在被打脸中进化：<br/>戴雨森的AI创投沉思录</p>
+
+<p class="meta-line">核心关键词：<span class="english">Strong Opinions Weakly Held</span> &nbsp;| &nbsp;<span class="english">Harness</span> &nbsp;| &nbsp;贝叶斯更新</p>
+
+<p class="meta-line podcast-ref">原始播客：张小珺商业访谈录 第142期<br/>"雨森的创投观察第2集：<span class="english">Harness</span>、下一个字节、<span class="num">2026</span>大机会和<span class="english">Stanley Druckenmiller</span>"<br/><span class="num">2026</span>年<span class="num">5</span>月<span class="num">27</span>日</p>
+
+<div class="quote-block">
+<p>"做早期投资，打脸是一个常态。如果你怕被打脸，那永远不说，永远不判断，那绝对不会被打脸。频繁被打脸，一方面说明我在获得反馈信号，我在成长；另外一方面说明这个行业在变化，有太多新东西——那我做早期投资就有机会。"</p>
+<p style="text-align:right; margin-top:8px;">—— 戴雨森，真格基金管理合伙人</p>
+</div>
+
+<p>在<span class="num">2025</span>年底第<span class="num">124</span>期节目中，真格基金管理合伙人戴雨森做了一个大胆的判断：<span class="num">2026</span>年的关键词是"<span class="english">the year of R</span>"——<span class="english">return</span>、<span class="english">research</span>、<span class="english">reality</span>。他彼时较为谨慎，认为这一年将是现实与回调之年，并且在过年前就清空了所有二级市场的股票。过去的小半年里，<span class="english">Anthropic</span>的编程收入暴涨，硬件股一路狂飙，整个市场比他预想的疯狂得多。很多人说他的一部分观点被打脸了。</p>
+
+<p>戴雨森经历了短暂的内心挣扎，还是决定继续录制这档系列节目。说服他的，是即刻的瓦总西东。瓦总对他说了一句话：如果你因为观点被打脸了就不愿意再说了，那你是真正被你的观点绑定了。但实际上你应该是一个持续学习、持续进化的个体。这很像费曼学习法，也很像模型的强化学习——你需要一个高质量的反馈信号，而很多时候那个信号是负反馈。在日常生活中，不会有人那么直接地批评你，但市场不会对你说好话。市场说你错了，你就是错了。</p>
+
+<p>于是有了这一期节目。主持人张小珺一如既往地带着她冷静的追问，把戴雨森的思考一层层剥开。从被打脸的复盘开始，一路穿过<span class="english">Anthropic</span>的组织密码、<span class="english">Harness</span>的价值崛起、<span class="english">return</span>问题的深层解构、<span class="num">2026</span>年的趋势判断、下一个字节跳动级公司的想象、硅谷与中国的前沿观察，直到最后，他们谈到了AI时代对人类思考能力的挑战。这不是一篇关于"AI未来"的综述。这是一份关于一个人如何在快速变化的市场中保持诚实、保持进化、以及刻意练习思考能力的现场记录。</p>
+
+<div class="page-num">- 1 -</div>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="page">
+
+<p>张小珺没有客气，开门见山："距离我们上次聊过去了小半年，上次你说的<span class="english">year of R</span>那些观点，今天觉得是不是有点被打脸了？"</p>
+
+<p>"其实这几个月来，陆续有人把之前的播客发给我说，你看你说今年AI的回报有问题，今年可能会有回调，是不是被打脸了？"戴雨森的回答没有回避，反而带着一种坦诚的兴奋。"我觉得其实挺有意思的。作为早期投资人，你必须在很多事情很早的时候去进行思考，然后给出一些判断。但在这过程中，打脸是一个常态。当你陆续被打脸的时候，很多时候其实说明这个行业变化很快。如果你做早期投资，这个行业变得很快，那就意味着它有很多的机会。"</p>
+
+<p>他接着复盘了这个判断的来龙去脉。去年底录节目的时候，大概是<span class="num">11</span>月<span class="num">12</span>月左右，大家最关注的是<span class="english">OpenAI</span>。那时<span class="english">OpenAI</span>的<span class="english">DAU</span>有<span class="num">8</span>亿，很快到<span class="num">10</span>亿。宣布跟一家公司合作，股价就涨几十个点。到了<span class="num">12</span>月，<span class="english">Gemini</span>发布了，大家说<span class="english">Google</span>变得很厉害，有<span class="english">TPU</span>、最多的算力、原生的多模态模型，<span class="english">Google</span>替代<span class="english">OpenAI</span>成为模型之王。然后到了今年<span class="num">1</span>月份，大家发现<span class="english">Claude</span>的<span class="english">coding</span>能力很强，<span class="english">agentic coding</span>开始全民普及。到<span class="num">3</span>月份的时候，<span class="english">Anthropic</span>收入增长非常快，它在二级市场的二手市值也超过了<span class="english">OpenAI</span>。但现在到<span class="num">5</span>月份，<span class="english">Codex</span>也很不错，新用户增速已经超过了<span class="english">Claude Code</span>。<span class="english">GPT-5.5</span>也很好，大家又觉得<span class="english">OpenAI</span>卷土重来。</p>
+
+<p>"所以哪个模型更好这个问题，在我们过去的<span class="num">6</span>到<span class="num">8</span>个月里面，不同的时候问可能都会有不同答案。"戴雨森总结道，"打脸是个常态。并且如果一个人怕被打脸，那永远不说，永远不判断，那绝对不会被打脸。阶段性去复盘、去思考，对自己和大家的交流都会是有帮助的。"</p>
+
+<div class="page-num">- 2 -</div>
+</div>
+
+<!-- ==================== PAGE 3 ==================== -->
+<div class="page">
+
+<p>张小珺追问道："你上一次非常精准地说的是要在今年下半年迎来回调。你现在还做这个判断吗？今年上半年起码没有，反而更疯狂了。"</p>
+
+<p>戴雨森没有正面回答"是"或"否"。他先引用了一句话——这句话来自他二级市场的偶像<span class="english">Stanley Druckenmiller</span>，索罗斯当年的操盘手，如今自己做基金。"<span class="english">Strong opinions weakly held</span>——你要有一个很强的观点，但是你不要被自己的观点所绑架。"他解释道，人很容易被自己说出去的话绑架。当你看空一个趋势的时候，你就很容易空仓。但为什么叫<span class="english">weakly held</span>？是因为你如果有一个很强的看法，你最好要知道你的看法是怎么来的——是<span class="num">123</span>不同的原因。当这些原因发生变化的时候，一个真正的聪明人应该去调整自己的看法。</p>
+
+<p>"世界本质上是个贝叶斯的事件，你前面发生的概率对后面事件的判断就是有影响。"戴雨森说。他重新拆解了当时判断的逻辑：他认为<span class="english">OpenAI</span>的核心收入分三大块——订阅制收入、广告电商收入、企业服务收入。前两块在六个月之后看，确实没有大家想的增长那么快。<span class="english">Pro</span>用户的付费增速、广告电商的进度都是低于预期的。</p>
+
+<p>"但是确实<span class="english">Anthropic</span>的<span class="english">coding</span>收入在企业服务里面大幅增长，那肯定是在去年<span class="num">11</span>月底<span class="num">12</span>月初是没有看到的。"他承认，<span class="english">Claude 4.5</span>、<span class="english">4.6</span>发布之后，带来了一个从量变到质变的提升。很多以前无法用<span class="english">agentic coding</span>完成的任务，现在能完成了。"当这个变化发生的时候，自然你对于未来轨迹的判断也会发生变化。"</p>
+
+<p>他还透露了自己的仓位变化：在看到<span class="english">Anthropic</span>的用量大幅上涨之后，他自己也频繁使用<span class="english">Claude Code</span>给自己做了很多小工具，确实觉得这是一个大变化。硅谷的<span class="english">Meta</span>、<span class="english">Google</span>，越来越多的公司在全民"吃螃蟹"，用<span class="english">agentic coding</span>、烧大量<span class="english">token</span>去尝试创新。所以他也加回了一些仓位——存储、光模块、<span class="english">GPU</span>这些所谓"卡脖子"的部分——但确实没有他的朋友们那么激进。</p>
+
+<div class="page-num">- 3 -</div>
+</div>
+
+<!-- ==================== PAGE 4 ==================== -->
+<div class="page">
+
+<p>张小珺敏锐地捕捉到了一个细节："你说你受到了播客的影响，不敢像朋友那样激进加仓。是播客的影响，还是你之前观点本身的影响？"</p>
+
+<p>"我觉得当你越强烈的表达一个观点的时候，你会被你说出去的话限制。而如果这句话是公开表达的，那肯定会有更多的限制。"戴雨森坦诚得令人意外，"这也是我之前在想要不要再录这第二期播客的原因。"</p>
+
+<p>他讲述了瓦总西东说服他的那番话。"他说如果你认为你的观点被打脸了，你就不愿意再说了，那其实你是真正的被你的观点绑定了。但实际上你应该是一个持续学习，持续进化的个体。"戴雨森把这比作费曼学习法——不断表达、思考，从中得到反馈。"这其实很像模型的强化学习，你要得到一个反馈信号，高质量的反馈信号。很多时候是负反馈信号，这是很重要的。在日常生活中可能不会有人那么直接的批评我，但市场不会对你说好话，市场说你错了你就错了。"</p>
+
+<p>张小珺顺势让他做一个完整的复盘：之前看对的什么，看错的什么？</p>
+
+<p>戴雨森说，看对的主要是对<span class="english">C</span>端用户的担忧。第一，以<span class="english">OpenAI</span>为代表的普通用户订阅制收费，他认为比较难以提价——从<span class="num">20</span>美金一个月，很难快速提到几十、一百美金。第二，当时已经有<span class="num">5000</span>万的付费用户，已经把人群中最愿意为AI付费的人筛选出来了，要继续提高不容易。过去六个月里，<span class="english">OpenAI</span>的<span class="english">DAU</span>、付费用户增速和每用户付费金额的增长，确实陷入了一定的停滞。第三，在<span class="english">ChatGPT</span>里面插广告这件事，大家太乐观了。哪怕像字节这么强大的公司，在抖音和<span class="english">TikTok</span>里的电商和广告探索都花了很长时间。<span class="english">Facebook</span>和<span class="english">Google</span>也是在成立之后都花了六年八年才成为广告的超级印钞机。这些判断没有大的问题。</p>
+
+<p>"但显然对<span class="english">Anthropic</span>或者说<span class="english">coding</span>，当时是完全没有预料到会在这么短的时间内发生这么大的变化。这个是看错的这部分。"</p>
+
+<div class="page-num">- 4 -</div>
+</div>
+
+<!-- ==================== PAGE 5 ==================== -->
+<div class="page">
+
+<p>张小珺追问那个最核心的问题：为什么当时没有看到<span class="english">coding</span>的爆发？</p>
+
+<p>戴雨森展开了一套非常诚实的分析。"智力这个东西，很多时候是一个突变的过程。这跟互联网是很不一样的。"他解释道，互联网在很早的时候——上个世纪末——电商、广告、门户、即时通讯这些商业模式的基础已经出现了。互联网需要的是把更多人连接起来、有更快的网速，从而产生更高的变现效率。它的商业模式出现得很早，只是一个不断完善的过程。但对于AI，本质上是智力。</p>
+
+<p>"我们可以想一个人来说，他的智力是必须突破一定的阈值才有价值的。你把AI的智力从猫的智力提高到智商<span class="num">80</span>、智商<span class="num">90</span>，是一个很大的成就。但是你想你要招个员工，你肯定希望他的智商至少是<span class="num">100</span>。突破这个阈值，才会突然出现很大的价值。"他打了一个他反复使用的比方——蒸汽机。"把水烧开了才有蒸汽机，烧到<span class="num">99</span>度也不会有蒸汽机。但到底多少度是烧开，提前预计是比较难的。"</p>
+
+<p>他进一步指出，从各方面的信息了解，包括张小珺之前跟<span class="english">Ilya Sutskever</span>和尧舜禹的访谈，大家对于<span class="english">coding</span>什么时候突破这个阈值，把<span class="english">agent</span>真正跑起来、完成高价值的<span class="english">coding</span>应用，其实没有一个特别明确的预期。"否则<span class="english">Claude 4.5</span>就不会叫<span class="english">4.5</span>，可能会叫<span class="num">5</span>。因为他们本身对这个版本号也可以看出来，其实没有那么大的一个期待。"从后视镜去看，没有范式变化，没有提出新的模型架构，也没有新的训练方式。但在<span class="num">4</span>到<span class="english">4.5</span>的过程中，<span class="english">4.5</span>又被<span class="english">4.6</span>进一步放大，带来了体验的本质变化。背后普遍认为是数据占了很大的部分——高质量的用户编程数据让模型的编程能力变得更好，同时有大量的<span class="english">RLHF</span>让模型这方面能力提升。原来跑不起来的<span class="english">agentic loop</span>，能够跑起来了。AI开始能够完成更长时间、更高价值的编程工作。</p>
+
+<p>"这个节点，你事后去看还是挺明显的。"</p>
+
+<div class="page-num">- 5 -</div>
+</div>
+
+<!-- ==================== PAGE 6 ==================== -->
+<div class="page">
+
+<p>张小珺没有停留在这个技术复盘上。她紧接着问了一个更深入的问题：<span class="english">Anthropic</span>为什么能做到？它背后的组织密码是什么？</p>
+
+<p>戴雨森先承认了信息的局限性。"<span class="english">Anthropic</span>本身就是一家尤其是对中国比较封闭的公司，所以我们的很多信息其实都是二手的，可能都不是一手的。"但他今年<span class="num">3</span>月份在硅谷交流了一圈之后，发现大家普遍提到了一点：组织能力和组织形态。</p>
+
+<p>他画出了一条组织形态的演进曲线。在<span class="english">ChatGPT</span>出现之前，AI处在探索阶段——大家不知道能做什么，是从下往上的、基于超级个人灵光一现的探索。在那个阶段，<span class="english">OpenAI</span>那种相对比较松散、从下往上的组织结构，比较适合探索不同方向。<span class="english">OpenAI</span>最开始有三个不同方向——做机器人、做世界模型去打游戏、语言模型只是一个小团队在做。这种支持自由探索的方式，在探索期很有价值。</p>
+
+<p>"但现在AI进入到了一个主线逐渐收敛的过程。<span class="english">Anthropic</span>选中<span class="english">coding</span>这个过程，我的理解是他也不是一上来就说我就要做<span class="english">coding</span>。而是在过程中逐渐发现，当训练数据中<span class="english">coding</span>的比例越来越多，它的<span class="english">coding</span>表现越来越好。并且他选择了一条做<span class="english">enterprise</span>、做生产力，跟<span class="english">OpenAI</span>做大的消费级产品不太一样的路线。但当方向明确之后，<span class="english">Anthropic</span>体现出来的其实是一个从上往下的公司组织能力。"</p>
+
+<p>他特别强调了<span class="english">Anthropic</span>的价值观面试。"每个人进去面试都是有价值观面试的，这是一种共同方向的认可。"而且它并不是那么强调个人英雄主义。反观<span class="english">OpenAI</span>，现在有很多明星研究员，每个人可能有自己的方向。"如果你是明星，我也是明星，那其实可能各自有各自的想法。"在资源分配上，<span class="english">Sam Altman</span>更像一个天使投资人——他在<span class="english">YC</span>当过<span class="english">President</span>，会不断鼓励各种小项目。"所以我们看到<span class="english">OpenAI</span>经常有很多项目做出来了，上线了，然后后来没人管，感觉又消失了。之前的<span class="english">GPTs</span>、<span class="english">Sora</span>、浏览器、<span class="english">Operator</span>……它缺乏一个持续性，因为很多时候是基于很小的团队从下往上做的。"</p>
+
+<div class="page-num">- 6 -</div>
+</div>
+
+<!-- ==================== PAGE 7 ==================== -->
+<div class="page">
+
+<p>戴雨森继续做对比。"<span class="english">Anthropic</span>现在看下来，不仅是招人的价值观、公司的方向很一致，并且<span class="english">Dario</span>好像每两个星期会跟公司有一个内部思考<span class="english">memo</span>的同步。它是一个很对齐的组织，蛮像是一些中国战斗力很强的公司。"他举了一个产品迭代速度的例子：在<span class="num">3</span>月份，<span class="english">Claude</span>几十天迭代了几十个不同的功能。"有的时候经常我一进<span class="english">Claude</span>的那个桌面端，它又升级了。"而<span class="english">OpenAI</span>的很多产品是"管杀不管埋"，到后面就没人维护了。</p>
+
+<p>"探索期适合自下往上的发散型组织。高速赛跑期适合一开始就明确<span class="english">bet</span>，然后从上往下、价值观比较一致、方向也比较齐心的组织。"但戴雨森没有把话说死。他提到了一个反例：张小珺跟尧舜禹也聊到过，<span class="english">OpenAI</span>还有很多创新的种子正在萌芽。假设接下来几年不"变天"，那<span class="english">Anthropic</span>这种专一的优势就会很大。但假如一两年后下一个范式又诞生了，可能重新会回到一个探索阶段。</p>
+
+<p>"这个其实是我在去年的<span class="english">R</span>里面的第二个<span class="english">R</span>——<span class="english">research</span>。当时我看到硅谷有很多<span class="english">new lab</span>的诞生，大家其实都在<span class="english">bet</span>一件事情——下一个范式可能又重新需要这种像<span class="english">new lab</span>一样比较发散、比较自由，同时也有很多资金的组织去诞生。但确实在现有范式下，就直直接在<span class="english">coding</span>上实现了一个大的提升转变。"</p>
+
+<p>他接着说了一个重要的观察。"在去年以前，很多人认为<span class="english">coding</span>是一个垂直领域。大家是把<span class="english">coding</span>和医疗、金融并列的。哪怕跟一些非常<span class="english">senior</span>的<span class="english">research lab</span>研究员聊，如果他不是做<span class="english">coding</span>的，他往往之前也是觉得<span class="english">coding</span>就是垂直方向中的一个。但现在大家发现<span class="english">coding</span>不是一个垂直，<span class="english">coding</span>是一个水平的——<span class="english">horizontal</span>——领域。它可以加强大量的办公室工作，加强医疗，加强大家做研究的速度。"这个认知的转变，是做出结果之后才变得显而易见的。</p>
+
+<div class="page-num">- 7 -</div>
+</div>
+
+<!-- ==================== PAGE 8 ==================== -->
+<div class="page">
+
+<p>张小珺接着问了一个尖锐的问题：之前大家都有一个担心——<span class="english">Anthropic</span>是不是一个卖<span class="english">API</span>的公司？尤其是在<span class="english">Claude Code</span>还没有风靡之前，包括尧舜禹也这么认为。如果只卖<span class="english">API</span>，那更好更便宜的模型出来以后，商业模式就没有门槛和壁垒。</p>
+
+<p>"但是你会发现<span class="english">Claude Code</span>非常重要。如果没有<span class="english">Claude Code</span>，<span class="english">Anthropic</span>只卖它的<span class="english">API</span>，我觉得它会是一家很不一样的公司。"戴雨森指出了核心：<span class="english">Claude Code</span>带来了用户大量高质量的使用数据，数据的回流让它能够训练更好的<span class="english">coding</span>模型，实现了数据飞轮。"并且最近<span class="english">Codex</span>涨得也很猛，<span class="english">Claude Code</span>、<span class="english">Codex</span>这其实都是<span class="english">Harness</span>。"</p>
+
+<p>"并不是说你有了强大的模型，你就可以把<span class="english">API</span>卖出去。用户还是要用你的产品，用户不是直接用<span class="english">API</span>。"所以这里面既有好的模型，又率先提出了一个能够做长时间任务的<span class="english">Harness</span>，这是<span class="english">Anthropic</span>做得很正确的事情。</p>
+
+<p>张小珺追问：那是不是有可能未来的好<span class="english">Harness</span>都是模型公司在做的？</p>
+
+<p>戴雨森认为不一定。"<span class="english">Claude Code</span>是可以接别的模型的。所以它和模型的耦合是没有那么强的。"他又举了<span class="english">OpenCoder</span>的例子——一个个人做的产品，曾经一度成为非常火的<span class="english">Harness</span>。"你会发现并不是只有模型公司才能够做出好的<span class="english">Harness</span>。当然如果你是模型公司，你对你自己的模型发展方向、对它的参数、各种细节很了解，所以你的<span class="english">Harness</span>会做得不错。但是<span class="english">OpenCoder</span>、<span class="english">Manus</span>、<span class="english">Cursor</span>，其实也都是<span class="english">Harness</span>。只是它们以前都叫套壳，去年大家都说套壳不重要，现在大家说<span class="english">Harness</span>变得很重要。大家对这个事情的判断，都是在不断变化的。"</p>
+
+<div class="page-num">- 8 -</div>
+</div>
+
+<!-- ==================== PAGE 9 ==================== -->
+<div class="page">
+
+<p>张小珺把话题拉回到两家公司的估值判断上：<span class="english">Anthropic</span>的优势是稳固的吗？今天的<span class="english">Anthropic</span>是被高估的吗？<span class="english">OpenAI</span>是被低估的吗？</p>
+
+<p>戴雨森的回答展现了他作为早期投资人习惯性的多时间维度思考。"短期、中期、长期不同的视角去看。很短期，三个月的角度，可能都被低估了。假设他们今天上市，普遍大家都认为可能至少是<span class="num">2</span>万亿美金的公司。现在<span class="english">Anthropic</span>新股的价格是<span class="num">9000</span>亿美金，<span class="english">OpenAI</span>也差不多<span class="num">9000</span>亿。他们预计在下半年或明年初上市，在现在的市场情绪下，上市直接翻倍炒到<span class="num">3</span>万亿都有可能。从这个角度来讲，反而是被低估的。现在年底<span class="english">ARR</span>的预期是<span class="num">1000</span>亿美金，也就是十倍，<span class="num">1</span>万亿美金不能说是特别贵。"</p>
+
+<p>"但如果从一两年的角度来讲，我仍然认为他们可能是被高估了。因为<span class="english">return</span>这个问题并没有真正被解决，它只是变成另外一种形式。两年之后去看，估值会有很大的下降。"他话锋一转，"从十年的角度去看，我认为里面的赢家——也许两个都是赢家，也许两个都会长期存在——有可能会是<span class="num">5</span>万亿、<span class="num">10</span>万亿的公司。"</p>
+
+<p>他还指出了一个容易被忽略的事实：现在头部几家模型公司没有拉开真正大的差距。"谁最后发模型，谁就显得最厉害。因为它每个模型都是一个比较大的提升，后发的就有后发优势。但如果你用这个去过度推演，可能也会有一些问题。"</p>
+
+<p>关于<span class="english">Claude Code</span>和<span class="english">Codex</span>之间的竞争，戴雨森的观察非常接地气。"很多是会有品牌锁定的。我自己用<span class="english">Claude</span>用得挺好的，那我有没有动力去试用<span class="english">Codex</span>呢？可能就没有。品牌其实会有很重要的优势——先发的品牌心智定位，还有用户粘性。我在我的<span class="english">Claude Code</span>里面配了很多<span class="english">skill</span>，有很多写在<span class="english">Claude MD</span>里面的配置，你要我用<span class="english">Codex</span>我可能就得重新弄一下。"</p>
+
+<div class="page-num">- 9 -</div>
+</div>
+
+<!-- ==================== PAGE 10 ==================== -->
+<div class="page">
+
+<p>张小珺精准地抛出那个核心命题："你刚才说到<span class="english">return</span>的问题没有真正解决。能不能展开讲讲？"</p>
+
+<p>戴雨森开始拆解一个三步链条。"我们投入的这些<span class="english">capex</span>它最后要变成一个回报，这是<span class="english">return</span>问题的本质。<span class="english">Anthropic</span>的收入大涨，让很多人认为回报问题已经被解决了。但我的看法是——<span class="english">Anthropic</span>的收入不是最后的回报，它是它的客户的投入。大家买来这么多<span class="english">token</span>，不是烧着玩的，大家是想最后得到结果的。所以这是把回报的问题进一步下推到了<span class="english">Anthropic</span>的客户这边。"</p>
+
+<p>他清晰地画出了链条：<span class="english">Anthropic</span>的<span class="english">token</span>是它客户的投入。客户烧了这些<span class="english">token</span>，需要得到做出来的软件——这是产出。产出光软件还不行，这个软件要卖钱或者能够降本，带来利润的提升——这才是结果。"投入、产出、结果。现在大家都在拼命投入，因为大家觉得这个投入最后有结果。这个结果一定是要利润的增加——要不然是收入的增加，要不然是成本的减少。"</p>
+
+<p>他抛出了一个思想实验。"移动互联网过去几年陷入了发展的停滞，不是因为缺程序员去写代码，而是大家不知道该做什么。对于一个稍微有一些规模的公司来讲，突然多了十倍的工程师，它的收入是会大涨吗？我认为很多时候其实是不会的。有很多人反馈用了<span class="english">agentic coding</span>之后效率提升了十倍。但是这么多十倍此起彼伏，公司的收入是不是多出来了很多新产品、卖给了很多新用户、带来很多新的收入？目前来看没有观察到一个大幅度的这种最后结果的提升。"</p>
+
+<p>张小珺追问：会不会是时间还不到？</p>
+
+<p>"就是你那个烧开水理论。新产品、新功能的发现是一个逐渐的过程。不是程序员突然多了十倍，新功能就出来了很多。它有一个逐渐释放、逐渐发现新产品新需求的过程。但你烧掉了<span class="english">token</span>，是现在就烧掉了。会有时间的错配。"</p>
+
+<div class="page-num">- 10 -</div>
+</div>
+
+<!-- ==================== PAGE 11 ==================== -->
+<div class="page">
+
+<p>戴雨森继续深入这个逻辑。他在硅谷和中国都观察到一个现象：原来硅谷不是那么内卷的，一个重要原因是程序员很贵。"我这么贵的程序员，我最好还是让他做我的核心业务。但现在你突然有了很多便宜的编程能力，但是你又不知道该做什么新东西的时候，我们就发现硅谷有的公司互相卷起来了，进入彼此的领地。原来<span class="english">Lovable</span>是做网站的，现在可以做<span class="english">PPT</span>了。原来<span class="english">Gamma</span>是做<span class="english">PPT</span>的，现在可以做网站了。当你可以用<span class="english">agentic coding</span>的时候，当你不知道做什么新的，第一反应是把别人做一下。复制一个已有功能的能力变得越来越快。"</p>
+
+<p>"但是如果你要做大家都没想到的功能，它不是一个编程问题，它是一个创新问题，一个产品问题。"所以他提出，"降本"是现在这个阶段的核心。</p>
+
+<p>他说到了裁员。但裁员这件事没有看起来那么简单。第一，如果出现大规模的裁员，这些程序员的收入也是别人公司的收入，对整个经济会产生巨大影响。第二，一个程序员可能百分之八九十的工作是编程，但还有百分之一二十是沟通协调、人与人的信任所驱动的。这些部分不能被<span class="english">agent</span>直接取代。"很多时候你替代他的编程能力那部分容易，但一个人在一个组织里的关系、人们的互相信任、沟通交流，还不能被取代。所以这个人你还不能简单的就把它裁掉了。"</p>
+
+<p>第三，裁员毕竟是你只能做一次的工作。"你只能把一个人裁一次，他能省下来的就是一次性的投入，不能持续的增量的裁出更多的成本来。"</p>
+
+<p>戴雨森最终下了一个判断。"我是感觉<span class="english">return</span>问题并没有真正的消除。它是以<span class="english">Anthropic</span>的收入这个形式——因为<span class="english">Anthropic</span>只要有收入，它的上游这些硬件公司、内存公司、光模块就可以有很多的订单。但是如果当<span class="english">Anthropic</span>的客户最后没赚到钱，那他们还会不会买这么多<span class="english">coding</span>的<span class="english">token</span>？这个非常值得观察和打个问号。"</p>
+
+<div class="page-num">- 11 -</div>
+</div>
+
+<!-- ==================== PAGE 12 ==================== -->
+<div class="page">
+
+<p>戴雨森用了一个水槽的比喻来形容当前的局面。"现在肯定是涌进来使用AI <span class="english">coding</span>的人远多于发现自己烧出去的<span class="english">token</span>没有那么大的价值的人。它有点像是个水槽，上面有无数多想'吃螃蟹'的人，上面其实有很多人觉得螃蟹不好吃他走了，但现在进来的人远多于离开的人。"</p>
+
+<p>但他强调了一个关键的时间约束。"来吃螃蟹的人、来尝鲜用AI <span class="english">coding</span>的人，是要能够最后从中赚到钱的，而且这个赚钱的周期不能太长。我不能今天烧了<span class="english">token</span>，过两年才能赚钱，这个大部分公司是受不了的。"他用自己的亲身经历佐证："我们自己也做很多的AI <span class="english">coding</span>的尝试。三月份估计都养了很多'小龙虾'，也烧了不少<span class="english">token</span>。但很有可能你会发现，三月份你烧的<span class="english">token</span>到现在就多很多。很多AI图文、自动化其实可能没有带来本质的价值。"</p>
+
+<p>不过他也承认，对小公司、对个人是很有机会的。"原来个人的创新，小公司的创新，很多时候确实是卡在程序员不够。他们是有想法没有人做。"</p>
+
+<p>张小珺提醒他：AI的影响不应该只限于程序员。戴雨森立刻接上，拓展到整个知识工作者。"第二步大家想的就是整个<span class="english">office worker</span>。比如你原来要写一个报告，现在AI给你写了，你是不是可以下岗了？"但他提出了一个非常独特的框架。"比如说我们投资机构，每个人能看的报告都多了很多。但是你投资决策，你最后还是要人去对这个决策负责。你原来看一家公司，现在可以看十家公司，但你能承担的投资职责，是不是你可以多投十倍的钱？我认为不是。"</p>
+
+<p>"一个组织里面能够背的锅是有限的。只要AI还不能帮你端到端完成一个工作，人多写十倍、一百倍的报告，但人还是要对报告的结果以及它驱动的行为负责。AI没法负责，我也没法开除它，我也没法关掉它。"</p>
+
+<div class="page-num">- 12 -</div>
+</div>
+
+<!-- ==================== PAGE 13 ==================== -->
+<div class="page">
+
+<p>张小珺问了一个关于时机的问题：今天的AI能力还在快速变化，现在就看<span class="english">return</span>问题会不会有点早？</p>
+
+<p>"我觉得肯定是比较早的。但是为什么现在要看呢？因为这个数很大。"戴雨森报出了一组数字。"现在整个AI今年在硬件上的投入是<span class="num">7000</span>亿美金。最近三星海力士的工人一年几百万的奖金——三星海力士的利润已经接近英伟达了。传统意义上的<span class="english">CSP</span>就是几个大的云厂商，他们的利润已经低于存储厂商的利润了。硬件端已经有非常大的投入。"</p>
+
+<p>"同时<span class="english">Anthropic</span>假设按照大家预期到年底<span class="num">1000</span>亿美金<span class="english">ARR</span>，意味着每个月它卖出<span class="num">100</span>亿美金的<span class="english">token</span>。掏了<span class="num">100</span>亿从这买<span class="english">token</span>的人，他们赚了多少钱？这个问题也是越来越需要在比较快的时间内回答，否则这个数字是太大——<span class="english">too big to ignore</span>。"他补充了一个金融层面的压力："像亚马逊这些，都已经在举债去建设它的数据中心。用资金杠杆引起来之后，实际上对于回报要求的问题解决的时间要求是在缩短的。"</p>
+
+<p>张小珺把话题拉回到<span class="num">2026</span>年的趋势判断上。去年底很多人说<span class="num">26</span>年会是应用的爆发，也有人预测会是大厂<span class="english">spring up</span>之战。但转过年来发现跟所有人想的完全不一样。</p>
+
+<p>戴雨森总结了自己团队一直以来的主线。"我们对于AI革命的关注的主线一直都很清晰。我们一直就看好AI对于生产力的巨大提升。我们也一直认为只有<span class="english">agent</span>才是AI提高生产力的主要形式。因为<span class="english">agent</span>不需要人的注意力，才能解放人的注意力。"他回溯了自己从<span class="num">2023</span>年开始的各种播客标题，从"大模型只是起点，人类未来适合多紧密协作的"到"模型能力的提升才能够解锁更多AI的价值"，到"每个人都会当AI的老板"。</p>
+
+<div class="page-num">- 13 -</div>
+</div>
+
+<!-- ==================== PAGE 14 ==================== -->
+<div class="page">
+
+<p>张小珺顺势请戴雨森深入讲解<span class="english">Harness</span>——这个在过去一年中从"套壳"变成了显学的概念。</p>
+
+<p>"我觉得如果说以前我们用一个产品，不管它是不是AI产品，有点像我自己去开车的话，现在我觉得我们构建的是一个有点像我们看<span class="english">F1</span>赛事里车手在开车，只是这个车手变成了模型，他开得很好。但是我们要搞一堆人给他保养、换胎，让他在赛道里面跑。"戴雨森说到这里，特意解释了<span class="english">Harness</span>这个词的起源——它来自于马具。"它是一个——你是怎么样让一个非常强的东西，在你规定的这个里面去运行。"</p>
+
+<p>他拆解了<span class="english">Harness</span>的几层结构。最基础的是模型。但模型首先需要有<span class="english">context</span>——模型有很多东西是不知道的，你需要把<span class="english">context</span>给它。这个<span class="english">context</span>可能是实时的，可能是属于你这个组织专用的信息。在<span class="english">context</span>外面，你还要给它建立起它能使用的工具、能以什么样的<span class="english">agent</span>循环去跑任务。</p>
+
+<p>"其实我们看到，当时为什么<span class="english">OpenCoder</span>出来大家觉得非常惊艳？是因为<span class="english">OpenCoder</span>通过给模型很多的权限，解锁了很多大家原来没有想到的场景。比如在<span class="english">Mac</span>文件上进行操作，它还有一个心跳的<span class="english">heartbeat MD</span>，每隔<span class="num">30</span>分钟让模型去检查有没有没做的事情。很多这些机制讲出来都很简单，但它让模型能够在长程的任务上完成得更好。"</p>
+
+<p>再往外一层是<span class="english">sandbox</span>——运行时环境。"去年<span class="english">Manus</span>出来的时候，他们就做了<span class="english">sandbox</span>，跟<span class="english">E2B</span>合作，让模型能够在<span class="english">sandbox</span>里上网、使用软件。现在大家越来越发现，要给AI配一个更加持久的电脑。"最近<span class="english">DigitalOcean</span>做虚拟机也涨了很多。"AI持久的具备一台电脑，在这台电脑里面一直去跑更多的任务，这件事情也变得很重要。这其实都是架构在模型层外面的。"</p>
+
+<p>戴雨森总结道："我们在模型外面报了越来越多的层次。这里面有的是模型厂商做的，有的是第三方创业公司做的。并且这里面越来越多的价值在于模型外面包的这几个壳里边。"</p>
+
+<div class="page-num">- 14 -</div>
+</div>
+
+<!-- ==================== PAGE 15 ==================== -->
+<div class="page">
+
+<p>张小珺追问：那你觉得<span class="english">Harness</span>变得更有价值了，还认可"模型即产品"这个观点吗——那个尧舜禹非常坚定地认为的观点？</p>
+
+<p>戴雨森的回答体现了辩证思维。"我认为他说的核心是在于，产品的核心能力是模型来提供的。但显然我们现在打交道的不是一个模型，或者不是一个模型的<span class="english">API</span>而已。把<span class="english">API</span>给你，你当然也能把它接起来，但我们交互的始终是一个产品。就说最开始AI这波浪潮的引爆是<span class="english">ChatGPT</span>，但<span class="english">ChatGPT</span>也是一个产品。它把<span class="english">InstructGPT</span>这样一个模型，<span class="english">position</span>成一个对话的形式，然后用这样一个对话的<span class="english">chatbot</span>形式体现出来。如果没有这个<span class="english">Harness</span>，也就没有这样的革命的诞生。"</p>
+
+<p>他进一步指出，进入<span class="num">2026</span>年，<span class="english">Harness</span>变得更重要了——但这和"模型吞噬一切"的观点可以同时成立。"拥有先进的模型这件事变得前所未有的重要。因为如果你的模型不够强，你也完成了不了这些任务。但我想说的点是，尤其是我们从一个早期投资人的角度，我们看到模型的这个生态位已经相对比较稳定。你说再出来一个同级模型公司需要的钱、需要的难度大很多。但是我们同时也看到大家都是在不同的<span class="english">Harness</span>上去用这个模型的。"</p>
+
+<p>他还指出了一个关键机制：好的<span class="english">Harness</span>带来的数据可以反哺模型。"以前<span class="english">Chat</span>大家觉得没有数据飞轮，是因为<span class="english">chatbot</span>主要是考验模型对世界的理解和智能，人类跟他聊的东西很难让模型变得更聪明——因为它已经训练了人类大量数据。但在<span class="english">coding</span>这里面，每个都是解决现实生活中的问题。当你起了一个项目，什么东西做好了，什么东西没做好，哪个库哪个东西要变化，所有的这些都是高质量的反馈信号。"</p>
+
+<p>他以<span class="english">Cursor</span>为例："<span class="english">Cursor</span>的<span class="english">Composer</span>基于<span class="english">Kimi</span>的<span class="english">pretraining</span>，然后他自己有大量的高质量的<span class="english">feedback</span>数据，所以训练出来<span class="english">Composer</span>这个模型其实是个挺好的模型。如果我只有<span class="english">Cursor</span>这个壳，但壳带来的数据加上<span class="english">post-training</span>，我也能够有模型级产品。"</p>
+
+<div class="page-num">- 15 -</div>
+</div>
+
+<!-- ==================== PAGE 16 ==================== -->
+<div class="page">
+
+<p>张小珺敏锐地提出了一个分歧：在她前面两期节目中，<span class="english">Freda</span>和尧舜禹对<span class="english">Harness</span>的看法很不一样。<span class="english">Freda</span>认为<span class="english">OpenCoder</span>这种智能体框架非常重要，能激发中层模型的上限。而尧舜禹觉得这种框架不太重要，更关注模型公司本身的能力。</p>
+
+<p>戴雨森调和了这个分歧。"他们俩都是搞模型的，所以你如果问他们什么最重要，他们一定会跟你说选一个好的模型最重要。对<span class="english">Freda</span>来讲，她聊到了<span class="english">OpenCoder</span>的话题，所以有这个看法。但她肯定不会觉得<span class="english">Harness</span>比模型更重要。并且我认为他们应该也都认为一个好的<span class="english">Harness</span>对于提升模型的表现，获取高价值用户的交互数据，从而形成数据回流，这两者都是重要的。"</p>
+
+<p>他接着分析了模型公司做<span class="english">Harness</span>的优势和劣势。"模型公司做<span class="english">Harness</span>有优势——有他对模型发展路线的了解，有他对模型结构的了解，当然也有他有很多算力和很多聪明人。但是另外一方面来讲，模型公司强调<span class="english">researcher</span>，和一个做应用的公司对于应用的理解，它可能是两种完全不同的能力。"</p>
+
+<p>他讲了一个有趣的细节。"当时<span class="english">Manus</span>出来的时候，大家都发现<span class="english">Manus</span>做<span class="english">PPT</span>做得挺好。然后我问了一个<span class="english">OpenAI</span>在做<span class="english">agent</span>的研究员，我说好像<span class="english">Manus</span>的<span class="english">PPT</span>比你们那个要好看。他回答我说'这个不本质'。我觉得他说的没毛病——对于一个模型的研究员来讲，<span class="english">PPT</span>好不好看确实不本质。但对用户来讲很本质。对用户来讲，我用你做<span class="english">PPT</span>我就得做个好看的<span class="english">PPT</span>。所以一个做模型的公司和一个做应用的公司，在很多事情上的看法是不一样的。"</p>
+
+<p>"模型公司认为的不本质是说我在现阶段以这个为目标去优化不本质，但它提高了智能的上限。当它提高了能力本身的时候，它自然就能做出好看的<span class="english">PPT</span>。但未来的那个更好的模型，也能被<span class="english">Harness</span>去用，做出更好的产品。"</p>
+
+<div class="page-num">- 16 -</div>
+</div>
+
+<!-- ==================== PAGE 17 ==================== -->
+<div class="page">
+
+<p>戴雨森接着用操作系统的类比来进一步阐述他的观点。"我们可以看假设操作系统的角度来讲，微软制作了<span class="english">IE</span>和<span class="english">Office</span>，这两个在早期时候就是<span class="english">Windows</span>上最重要的应用。但是<span class="english">Windows</span>上并不是只有微软做的应用，它也有<span class="english">Adobe</span>，也有<span class="english">Autodesk</span>。所以我不会认为说这些最后的应用也好，<span class="english">Harness</span>也好，最后都是模型公司自己做的。如果那样的话，这个生态这个<span class="english">use case</span>可能就太狭窄了。"</p>
+
+<p>张小珺让戴雨森具体讲讲几个典型<span class="english">Harness</span>的不同特点。戴雨森如数家珍。</p>
+
+<p><span class="english">Manus</span>："在<span class="english">sandbox</span>里面跑一个虚拟的浏览器，让AI去访问网页、去执行很多操作。它第一个做了<span class="english">wide research</span>——同时起十个几十个<span class="english">sub-agent</span>去执行不同的任务。其实它比<span class="english">Claude</span>、比现在大家做<span class="english">agentic</span>都要做得更早了。后来了解，<span class="english">Anthropic</span>做<span class="english">Claude</span>的时候，也借鉴了很多<span class="english">Manus</span>在<span class="english">wide research</span>时候的经验。它这个创新体现了一种——大家没见过一个做应用的公司，它基于模型把模型的<span class="english">agent loop</span>、<span class="english">context</span>吃得很透，做出来了很多模型公司没有做出来的体验。"</p>
+
+<p><span class="english">Claude Code</span>："这个<span class="english">CLI</span>其实是一个非常重要的展现形式。在<span class="english">terminal</span>里面，AI在一个更便于AI去进行操作的环境里，而不是在一个给人用的图形化界面里面。然后它通过<span class="english">skill</span>、这套对于<span class="english">agent loop</span>的配置，把模型能力发挥得非常好。"</p>
+
+<p><span class="english">OpenCoder</span>："在你<span class="english">Mac</span>上运行，所以它可以访问你<span class="english">Mac</span>里面所有的文件、日历、信息。心跳机制让它能够完成定时的任务，具备更强的记忆。它的<span class="english">memory MD</span>这套体制——在<span class="english">ChatGPT</span>、<span class="english">Manus</span>、<span class="english">Claude Code</span>之前，大家都觉得要把<span class="english">session</span>分开，不想串<span class="english">context</span>。但对于<span class="english">OpenCoder</span>来讲，所有都在一个大的聊天里面，只通过每天整理的<span class="english">memory MD</span>去实现记忆。很多人一开始不以为然，觉得<span class="english">context</span>会串、AI会有幻觉，但对用户来讲感觉就是很神奇。"他特别提到<span class="english">OpenCoder</span>做到了微信、<span class="english">WhatsApp</span>、<span class="english">Discord</span>这些<span class="english">IM</span>里面——"我到你去熟悉的地方。这个产品形态之前是没有的。这个创新显然也不是一个典型模型公司去做的。"</p>
+
+<div class="page-num">- 17 -</div>
+</div>
+
+<!-- ==================== PAGE 18 ==================== -->
+<div class="page">
+
+<p>戴雨森进一步深化了这个操作系统的类比。"以前大家把模型比作<span class="english">OS</span>，但我现在觉得这个<span class="english">Harness</span>本身更像是<span class="english">OS</span>。模型它其实很像是驱动这个<span class="english">OS</span>的处理器。"</p>
+
+<p>他解释道，现在已经有很多应用是基于<span class="english">Claude Code</span>或<span class="english">Codex</span>的<span class="english">runtime</span>再做一层应用。"比如说有个<span class="english">skill</span>可以插入到<span class="english">Claude Code</span>里面去。包括<span class="english">Pencil</span>、我们投的<span class="english">Slog</span>，都是基于你现在的<span class="english">runtime</span>，在上面再继续做一个壳、做一个功能。它有点像我在<span class="english">Windows</span>上去做一个应用。对于这样的应用来讲，它不用自己去处理跟模型怎么通讯，而是由这个中央<span class="english">Harness</span>去处理模型的通讯。做<span class="english">skill</span>的人只用考虑我的<span class="english">UI</span>怎么做。"</p>
+
+<p>他回溯了技术分化的历史。"这特别像是在早期操作系统出现的时候形成的分化。最开始你要写一个应用，你是自己得处理怎么跟<span class="english">CPU</span>通信的。当<span class="english">Windows</span>、<span class="english">DOS</span>这样的操作系统出现之后，你只需要处理跟<span class="english">Windows</span>的通讯。至于<span class="english">Windows</span>怎么去调度<span class="english">CPU</span>、内存，怎么去做<span class="english">IO</span>接口，是操作系统去解决的。对于当时<span class="english">Windows</span>出现之后，开发者就不用去<span class="english">handle</span>硬件了，就<span class="english">handle API</span>就行了。"</p>
+
+<p>"三年前，一个AI应用开发者他得自己去处理，怎么样写一个<span class="english">agentic loop</span>，怎么样处理<span class="english">memory</span>，怎么样处理各种<span class="english">guardrail</span>——就是模型的这些<span class="english">Harness</span>的东西。那个时候要做一个应用开发者是更辛苦的。但现在在<span class="english">Claude Code</span>或者这些<span class="english">Harness</span>基础上，你再做一个<span class="english">skill</span>，你就不用去处理怎么跑这个<span class="english">agentic loop</span>——<span class="english">Harness</span>帮你处理了。现在它有点像是<span class="english">Harness</span>变成了操作系统层，模型变成了处理器层。就像当时<span class="english">Windows</span>年代，你可以用<span class="english">Intel</span>的<span class="english">CPU</span>，也可以用<span class="english">AMD</span>的<span class="english">CPU</span>，你可以插拔这个<span class="english">CPU</span>——哪个便宜用哪个，哪个新的更想用哪个。这个其实挺像现在的，就是用户可以插拔模型给它的<span class="english">Harness</span>。"</p>
+
+<div class="page-num">- 18 -</div>
+</div>
+
+<!-- ==================== PAGE 19 ==================== -->
+<div class="page">
+
+<p>张小珺把话题转向了创业投资。戴雨森先谈了他看创业者的两个原则。</p>
+
+<p>第一个：要做真正大幅度的创新。在变化很快的时候、机会很多的时候，最怕的就是为了稳妥去跟风。"你一做跟风，你如果东西不够创新，你跟着别人跑，那可能时间就浪费了。缺钱可以融资，创新失败了可以再来。但如果你做的事情上来也不创新，在AI时代这是很危险的。"</p>
+
+<p>第二个：要敢于做<span class="english">horizontal</span>的东西。"在硅谷的时候，每个人都说我要做<span class="english">vertical</span>，我要做很垂直。有的人觉得经营垂直行业比较保险，因为大厂不会来跟你竞争。但是技术发展早期变化太快了。如果你做的太垂直的话，你是容易把自己给困进去的。当你做<span class="english">horizontal</span>的时候，你的能力是可以去发散的。<span class="english">Manus</span>刚开始做的时候，并不知道后来<span class="english">PPT</span>、做网站会变成主要的场景。他们是做了一个很公用的<span class="english">agent</span>，后来衍生出了可以做<span class="english">PPT</span>、做网站、做数据分析。"</p>
+
+<p>他认为硅谷之所以讲究做垂直<span class="english">SaaS</span>，是因为<span class="english">SaaS</span>已经到了后期，通用的机会已经被做得差不多了。但在一个技术发展早期，当有<span class="english">horizontal</span>的机会的时候，勇敢地去做<span class="english">horizontal</span>、做创新，才会有大机会。他说了一句有点"暴论"的话："我们对<span class="english">AGI</span>的定义一直在缩水的。最开始的<span class="english">AGI</span>是那种毁灭人类——<span class="english">Singularity</span>，后来变成解决黎曼猜想、创造新东西，现在是替代普通程序员。虽然现在一部分已经实现了，但<span class="english">AGI</span>被做了一个缩水化。怎么样真正实现能够创新，还是非常重要。写代码，尤其大部分日常的写代码，是一个完全<span class="english">within distribution</span>的事情。<span class="english">AI</span>毁灭旧价值的速度是远高于创造新价值的速度的。创造新价值——新药物，新的发现——这些还是应该去做。"</p>
+
+<div class="page-num">- 19 -</div>
+</div>
+
+<!-- ==================== PAGE 20 ==================== -->
+<div class="page">
+
+<p>戴雨森谈到了<span class="english">Harness</span>创业者的护城河问题。"第一个就是你积累了自己数据之后，可能也得做自己的模型。<span class="english">Cursor</span>是一个最典型的例子——他不是也要卖了吗？但是他可以不卖。但至少<span class="english">Composer</span>的出现肯定是让<span class="english">Cursor</span>这家公司变得更有价值了。第二个，你的护城河要建在产品上。当你的记忆在<span class="english">Harness</span>身上的时候，用户是可以换模型，但他不想换<span class="english">Harness</span>。"</p>
+
+<p>他接着提出了一个非常新颖的构想——<span class="english">agent</span>之间的网络效应。"互联网最强的就是网络效应。但过去AI一直没有做出一个好的网络效应来。我在想，是有可能出现一个<span class="english">agent</span>的网络效应。本质上是因为<span class="english">agent</span>之间的差距越来越大，带来了一个价值交换的可能性。"</p>
+
+<p>他描述了一个场景："六个月前你用的<span class="english">agent</span>，我用的<span class="english">agent</span>，没有什么本质变化。但现在因为大家在<span class="english">agent</span>上沉淀了越来越多的<span class="english">context</span>——你有你的<span class="english">skill</span>，我有我装的<span class="english">skill</span>，并且我跟我的<span class="english">agent</span>沟通之后，它对我有很多更加独特的了解。假设我跟他讨论了<span class="num">100</span>个<span class="english">BP</span>，那它可能对于戴雨森怎么看一个<span class="english">BP</span>就会有更多的了解。同样一个任务给不同的人的<span class="english">agent</span>去做，会得到不同的结果。这样就会出现——我有理由把我的事儿给你做。"</p>
+
+<p>他甚至算了一笔账。"假设我要采访一个人，我的<span class="english">agent</span>把任务请张小珺的<span class="english">agent</span>来做，给<span class="num">1000</span>块钱。这里面可能<span class="num">100</span>块钱是<span class="english">token</span>的价值，但<span class="num">900</span>块钱是因为你的<span class="english">agent</span>积累了你的专有知识、专有信息，所以它比我的<span class="english">agent</span>烧<span class="english">token</span>做出来东西要好很多。这种价值的网络是有可能出现的，有点像是一个雇佣劳动市场。"</p>
+
+<p>"六个月前我是没有理由雇佣你的<span class="english">agent</span>的。因为你的<span class="english">agent</span>跑的也是<span class="english">Claude</span>，我的也是<span class="english">Claude</span>，咱俩都一样。但是你的<span class="english">context</span>、你的专有信息，永远不会被蒸馏到模型里面去。所以你的<span class="english">agent</span>做出来的东西就是跟别人不一样。"他甚至开玩笑说："沈南鹏的<span class="english">agent</span>也可以花高价钱，请戴雨森的<span class="english">agent</span>帮你看看<span class="english">BP</span>、看看二级市场投资。"</p>
+
+<div class="page-num">- 20 -</div>
+</div>
+
+<!-- ==================== PAGE 21 ==================== -->
+<div class="page">
+
+<p>张小珺问他：<span class="num">2026</span>年的投资出手速度有没有变化？</p>
+
+<p>"我们整体节奏比较固定，今年比去年要多一点，但没有多很多。<span class="num">25</span>年上半年整体市场那会儿还是<span class="english">DeepSeek</span>时刻、<span class="english">Manus</span>时刻，所以那时候还比较没那么活跃。今年我们整体会多一点，但节奏还是相对比较固定。"他透露，"去年看了<span class="num">100</span>个项目，投了两个。今年到<span class="num">5</span>月已经投了三个了。"</p>
+
+<p>戴雨森接着阐述了真格基金的投资哲学：坚持投人。"我们发现优秀的创业者，其实会和热门的方向共振。比如去年下半年我们投了两家做具身方向的公司，创始人一个叫刘松明是<span class="num">00</span>年的，一个叫丁宁是<span class="num">97</span>年的，都是清华非常年轻的<span class="english">PhD</span>和教授。我们投他们都不是因为他们是做世界模型或者机器人大脑这种热门的方向，而是我们跟踪了好几年，一直就觉得他们是我们心目中很优秀的清华新一代年轻学术型创业者。但他们做的这些事情在今年都变成了大家觉得很热的风口，估值都涨了很多。"</p>
+
+<p>"我们一开始并不是因为他们要做这个方向，我们去找这个方向的创业者的。而是我们一直觉得他们很优秀，关注很久，他们只要想创业我们就投了。所以我们一直是通过投人寻找优秀的人。然后这些优秀的人，他们做的事情有可能变成下一个风口，成为大家关注的方向。"</p>
+
+<p>他透露了一个有意思的细节：去年投的时候，两家公司都是<span class="num">2</span>亿人民币左右的估值，现在好像都几十亿了。刘松明是在跟<span class="english">Journalist</span>几乎同期做了通过大规模收集<span class="english">embodiment</span>数据进行模型训练的工作，丁宁是<span class="english">SimpleVLA</span>系列的作者。他们共同的特质是：对技术充满前瞻的理解，同时又很具备企业家精神，能够果断放弃很多东西出来创业。</p>
+
+<div class="page-num">- 21 -</div>
+</div>
+
+<!-- ==================== PAGE 22 ==================== -->
+<div class="page">
+
+<p>他还讲了一个关于灵巧手的投资故事。真格投了一家叫<span class="english">5G</span>的公司做灵巧手，创始人从<span class="english">UIUC</span>毕业之后，自己家里掏钱供他去做电机的公司。"他对创业是一个非常有执念的创始人。不是说我用了<span class="english">VC</span>的钱我才去创业，他是自己掏钱去做的，对这事情非常有热情。"</p>
+
+<p>创始人一开始做的是高扭矩电机，做着做着发现手这个东西很重要。"但那个时候很少有人做手，而且很少有人做高自由度的灵巧手。那时候一个手可能都是几十万，大家会觉得太贵了，市场很小。但他就坚定要做灵巧手。他说未来机器人的最好操作就是手，人手的数据是最容易获得的，手的成本会快速下降。"</p>
+
+<p>现在手的成本正在快速下降，而且因为通过<span class="english">egocentric</span>视频数据训练的模型越来越重要，跟人手同构的灵巧手就变得越来越关键。"但你如果问我们是不是一上来就意识到手会特别好——也不是。我们也是投优秀的创始人，他去探索出来，他认为做手的机会来了。"</p>
+
+<p>张小珺问他看人的框架有没有变。戴雨森说底层的东西没有变。"我们把创始人分为四类：小天才、老司机、科学家、操盘手。这个时代照样适用。学习力、创造力、领导力、意志力，每个力有不同的维度去判断。优秀的创业者的很多第一性原理始终是一致的——从徐老师他们做新东方开始，始终都关注创始人之间的配合、信任，关注创始人为什么要创业的动机，关注这个团队是否经历过考验，是否能力互补。"不同的是，"<span class="num">20</span>年前是对互联网的了解，十年前是对移动互联网了解，现在是对AI的了解和机器人的了解。"</p>
+
+<div class="page-num">- 22 -</div>
+</div>
+
+<!-- ==================== PAGE 23 ==================== -->
+<div class="page">
+
+<p>张小珺问了一个关于创业者群体的问题：字节系的创始人是不是一个好的投资人群？</p>
+
+<p>"字节系出来的创始人本身的素质肯定是很高的。但我的一个简单观察是，有的时候要把自己学会的东西，可能要自己颠覆自己的一个过程。"戴雨森说道，"确实我们看到有的字节系创业者做的产品也挺像一个字节产品的——就是一个信息流刷来刷去，里面可能是AI生成的小游戏、AI生成的小组件或者一个<span class="english">chatbot</span>。把这种组件再做一个信息流应用，我觉得是蛮难有大机会的。"</p>
+
+<p>他接着提出了一个更大的判断。"我认为每个时代革命型的公司，它解决的用户问题、它的交互方式都是挺不一样的。现在有一批创始人和一批投资人在寻找下一个字节跳动的公司。但很多人在做的AI应用，我会总结为一个AI的信息流——打开是一个信息流，用户单列或双列在刷AI产生的东西。我认为这就是把新的技术包在了一个自己最擅长的信息流壳里边，然后再去比推广、比分发。在字节的游戏规则里打败字节是非常难的。"</p>
+
+<p>他拿<span class="english">OpenCoder</span>做反例。"<span class="english">OpenCoder</span>没有自己的应用，连自己的阵地都没有，但是它活在每个地方——你的微信、你的<span class="english">Discord</span>、你的<span class="english">Telegram</span>。把上一个时代的成功范式搬到AI时代，你其实就是在跟上个时代的冠军去竞争，这很有难度。"</p>
+
+<p>他进一步区分了<span class="english">To C</span>和<span class="english">To B</span>的机会。"移动互联网应该是<span class="english">To C</span>，但我觉得AI时代，<span class="english">To C</span>做娱乐的机会、做<span class="english">kill time</span>的机会，不一定是大机会。因为你现在做任何一个<span class="english">kill time</span>的应用，一上来分发就被已有的冠军把持了。你的竞争对手一上来就是抖音、红果、小红书。生产力角度就完全不一样——原来用户都得用手打<span class="english">Excel</span>，现在AI帮你做，一下子就是十倍一百倍的提高。这个是简单题。"</p>
+
+<div class="page-num">- 23 -</div>
+</div>
+
+<!-- ==================== PAGE 24 ==================== -->
+<div class="page">
+
+<p>戴雨森接着用技术扩散的历史规律来阐述他的判断。"每次技术革命发生的时候，我认为首先是新技术解决老问题的过程。互联网创业的时候，首先是已经有了邮件，大家用互联网发邮件；有了新闻报纸，大家用互联网再做一遍新闻，有了门户网站；有了商业，大家用互联网再做一遍商业，有了自营电商。这个过程，新瓶装旧酒，是有很大价值的。"</p>
+
+<p>"但是最大的机会是在技术渗透率到达一定程度的时候诞生的全新机会。当上网的人越来越多，把这些人组织起来的社交网络和即时通讯，是互联网时代最大的机会之一。当越来越多的信息上网了，搜索引擎诞生了。当商家、买家和卖家都上网了，平台电商出现了。"</p>
+
+<p>他继续推演移动互联网时代。"移动互联网来临的时候，大家用移动思维做老需求——移动浏览器、移动搜索引擎、移动<span class="english">YouTube</span>。但移动搜索引擎还是<span class="english">Google</span>和百度，移动浏览器还是<span class="english">Chrome</span>。当智能手机<span class="english">4G</span>的普及率过高，内容创作者和消费者都有了智能手机，才诞生了短视频平台、直播平台、推荐引擎。当游戏玩家上了手机，出现了米哈游。当蓝领工人也拥有了智能手机，出现了美团、滴滴。当下沉市场的很多用户有了微信和支付方式，出现拼多多。所有这些公司全是创业公司——做的都是技术渗透率到达一定程度、技术完善度到达一定程度之后出现的新机会。"</p>
+
+<p>他把这个规律套用到AI上。"AI一上来是新技术解决老问题——<span class="english">coding</span>、写文章、翻译、画图。这部分已经带来巨大价值。但如果我们把这个规律继续推，当AI或者<span class="english">agent</span>变得渗透率很高、很成熟的时候——你有<span class="english">agent</span>我也有<span class="english">agent</span>，每个商家都有<span class="english">agent</span>，每个产品服务都有<span class="english">agent</span>——他们之间怎么协作？怎么样高效地让我的<span class="english">agent</span>也变得更有价值？这可能是更大的机会。"</p>
+
+<div class="page-num">- 24 -</div>
+</div>
+
+<!-- ==================== PAGE 25 ==================== -->
+<div class="page">
+
+<p>戴雨森描绘了三步走的AI <span class="english">native</span>产品路线图。"AI有点像是一个外星人，来到了人类的世界。第一个阶段是让人类拥有更多更好的<span class="english">agent</span>。三年前人类社会是没有<span class="english">agent</span>的，现在来了一些<span class="english">agent</span>，但还不够多。<span class="english">Claude Code</span>、<span class="english">Codex</span>、<span class="english">OpenCoder</span>、<span class="english">Manus</span>、<span class="english">Cursor</span>全都在做这个事情——安装越来越简单，配置越来越容易，管理越来越方便。"</p>
+
+<p>"第二波是让来到人类世界的<span class="english">agent</span>更好地适应人类的数字世界。因为人类的数字世界基本上是为人类设计的。<span class="english">GUI</span>、验证码、信用卡——AI原来往往是要被阻止的对象。原来都是要阻止<span class="english">bot</span>，现在我们有一堆好的<span class="english">bot</span>来了。所以让AI高效地使用人类的软件和基础设施变得很重要。大家都发现支付是个问题，<span class="english">Stripe</span>、<span class="english">Basis</span>都在做给AI发人类的信用卡。<span class="english">Cloudflare</span>以前都是挡住AI的，最近推出了让<span class="english">agent</span>跟人一样平等注册和使用各种服务的功能。各种<span class="english">computer use</span>、各种<span class="english">sandbox</span>，让AI能用人类已经写好的软件。就好像一个外国人来到中国，你得给他办个<span class="english">SIM</span>卡，弄个微信账号，弄个支付宝。这是一个让<span class="english">agent</span>能够待下来，用好人类已有设施的阶段。"</p>
+
+<p>"再进一步，当<span class="english">agent</span>变得更多、更重要的时候，会有<span class="english">agent</span>专属的数字世界的工具和基础设施。比如说AI和AI之间的支付就跟人的支付不一样，可能就没有卡这个概念了——因为<span class="english">agent</span>的支付可能是非常高频、小额的、多对多的。AI用的可能就是<span class="english">CLI</span>或者是<span class="english">API</span>，总之不是用人的<span class="english">GUI</span>——因为<span class="english">GUI</span>是为人设计的，人能力很差，会记不住看到哪了，需要有个列表，滑到这儿了。AI没有这个问题，AI可以变得更高效。这三个阶段，每一个其实都是产品的机会。"</p>
+
+<div class="page-num">- 25 -</div>
+</div>
+
+<!-- ==================== PAGE 26 ==================== -->
+<div class="page">
+
+<p>张小珺问他在硅谷观察到了哪些前沿方向。戴雨森总结了三个。</p>
+
+<p>第一个就是<span class="english">coding</span>带来的大变化。"大家都在拼命使用<span class="english">coding</span>，不管有没有用，先用上，然后开始大跃进式的烧<span class="english">token</span>。<span class="english">Meta</span>搞<span class="english">leaderboard</span>，比谁烧得多。这里面肯定有浪费，但肯定也有创新会被催生出来。"这个现象带来的社会心理影响也很大——"有些人很兴奋，觉得<span class="english">AGI</span>马上会实现。很多人很恐惧，觉得自己要失业。硅谷很多人想投<span class="english">Anthropic</span>的老股——你既然要把我的工作消灭了，我不如成为你的股东，我要上车。"</p>
+
+<p>第二个是世界模型。"确实是在中美过去<span class="num">6</span>到<span class="num">12</span>个月变得非常热的一个概念。在中国，大家发现我有很多硬件，但硬件得有用，得能操控、帮人做事情。从模型角度，<span class="english">egocentric</span>大规模视频数据训练、<span class="english">embodiment</span>数据进行训练，几条不同路线在机器人上陆续出现了一些端倪——机器人在做一些任务的稳定性以及未见任务的泛化能力上，好像出现了一些突破。硅谷的人特别想把语言模型的范式平移到机器人的模型上——通过收集大量数据，符合某种<span class="english">scaling law</span>进行训练，让机器人模型也具备<span class="english">zero-shot</span>的泛化能力。但世界模型现在也处在一个概念纷争中——到底什么是世界模型，大家也不知道。"</p>
+
+<p>第三个是<span class="english">auto research</span>。"大家想实现的是一个<span class="english">recursive</span>——AI能够自我迭代、自我提高、AI提升AI的过程。不管是在科学研究上还是在AI研究上，都有这样的公司在做。元元栋的<span class="english">Cursive</span>也在做自我改进的AI。这是一个很重要的方向。"</p>
+
+<p>戴雨森还对比了中美差异。"硅谷非常<span class="english">focus</span>在模型和<span class="english">vertical</span>上，<span class="english">horizontal</span>的通用应用是很少的。<span class="english">Manus</span>好像没有什么竞品。但<span class="english">Manus</span>的<span class="english">ARR</span>也到了四点几亿美金，<span class="english">Cursor</span>也有四点几亿美金。其实<span class="english">horizontal</span>我认为还是有很多的机会。中国则是硬件方面会火很多——机器人一直很火，还有<span class="english">AI</span>硬件、各种可穿戴、量子计算、商业火箭。"</p>
+
+<div class="page-num">- 26 -</div>
+</div>
+
+<!-- ==================== PAGE 27 ==================== -->
+<div class="page">
+
+<p>张小珺提到移动互联网时代有很多"金科玉律"今天可能不<span class="english">work</span>了。戴雨森一连串地指出了好几个维度的变化。</p>
+
+<p>"移动互联网的商业模式可以叫做<span class="english">attention as a unit</span>——<span class="english">DAU</span>乘以时长乘以变现效率等于收入。但里面有个<span class="english">bug</span>——世界上只有这么多人，每个人只有<span class="num">24</span>小时。但<span class="english">agent</span>的时代，用户自己看着屏幕的时长已经不是最关键的指标了。更关键的指标是<span class="english">METR</span>那个研究院提出的——一个<span class="english">agent</span>能够持续完成有价值任务的长度。如何解放用户的注意力，让AI去干活，变得很关键。<span class="english">Attention is all you need</span>变成<span class="english">Attention is not all you need</span>。"</p>
+
+<p>护城河的角度也发生了很大变化。"移动互联网时候，超级应用都是把用户圈在自己的<span class="english">APP</span>里面，让用户不出去。但如果用户的<span class="english">agent</span>变得很强大，但<span class="english">agent</span>无法访问你这个封闭<span class="english">APP</span>里面的信息——在之前用户的<span class="english">agent</span>就很难访问微信里面的信息，因为微信不开放。那用户可能就会去访问飞书里面的信息，因为飞书开放。你原来的超强护城河反而可能变成束缚自己的壁垒。<span class="english">OpenCoder</span>出来之后，飞书接入了很快，还出了飞书<span class="english">CLI</span>。在微信里的工作群聊，我是有动力迁移到飞书上去的。在微信里聊了AI看不到，但在飞书里聊了AI就能看到。原来你的护城河变成你的软肋。"</p>
+
+<p>关于<span class="english">DAU</span>这个指标，他也提出了反思。"一个<span class="english">DAU</span>没那么高的产品，不一定就不大。<span class="english">Claude Code</span>的<span class="english">DAU</span>肯定远低于<span class="english">ChatGPT</span>，但它的收入量级可能要高很多。一个大的<span class="english">DAU</span>产品和一个高价值任务的产品，应该选择做哪种？如果你为了优化<span class="english">DAU</span>，可能出现一种很滑稽的场景——你让用户不得不多上来看一看。但更好的是用户把任务交给<span class="english">agent</span>，它自己跑出来，你都不用去看了。所以你的用户访问反而会下降。这取决于你要做什么样的产品。"</p>
+
+<div class="page-num">- 27 -</div>
+</div>
+
+<!-- ==================== PAGE 28 ==================== -->
+<div class="page">
+
+<p>张小珺问他：AI本身对你的改变是什么？</p>
+
+<p>戴雨森的回答从工具层面切入，但很快进入了一个更深层的反思。"我确实用<span class="english">agentic coding</span>做了很多自己用的小工具。我是一个以前不会写代码的人，去年年终用<span class="english">Claude Code</span>发现能做到<span class="num">80%</span>的任务，但离真正把它发布上线调通还差临门一脚。今年年初确实完成度完全不一样了。"</p>
+
+<p>他现在每天都有好几个爬虫把播客、<span class="english">newsletter</span>、会议纪要、写作内容整理到一起，给自己出日报。"我每天见的人，可能有一个人分三段时间见了三次，他的纪要会整理在这个人的条目下面，建立对一个人、对一个公司、对一个股票的长期跟踪。信息的获取和收集效率提升了很多。"</p>
+
+<p>但紧接着他就抛出了一个担忧。"我最近一直在想一个问题——越来越自然的，我们就把很多思考外包给了<span class="english">ChatGPT</span>或者给了AI。以前遇到个问题，可能会自己去了解一下，想一想，现在很多时候就是问AI。这带来了很多好处，但可能也会出现很多问题。因为如果你直接得到答案，而你没有自己经过思考的过程，你对于这个答案的质量以及后续再怎么进一步去思考——你的大脑并没有变化，你的权重没有更新，可能并没有真正理解这件事情。"</p>
+
+<p>"如果一个人一直坐轮椅的话，他的腿部肌肉可能就会退化、萎缩。一个人如果长期用AI带来的所谓思考代替自己的思考，那思考能力可能也是会退化的。我们现在是把体力劳动外包给机械，把知识和记忆外包给互联网，现在正在把思考外包给AI。<span class="english">Andrej Karpathy</span>说过一句话——你可以外包思考，但不能外包理解。但我认为思考可能也不能完全外包。"</p>
+
+<div class="page-num">- 28 -</div>
+</div>
+
+<!-- ==================== PAGE 29 ==================== -->
+<div class="page">
+
+<p>戴雨森提出了一个概念——"思想的健身房"。"你看我们为了多运动，有健身房，我要刻意的运动。可能当你的很多思考被外包给AI之后，你也需要思想的健身房——你刻意的去思考。为了准备咱们这些播客，我对于很多事情可能有个观点，但这个观点里面有哪些论据、以什么来的？我其实是在逼自己思考的一个过程。当我思考了，而不是让AI去总结一下，我能够对这个事情讲得更清楚。思考是需要刻意练习的，创新也是需要刻意练习的。"</p>
+
+<p>他坦诚地说出了自己的困境。"作为一个快<span class="num">40</span>岁的中登，我的想法可能比我<span class="num">20</span>岁创业的时候要少了很多。现在坐拥各大<span class="english">coding agent</span>的订阅，每天有很多AI等着给我打工，但做什么呢？我自己都有这个问题。"他讲了一个朋友的例子——"林总"每个月烧一万美金的<span class="english">token</span>。"他做了个扫描器，扫描每天哪些域名到期了又没有人注册。然后看看今天AI注册回来什么域名，再给域名做点东西。上次买了一个猫相关的域名，就给自己家里五只猫做了一个实时监控系统。我很佩服他，因为他是在刻意练习自己为AI创新。"</p>
+
+<p>戴雨森还分享了他们几个朋友正在用<span class="english">Slog</span>共创一个鼓励朋友之间互相比较健康数据的应用。"初衷是要督促我减肥。他们说要做一个大屏幕，让你看到大家的睡眠都很好，所以你要多睡觉。这种东西好像不是什么直接能产生价值，但在这个过程中，我们知道用<span class="english">agent</span>一起协作做一个事情，到底难点在哪，也是个很有意思的体验。"</p>
+
+<p>关于社会如何消化技术变革带来的冲击，戴雨森引用了工业革命的类比。"蒸汽机发明是为了从矿井里面抽水，因为煤矿越挖越深，容易积水。当时的蒸汽机只能做直线运动，只能在抽水这个场景。后来瓦特发明了冷凝器和行星齿轮，把往复运动变成了圆周运动。然后珍妮纺织机的发明，蒸气机带动了纺织业。纺织业的进展让每个人用的衣服变多了，带来了对颜色的需求。当时天然染料很贵，化学合成染料工艺开始发展，现在的巴斯夫、拜耳这些化工巨头当时是开染料作坊的。化工产业的诞生又带来了汽油、塑料、化肥——一个蒸汽机的发明，扩散了很多东西。"</p>
+
+<div class="page-num">- 29 -</div>
+</div>
+
+<!-- ==================== PAGE 30 ==================== -->
+<div class="page">
+
+<p>戴雨森用这个类比回应了关于失业的担忧。"一开始的时候，大家也没想到蒸汽机带来纺织业的提升，或者带来化工工业的提升。这需要时间，需要有很多企业去找到——当一方面的能力供给大幅提升之后，带来的生产力溢出，它带来什么新的机会？长期来讲产生新的工作，这个是毫无疑问的。但扩散需要一点时间。在这个过程中，一个是要学习使用AI，另一个是要去探索AI带来什么新的机会。"</p>
+
+<p>"但是现在问题是变化太快了。工业革命是几十年的扩散时间，但AI现在一年时间——大家感觉写程序这个事儿已经被替代了很多。所以带来的动力也会更大。这里面投资机会也好，大家对于社会的思考、对于人和人、人和职业关系的思考，都会发生很大的变化。"</p>
+
+<p>张小珺问了一个很多人都关心的问题：孩子以后应该学什么专业？</p>
+
+<p>"我孩子刚上幼儿园。"戴雨森坦言，"我觉得真的是培养他的<span class="english">agency</span>会很重要。两年前的播客里面，我讲的是说人会剩下<span class="english">agency</span>和<span class="english">taste</span>。后来我意识到<span class="english">taste</span>——AI那么聪明，见过那么多好的数据，它的<span class="english">taste</span>绝对是远超普通人类的。<span class="english">AI</span>做的<span class="english">PPT</span>很好看，所以我后来意识到<span class="english">taste</span>这事儿也不靠谱。可能到目前来讲还是<span class="english">agency</span>——不管它做得多好，要做什么，还是你决定的。"</p>
+
+<p>"创新要刻意练习，做什么也要刻意练习。很多人包括我自己，如果突然问你要做什么事情，你可能不知道自己要做什么。但是如果你刻意去想，可能你发现还有很多事情可以变得更好。至少目前还是——人需要能问出好问题。如果一个人能回答你所有问题，但你要知道该问什么问题，你要有想去解决的问题，想去改变的现状。"他进一步推演："现在的AI基于现在的模型结构，能很好地解决人类已经拥有的数据——<span class="english">within distribution</span>的事情。但人类有少部分人能创造<span class="english">out of distribution</span>的事情——创造一个之前从来没见过的事情。AI没法讲一个原创的笑话，它只能把人类已经讲过的笑话<span class="english">reframe</span>一下。为什么有的人能够创造出<span class="english">out of distribution</span>的内容？这可能是对于人脑的研究，我们还没找到好的答案。"</p>
+
+<div class="page-num">- 30 -</div>
+</div>
+
+<!-- ==================== PAGE 31 ==================== -->
+<div class="page">
+
+<p>戴雨森接着梳理了人类能力在历次技术革命中被"蒸馏"出来的过程。"工业革命发生之后，人的体力变得不那么重要了，脑力变得很重要。所以那个时候开始读书改变命运，大家重视教育——之前你没教育有体力，原来挑的体力没有用了。互联网发明之后，我觉得是把人类的记忆和能力分开了。因为知识都可以搜到，知识变成搜一体的了。所以大家开始看动手能力——写代码、动手能力这些。但AI来了之后，执行力——把这件事情做了——又变得越来越被AI取代了。"</p>
+
+<p>"但是判断力——我要做什么——还没有被取代。行动力会变得至少目前还是AI不能自己动起来。我真的在想这个问题，但是没有答案。我只是觉得好像让一个人更有<span class="english">agency</span>——包括我自己也是——所以我就说从多用AI、多做点稀奇古怪的东西开始。"</p>
+
+<p>张小珺问了一个关于未来的问题：你还会继续录吗？毕竟每次录都可能被打脸。</p>
+
+<p>戴雨森讲述了他和瓦总西东的那段对话。"我跟瓦总说，下次不要录了。说出去的话会限制自己，对自己产生某种<span class="english">flag</span>。然后瓦总就说——你不能被自己说的话束缚。如果你觉得打脸了之后就不录了，那是真正的被打倒了。我觉得不断的去总结自己的思考，是一个让自己把没想清楚的问题有机会想得更清楚的过程。刻意练习。因为当你表达的时候，你就会发现有的地方你自己是很清楚知道自己是懂的——或者你认为自己懂——但有的地方是糊弄过去的。这个在你讲一个东西的时候很清楚。所以这也是对我自己的一个整理过程，很有价值。"</p>
+
+<p>"并且还是那句话，作为一个早期投资人，频繁被打脸是幸福的。如果一个人总是不被打脸，大概率不是因为他永远正确，而是因为他没有进步。频繁被打脸，一方面是我在获得反馈信号、我在成长。另外一方面是这个行业在变化，所以有很多新东西。那我做早期投资工作就有机会。我其实是在享受被打脸的一个工作中。"</p>
+
+<div class="page-num">- 31 -</div>
+</div>
+
+<!-- 尾页：版权与制作说明 -->
+<div class="page" style="min-height:auto; text-align:center; padding:48px 40px;">
+  <div class="divider">· · ·</div>
+
+  <p style="text-indent:0; font-size:13px; color:#8b7355; line-height:2; margin-bottom:20px;">
+    本文基于《张小珺商业访谈录》第<span class="num">142</span>期播客整理<br>
+    <span class="english" style="font-size:12px;">2026年5月27日</span>
+  </p>
+
+  <p style="text-indent:0; font-size:13px; color:#6b5e4a; line-height:2.2;">
+    🎧 收听原播客<br>
+    <span style="color:#8b7355;">小宇宙</span>
+    &nbsp;·&nbsp;
+    <span style="color:#8b7355;">Apple Podcasts</span>
+    &nbsp;·&nbsp;
+    <span style="color:#8b7355;">Podwise（含文字稿）</span>
+  </p>
+
+  <div style="width:30px; height:1px; background:#c4a87c; margin:22px auto;"></div>
+
+  <p style="text-indent:0; font-size:12px; color:#a09070; line-height:2;">
+    制作流程：通义听悟（语音转写）→ 人工初审 → Hermes Agent（按写作规范生成）→ 人工复核<br>
+    写作规范参照：《史蒂夫·乔布斯传》《激荡三十年》风格
+  </p>
+
+  <p style="text-indent:0; font-size:11px; color:#b0a090; line-height:2; margin-top:16px;">
+    仅供个人阅读 · 非商业用途<br>
+    内容版权归 张小珺商业访谈录 及 语言及世界工作室 所有
+  </p>
+</div>
+
+</body>
+</html>
