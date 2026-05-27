@@ -1,60 +1,26 @@
 # 张小珺商业访谈录 · 纸上纪录片
 
-将《张小珺商业访谈录》播客的长篇深度访谈转化为适合手机/网页阅读的书籍章节。
-
 在线阅读：**https://mally-cj.github.io/zhangxiaojun-archives/**
 
-## 为什么做这个
+将《张小珺商业访谈录》播客转化为适合阅读的书籍章节。个人项目，非商业用途。
 
-纯粹为了**方便自己阅读**。播客是很棒的媒介，但信息密度太高——开车、走路、做家务的时候听，很难真正消化那些层层递进的逻辑推演和精确的商业判断。把一场访谈变成一篇可以随时翻阅、反复咀嚼的章节，是我自己最舒服的消费方式。
+## 怎么用
 
-**这是个人项目，非商业用途。所有内容版权归《张小珺商业访谈录》及语言及世界工作室所有。**
+**阅读**——打开上面的网址就行。
 
-## 自动化程度
+**增加新内容**——对 AI agent 说一句话：
 
-这个项目现在由 AI agent **半自动维护**。你只需要说一句"处理一下"，agent 就会：
+> 看一下 program.md，开始处理
 
-1. 检查 RSS 有没有新播客
-2. 提醒你提供通义听悟 cookie（一次性）
-3. 自动打开通义听悟，输入 RSS，选中新播客，开始转写
-4. 转写完成后，自动将转录稿加工为书籍章节 HTML
-5. 更新目录、提交推送
-
-唯一需要人参与的环节：**提供通义听悟的登录 cookie**（因为登录需要扫码验证）。
+agent 会自动完成：检查新播客 → 提醒给 cookie → 转写 → 加工 → 发布。完整流程见 program.md。
 
 ## 致谢
 
-- **Prompt 来源**：感谢小红书博主 **J在发光** 提供的写作 Prompt 思路
-- **转录工具**：通义听悟
-- **自动化引擎**：Hermes Agent
-- **原始播客**：[小宇宙](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962) · [Apple Podcasts](https://podcasts.apple.com/cn/podcast/%E5%BC%A0%E5%B0%8F%E7%8F%BAj%C3%B9n-%E5%95%86%E4%B8%9A%E8%AE%BF%E8%B0%88%E5%BD%95/id1634356920)
+- 写作 Prompt：小红书博主 **J在发光**
+- 转录：通义听悟
+- 自动化：Hermes Agent
+- 原始播客：[小宇宙](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962) · [Apple Podcasts](https://podcasts.apple.com/cn/podcast/%E5%BC%A0%E5%B0%8F%E7%8F%BAj%C3%B9n-%E5%95%86%E4%B8%9A%E8%AE%BF%E8%B0%88%E5%BD%95/id1634356920)
 
-## 制作流程
+---
 
-```
-RSS 监控 → 通义听悟（自动转写）→ agent（按 Prompt 加工）→ HTML 网页 → 自动发布
-                     ↑
-               人提供 cookie
-```
-
-## Agent 指令
-
-详见 `program.md`——这个文件就是 agent 的完整操作手册。agent 会读取它并自主执行所有步骤。
-
-## 项目结构
-
-```
-张小珺商业访谈录/
-├── README.md           # 本文件（人类阅读）
-├── program.md          # Agent 自动化指令 + 写作 Prompt
-├── index.html          # 目录首页
-├── 原文/               # 通义听悟转录稿（.docx = 待处理，.md = 已处理）
-└── 书籍章节/           # 加工后的书籍章节（HTML）
-```
-
-## 已收录内容
-
-| 期数 | 嘉宾 | 主题 |
-|------|------|------|
-| 第141期 | Freda Duan (Ultimately Capital) | Tokenmaxxing、AI组织架构、软件行业冲击、投资行业变革、焦虑与人际连接 |
-| 第136期 | 广密 | Coding是AGI第二幕、硅谷御三家真相、模型正成为新一代OS |
+**版权归《张小珺商业访谈录》及语言及世界工作室所有**
