@@ -25,6 +25,7 @@ from typing import Iterable
 
 _CWD = Path.cwd()
 _ENV_PATH = _CWD / ".env"
+_USER_ENV_PATH = Path.home() / ".kimi-code" / "credentials" / "smtp.env"
 
 
 def _load_env_file(path: Path) -> None:
@@ -50,6 +51,10 @@ try:
 except Exception:
     _load_env_file(_ENV_PATH)
 
+# Fallback to user-level credentials if project .env lacks SMTP_PASSWORD
+if not os.environ.get("SMTP_PASSWORD"):
+    _load_env_file(_USER_ENV_PATH)
+
 
 def _env(name: str, default: str | None = None) -> str | None:
     return os.getenv(name, default)
@@ -58,7 +63,7 @@ def _env(name: str, default: str | None = None) -> str | None:
 def _require_env(name: str) -> str:
     value = _env(name)
     if not value:
-        raise ValueError(f"缺少环境变量: {name}，请在 .env 中配置。")
+        raise ValueError(f"缺少环境变量: {name}，请在 .env 或 ~/.kimi-code/credentials/smtp.env 中配置。")
     return value
 
 
